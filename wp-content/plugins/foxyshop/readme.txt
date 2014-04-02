@@ -3,8 +3,8 @@ Contributors: sparkweb
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2AHG2QMABF8SG
 Tags: foxycart, shopping, cart, inventory, management, ecommerce, selling, subscription, foxy
 Requires at least: 3.1
-Tested up to: 3.6
-Stable tag: 4.4
+Tested up to: 3.8
+Stable tag: 4.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 FoxyShop provides a robust shopping cart and inventory management tool for use with FoxyCart's hosted e-commerce solution.
@@ -68,6 +68,31 @@ There's a thorough FAQ section located at [http://www.foxy-shop.com/faq/](http:/
 
 == Changelog ==
 
+= 4.4.4 =
+* Changing the Manage Inventory page to use ajax-based saving
+* Trim individual variation lines
+* Updating styles for WordPress 3.8
+* Adding GTIN, MPN field matching for Google Products (thanks to Scott Daniels)
+
+= 4.4.3 =
+* Updating inventory now covers multiple products with same code
+* Add-on product images are now properly skipping validation
+* Add-on products are not displayed if they are not in stock
+* Changed multiship script to use "Me" instead of "me" to avoid potentially different shipto names
+* Allow alternate named sub_startdate and sub_enddate to set a dynamic strtotime date
+
+= 4.4.2 =
+* Fixing a missing " that was keeping the image field from working properly
+
+= 4.4.1 =
+* Improved WP_Error handling with FoxyCart API
+* Start using wp_redirect()
+* Fix for missing validation on variation values that are only "0"
+* Added 'foxyshop_social_media_header' handle for custom social media headers
+* Made the JavaScript UTF-8 checker more flexible
+* Updates SSO account updating to properly update WordPress passwords
+* Updated external jQuery reference to 1.10.2
+
 = 4.4 =
 * Added a default checkout and receipt template
 * Allow the fr:X variation modifier to adjust the sub_frequency
@@ -84,7 +109,7 @@ There's a thorough FAQ section located at [http://www.foxy-shop.com/faq/](http:/
 * Changed cURL to wp_remote_post()
 * Check for is_ssl() when building FoxyShop admin links
 * Fixed the jQuery dequeue feature
-* Upgraded to jQuery 1.10.1
+* Upgraded to jQuery 1.10.1 for stores <= FoxyCart 1.0
 * Upgraded to prettyPhoto 3.1.5
 * Upgraded to jQuery 1.10.3 (used for Date Picker)
 * Default FoxyCart version is now 1.1
@@ -307,5 +332,6 @@ There's a thorough FAQ section located at [http://www.foxy-shop.com/faq/](http:/
 
 == Upgrade Notice ==
 
-= 4.4 =
-Added checkout templates, upgraded to jQuery 1.10.1
+= 4.4.4 =
+WP 3.8 CSS Updates
+

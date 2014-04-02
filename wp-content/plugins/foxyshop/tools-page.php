@@ -14,15 +14,15 @@ function foxyshop_save_tools() {
 		$foxyshop_import_settings = str_replace("\n","",$_POST['foxyshop_import_settings']);
 		$decrypted = explode("|-|", rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($encrypt_key), base64_decode($foxyshop_import_settings), MCRYPT_MODE_CBC, md5(md5($encrypt_key))), "\0"));
 		if (count($decrypted) != 3) {
-			header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&importerror=1');
-			die;
+			wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&importerror=1');
+			exit;
 		} else {
 			update_option("foxyshop_settings", unserialize($decrypted[0]));
 			update_option("foxyshop_category_sort", unserialize($decrypted[1]));
 			update_option("foxyshop_saved_variations", unserialize($decrypted[2]));
 			delete_option("foxyshop_setup_required");
-			header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&import=1');
-			die;
+			wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&import=1');
+			exit;
 		}
 
 	//Scan For Old Variations
@@ -30,8 +30,8 @@ function foxyshop_save_tools() {
 		if (!check_admin_referer('foxyshop_old_variations_scan')) return;
 		$foxyshop_settings['foxyshop_version'] = "2.9";
 		update_option("foxyshop_settings", $foxyshop_settings);
-		header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&oldvars=1');
-		die;
+		wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&oldvars=1');
+		exit;
 
 	//Update FoxyCart Template
 	} elseif (isset($_POST['foxycart_cart_update_save']) || isset($_POST['foxycart_checkout_update_save']) || isset($_POST['foxycart_receipt_update_save'])) {
@@ -43,8 +43,8 @@ function foxyshop_save_tools() {
 
 		//If just clearing the urls, return now
 		if (empty($_POST['foxycart_cart_update']) && empty($_POST['foxycart_checkout_update'])) {
-			header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=clear');
-			die;
+			wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=clear');
+			exit;
 		}
 
 		//Cart
@@ -54,11 +54,11 @@ function foxyshop_save_tools() {
 			$foxy_response = foxyshop_get_foxycart_data($foxy_data);
 			$xml = simplexml_load_string($foxy_response, NULL, LIBXML_NOCDATA);
 			if ($xml->result != "ERROR") {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=cart');
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=cart');
 			} else {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
 			}
-			die;
+			exit;
 
 
 		//Checkout
@@ -67,11 +67,11 @@ function foxyshop_save_tools() {
 			$foxy_response = foxyshop_get_foxycart_data($foxy_data);
 			$xml = simplexml_load_string($foxy_response, NULL, LIBXML_NOCDATA);
 			if ($xml->result != "ERROR") {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=checkout');
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=checkout');
 			} else {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
 			}
-			die;
+			exit;
 
 		//Receipt
 		} elseif (isset($_POST['foxycart_receipt_update_save'])) {
@@ -79,11 +79,11 @@ function foxyshop_save_tools() {
 			$foxy_response = foxyshop_get_foxycart_data($foxy_data);
 			$xml = simplexml_load_string($foxy_response, NULL, LIBXML_NOCDATA);
 			if ($xml->result != "ERROR") {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=receipt');
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=receipt');
 			} else {
-				header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
+				wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&updatetemplate=error&error='.urlencode((string)$xml->messages->message));
 			}
-			die;
+			exit;
 		}
 
 	//Process Saved Variations
@@ -146,16 +146,16 @@ function foxyshop_save_tools() {
 			delete_option('foxyshop_saved_variations');
 		}
 
-		header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&processedvars=1');
-		die;
+		wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&processedvars=1');
+		exit;
 
 	//Reset API Key
 	} elseif (isset($_GET['foxyshop_api_key_reset'])) {
 		if (!check_admin_referer('reset-foxyshop-api-key')) return;
 		$foxyshop_settings['api_key'] = "sp92fx".hash_hmac('sha256',rand(21654,6489798),"dkjw82j1".time());
 		update_option("foxyshop_settings", $foxyshop_settings);
-		header('location: edit.php?post_type=foxyshop_product&page=foxyshop_tools&key=1');
-		die;
+		wp_redirect('edit.php?post_type=foxyshop_product&page=foxyshop_tools&key=1');
+		exit;
 	}
 }
 
@@ -237,7 +237,7 @@ function foxyshop_tools() {
 
 	<div style="clear: both; margin-top: 14px;"></div>
 
-	<table class="widefat">
+	<table class="widefat" id="recommended_plugins_container" style="margin-bottom: 30px;">
 		<thead>
 			<tr>
 				<th><img src="<?php echo $recommend_icon; ?>" alt="" /><?php _e("Recommended Companion Plugins", 'foxyshop'); ?></th>
@@ -310,9 +310,7 @@ function foxyshop_tools() {
 		</tbody>
 	</table>
 
-	<br /><br />
-
-	<table class="widefat">
+	<table class="widefat" id="misc_tools_container" style="margin-bottom: 30px;">
 		<thead>
 			<tr>
 				<th><img src="<?php echo $misc_icon; ?>" alt="" /><?php _e('Misc Tools', 'foxyshop'); ?></th>
@@ -369,8 +367,6 @@ function foxyshop_tools() {
 			</tr>
 		</tbody>
 	</table>
-
-	<br /><br />
 
 	<form method="post" name="foxyshop_saved_vars_form" action="">
 	<table class="widefat">
@@ -569,7 +565,7 @@ echo "</div>";
 	<br /><br />
 
 	<form method="post" name="foxyshop_tools_form" action="">
-	<table class="widefat">
+	<table class="widefat" id="import_export_settings_container">
 		<thead>
 			<tr>
 				<th><img src="<?php echo $export_icon; ?>" alt="" /><?php _e('Import/Export FoxyShop Settings', 'foxyshop'); ?></th>
@@ -588,7 +584,7 @@ echo "</div>";
 				<td>
 					<label for="foxyshop_import_settings"><?php echo __('Paste Settings String to Import', 'foxyshop'); ?>:</label>
 					<div style="clear: both;"></div>
-					<textarea id="name="foxyshop_import_settings" name="foxyshop_import_settings" wrap="auto" style="float: left; width:500px;height: 80px; font-size: 13px; font-family: courier; line-height: 110%; resize: none;"></textarea>
+					<textarea id="foxyshop_import_settings" name="foxyshop_import_settings" wrap="auto" style="float: left; width:500px;height: 80px; font-size: 13px; font-family: courier; line-height: 110%; resize: none;"></textarea>
 					<div style="clear: both;"></div>
 					<p><input type="submit" class="button-primary" value="<?php _e('Import Settings', 'foxyshop'); ?>" /></p>
 				</td>
@@ -609,7 +605,7 @@ echo "</div>";
 	<br /><br />
 
 	<form name="foxyshop_uninstall_form" action="" onsubmit="return false;">
-	<table class="widefat">
+	<table class="widefat" id="uninstall_plugin_container" style="margin-bottom: 14px;">
 		<thead>
 			<tr>
 				<th><img src="<?php echo $remove_icon; ?>" alt="" /><?php _e('Uninstall FoxyShop', 'foxyshop'); ?></th>
