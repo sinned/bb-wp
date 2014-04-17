@@ -1,0 +1,148 @@
+#page {
+    margin: 0 auto 2em auto;
+}
+#branding {
+	border-top: 0 none;
+	z-index: 1;
+}
+.foxyshop #content {
+	width: 85%;
+}
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+	width: auto;
+}
+.singular .entry-meta .edit-link a {
+	top: auto;
+	left: auto;
+}
+.singular.page .hentry {
+	padding: 0 0 30px 0;
+}
+
+body #cboxClose span {
+	vertical-align: -23%;
+}
+
+
+.foxyshop_product .foxyshop_product_info {
+	width: 530px;
+}
+#foxyshop_container {
+	margin-bottom: 30px;
+	overflow: auto;
+}
+#foxyshop_container h1 {
+	font-size: 22px;
+	font-weight: bold;
+}
+#foxyshop_container h2 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.foxyshop_product_list {
+	margin: 30px 0 15px 0;
+}
+.foxyshop_product_list .foxyshop_product_info {
+	width: 280px;
+}
+.foxyshop_variations select {
+	margin-top: 5px;
+}
+.foxyshop_variations input[type=radio] {
+	margin-top: 8px;
+}
+.foxyshop_variations textarea {
+	width: auto;
+}
+.foxyshop_related_product_list {
+	margin: 20px 0;
+}
+.foxyshop_related_product_list li.titleline h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+.foxyshop_product .foxyshop_product_info {
+	width: 60%;
+}
+.foxyshop_product .foxyshop_product_image {
+	width: 37%;
+}
+.foxyshop_product_image_holder img {
+	max-width: 90%;
+}
+
+/* ----------  BUTTONS  ------------ */
+
+.foxyshop_button, .foxyshop_button:visited {
+	background: #9e1d20 url(images/alert-overlay.png) repeat-x; 
+	display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+
+.foxyshop_button:hover							{ background-color: #c91317; color: #fff; text-decoration: none; }
+.foxyshop_button:active							{ top: 1px; }
+.small.foxyshop_button, .small.foxyshop_button:visited 			{ font-size: 11px; padding: ; }
+.foxyshop_button, .foxyshop_button:visited,
+.medium.foxyshop_button, .medium.foxyshop_button:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
+.large.foxyshop_button, .large.foxyshop_button:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
+
+
+
+/* ----------  RESPONSIVE TINY  ------------ */
+@media all and (max-width:570px) {
+
+#page {
+	min-width: 410px;
+}
+
+.foxyshop_product_list .foxyshop_product_info {
+    width: 160px;
+}
+
+.foxyshop_variations label {
+    width: auto;
+}
+}
+
+
+
+/* ----------  RESPONSIVE SMALL  ------------ */
+@media all and (max-width:830px) {
+
+.foxyshop_product_list li.foxyshop_product_box {
+	clear: both;
+	width: 100%;
+}
+
+.foxyshop_categories li {
+    clear: both;
+    width: 100%;;
+}
+.foxyshop_variations label {
+    width: auto;
+}
+
+}
+
+/* ----------  RESPONSIVE MEDIUM  ------------ */
+@media all and (min-width:845px) and (max-width:1070px) {
+
+
+.foxyshop_product_list .foxyshop_product_info {
+    width: 200px;
+}
+
+
+
+}
+
