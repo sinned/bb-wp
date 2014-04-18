@@ -692,7 +692,7 @@ a:hover {
 
 #main {
   clear: both;
-  padding: 1.625em 0 0;
+  padding: 0 0 0 0;
 }
 .page-title {
   color: #666;
@@ -2711,5 +2711,25 @@ p.comment-form-comment {
 
 #ie8 section.feature-image.large img {
   width: 100%;
+}
+
+/* Bitters+Bottles */
+
+#page, #site-generator {
+  background: url(images/global/BB-content-area-bg-pattern.jpg) ;
+}
+
+li.home-nav-class {
+  background: url(images/header/BB-header-logo-transp.png) no-repeat 5px;
+  width: 260px;
+  color: #000;
+}
+
+li.home-nav-class a {
+  opacity:0;
+}
+
+ul#menu-top-menu {
+  text-transform: uppercase;
 }
 
