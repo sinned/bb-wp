@@ -49,7 +49,7 @@ get_header(); ?>
 			<div class="primary-content">
 				<div class="main-content">			
 					<div class="hp-cocktails">
-						<h2>Classic Cocktails</h2>
+						<h3>Classic Cocktails</h3>
 						<h5>Your Home Bar, Selected by Experts</h5>
 						<br />
 						<a href="#" class="btn">Subscribe Cocktails</a>
