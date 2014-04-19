@@ -26,21 +26,23 @@ get_header(); ?>
 
 		<div class="primary-content">
 			<div class="main-content centered">
-				<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
-				<div class="bb-process">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" />
-					<h4>Register</h4>
-					<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="#">Sign up today</a>.</p>
-				</div>
-				<div class="bb-process">				
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" />
-					<h4>Receive</h4>
-					<p>FedEx is at the door. <br />Today is a good day.</p>
-				</div>
-				<div class="bb-process">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" />
-					<h4>Reveal</h4>
-					<p>Open your box of perfection. It's time to tend bar. <br /><a href="#">Register now.</a></p>
+				<div style="margin:auto;width:1000px;">
+					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
+					<div class="bb-process">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" />
+						<h4>Register</h4>
+						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="#">Sign up today</a>.</p>
+					</div>
+					<div class="bb-process">				
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" />
+						<h4>Receive</h4>
+						<p>FedEx is at the door. <br />Today is a good day.</p>
+					</div>
+					<div class="bb-process">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" />
+						<h4>Reveal</h4>
+						<p>Open your box of perfection. It's time to tend bar. <br /><a href="#">Register now.</a></p>
+					</div>
 				</div>
 			</div>
 		</div>
