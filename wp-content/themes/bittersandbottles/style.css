@@ -162,7 +162,7 @@ a.btn:hover, a.foxyshop_button:hover {
 /* Media Queries */
 @media (max-width: 1000px) {
 	.hp-cocktails {
-		background: #dadadc;			
+		padding: 260px 20px 20px 20px;
 	}	
 	.bb-process {
 		float:none;
