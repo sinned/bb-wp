@@ -49,11 +49,19 @@ get_header(); ?>
 			<div class="primary-content">
 				<div class="main-content">			
 					<div class="hp-cocktails">
-						<h3>Classic Cocktails</h3>
-						<h5>Your Home Bar, Selected by Experts</h5>
-						<br />
-						<a href="#" class="btn">Subscribe Cocktails</a>
-					</div>				
+						<div style="float:right;text-align:left;padding:10px;">
+							<h3>Classic Cocktails</h3>
+							<h5>Your Home Bar, Selected by Experts</h5>
+							<br />
+							<a href="#" class="btn">Subscribe Cocktails</a>
+						</div>
+					</div>		
+					<br />
+					<div class="hp-box">
+						<p>
+							Setting up a home bar is a journey. Over the course of a year's cocktail subscription, we'll take you through recipes for 60 noteworth classics, and set up your top shelf home bar. Each delivery builds on its predecessor, adding new bottles to your bar and five new recipes to your repertoire.
+						</p>
+					</div>		
 				</div>
 			</div>
 		</div>
