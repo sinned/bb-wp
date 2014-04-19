@@ -17,9 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 {font-size:60pt;line-height:60pt;font-weight:bold;}
 h2 {font-size:48pt;line-height:48pt;font-weight:bold;}
 h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
-h4 {font-size:30pt;line-height:30pt;}
-h5 {font-size:24pt;line-height:24pt;text-transform: none;}
-h6 {font-size:22pt;line-height:22pt;}
+h4 {font-size:25pt;line-height:25pt;}
+h5 {font-size:16pt;line-height:24pt;text-transform: none;}
+h6 {font-size:16pt;line-height:22pt;}
 
 p {margin:0;padding:0;}
 
@@ -90,7 +90,6 @@ a.btn:hover, a.foxyshop_button:hover {
 	margin: 0;
 	width: 100%;
 	padding: 400px 20px 100px 20px;
-	background-size: cover;
 	color: #ffffff;
 	clear: both;
 }
@@ -98,11 +97,13 @@ a.btn:hover, a.foxyshop_button:hover {
 #top-hero {
 	text-align: center;
 	background: url(images/homepage/_high_compression/BB-HP-billboard-hero-01-fw.jpg) no-repeat;
+	background-size: cover;
 }
 
 #sub-hero {
 	text-align: right;
 	background: url(images/homepage/_high_compression/BB-HP-subscriptions-bg-fw.jpg) no-repeat;
+	background-size: cover;
 	padding: 100px 20px;
 	min-height: 400px;
 }
