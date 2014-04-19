@@ -8,8 +8,41 @@ Version: 1.0
 
 @import url("../twentyeleven/style.css");
 
-
 /* Bitters+Bottles */
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+h1 {font-size: 60pt;line-height:60pt;font-weight:bold;}
+h2 {font-size:48pt;line-height:48pt;font-weight:bold;}
+h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
+h4 {font-size:30pt;line-height:30pt;}
+h5 {font-size:24pt;line-height:24pt;text-transform: none;}
+h6 {font-size:22pt;line-height:22pt;}
+
+p {margin:0;padding:0;}
+
+body {
+	padding: 0;
+}
+
+.centered {
+	text-align:center;
+}
+
+#main {
+	margin:0; padding:0;
+}
+
+#page {
+	margin: 2em auto;
+	max-width: 8000px;
+}
+
+nav#access {
+	margin:0;
+}
 
 #page, #site-generator {
   background: url(images/global/BB-content-area-bg-pattern.jpg) ;
@@ -27,4 +60,82 @@ li.home-nav-class a {
 
 ul#menu-top-menu {
   text-transform: uppercase;
+}
+
+/* Buttons */
+a.btn {
+  color: #ffffff;
+  font-size: 20px;
+  background: #D74125 url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
+  padding: 10px 40px 10px 20px;
+  text-decoration: none;
+}
+
+a.btn:hover {
+  background: #BD977E url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
+  text-decoration: none;
+}
+
+/* Home Page */
+
+#top-hero, #sub-hero {
+	margin: 0;
+	width: 100%;
+	padding: 400px 20px 100px 20px;
+	background-size: cover;
+	color: #ffffff;
+	clear: both;
+}
+
+#top-hero {
+	text-align: center;
+	background: url(images/homepage/_high_compression/BB-HP-billboard-hero-01-fw.jpg) no-repeat;
+}
+
+#sub-hero {
+	text-align: right;
+	background: url(images/homepage/_high_compression/BB-HP-subscriptions-bg-fw.jpg) no-repeat;
+	padding: 100px 20px;
+	min-height: 400px;
+}
+
+.primary-content {
+	float: right;
+	margin: 0 0 0 -26.4%;
+	width: 100%;	
+}
+
+.main-content {
+	clear: both;
+	padding: 1.625em 0 0;	
+	margin: 0 7.6%;
+	width: auto;
+}
+
+.bb-process {
+	width:259px;
+	float:left;
+	text-align: center;
+	padding: 20px;
+	margin: 0px;
+}
+.bb-process img {
+	width: 220px;
+	margin: 0px 0px 10px;
+}
+
+.hp-cocktails {
+	background: #dadadc url(images/homepage/_high_compression/BB-HP-cocktails-fw.jpg) no-repeat top left;	
+	padding: 20px;
+	color: #000;
+	height: 190px;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.hp-divider {
+	background: url(images/homepage/BB-HP-div-line.png) no-repeat;
+	background-position:center;	
+	width:100%;
+	height:10px;
 }
