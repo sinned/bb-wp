@@ -23,7 +23,6 @@ body #cboxClose span {
 	vertical-align: -23%;
 }
 
-
 .foxyshop_product .foxyshop_product_info {
 	width: 530px;
 }
@@ -66,6 +65,9 @@ body #cboxClose span {
 }
 .foxyshop_product .foxyshop_product_image {
 	width: 37%;
+}
+.foxyshop_product .foxyshop_product_image img {
+	border: none;
 }
 .foxyshop_product_image_holder img {
 	max-width: 90%;
