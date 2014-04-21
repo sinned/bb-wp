@@ -26,7 +26,6 @@ get_header(); ?>
 
 		<div class="primary-content">
 			<div class="main-content centered">
-				<div style="margin:auto;width:1000px;">
 					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
 					<div class="bb-process">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" />
@@ -43,7 +42,6 @@ get_header(); ?>
 						<h4>Reveal</h4>
 						<p>Open your box of perfection. It's time to tend bar. <br /><a href="#">Register now.</a></p>
 					</div>
-				</div>
 			</div>
 		</div>
 

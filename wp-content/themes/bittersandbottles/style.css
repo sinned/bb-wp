@@ -122,11 +122,12 @@ a.btn:hover, a.foxyshop_button:hover {
 }
 
 .bb-process {
-	width:236px;
+	width:31%;
 	float: left;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 5px;
 	margin: 0px;
+	border: 1px solid red;
 }
 .bb-process img {
 	width: 220px;
@@ -161,17 +162,16 @@ a.btn:hover, a.foxyshop_button:hover {
 }
 
 /* Media Queries */
-@media (max-width: 1000px) {
-	.hp-cocktails {
-		padding: 260px 20px 20px 20px;
-	}	
-	.bb-process {
-		float:none;
-		margin: auto;
-	}		
-}
 @media (max-width: 800px) {
 	#top-hero, #sub-hero {
 		padding: 100px 20px 100px 20px;
 	}
+	.hp-cocktails {
+		padding: 260px 20px 20px 20px;
+	}	
+	.bb-process {
+		width:80%;		
+		float:none;
+		margin: auto;
+	}	
 }
