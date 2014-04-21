@@ -172,7 +172,6 @@ div#site-generator {
 	background: url(images/footer/BB-footer-logo-transp.png) no-repeat right;
 	border: none;
 	clear: both;
-	margin: 60px 25px;
 }
 
 #sharebuttons {
@@ -225,7 +224,7 @@ div#site-generator {
 
 #footeraccess {
 	clear: both;
-	margin: 20px;
+	margin: 5%;
 	text-transform: uppercase;	
 }
 #footeraccess ul {
