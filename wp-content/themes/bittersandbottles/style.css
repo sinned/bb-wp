@@ -36,11 +36,10 @@ body {
 }
 
 #page {
-	margin: 2em auto;
-	max-width: 8000px;
+	max-width:10000px;
 }
 
-nav#access {
+nav#footeraccess {
 	margin:0;
 }
 
@@ -157,6 +156,145 @@ a.btn:hover, a.foxyshop_button:hover {
 	background-position:center;	
 	width:100%;
 	height:10px;
+}
+
+/* Footer */
+footer#colophon { 
+	background: black;
+	color: #fff;
+	padding: 20px;
+}
+
+div#site-generator {
+	color: #fff;
+	text-align: left;
+	padding: 0;
+	background: url(images/footer/BB-footer-logo-transp.png) no-repeat right;
+	border: none;
+	clear: both;
+	margin: 60px 25px;
+}
+
+#sharebuttons {
+	width: 450px;
+	margin: 0 auto;
+	text-transform: uppercase;	
+}
+
+#sharebuttons p {
+	float: left;
+	margin-right: 10px;
+	font-size: 17px;
+	padding-top: 20px;
+}
+
+#sharebuttons ul {
+	list-style: none;
+}
+
+#sharebuttons li {
+	float: left;
+	position: relative;
+	margin: 5px;
+	width: 75px;
+	height: 75px;
+	background: url(images/footer/BB-footer-share-sprites.png);
+}
+
+#sharebuttons li a {
+	display: block;
+	width: 75px;
+	height: 75px;
+ 	opacity:0;
+}
+
+#sharebuttons li.pinterest {
+	background-position: -75px 0;
+}
+
+#sharebuttons li.facebook {
+	background-position: -150px 0;	
+}
+
+#sharebuttons li.instagram {
+	background-position: -225px 0;	
+}
+
+/* =FooterMenu
+-------------------------------------------------------------- */
+
+#footeraccess {
+	clear: both;
+	margin: 20px;
+	text-transform: uppercase;	
+}
+#footeraccess ul {
+	font-size: 13px;
+	list-style: none;
+	margin: 0 0 0 -0.8125em;
+	padding-left: 0;
+}
+#footeraccess li {
+	float: left;
+	position: relative;
+}
+#footeraccess a {
+	color: #eee;
+	display: block;
+	line-height: 3.333em;
+	padding: 0 1.2125em;
+	text-decoration: none;
+}
+#footeraccess ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	top: 3.333em;
+	left: 0;
+	width: 188px;
+	z-index: 99999;
+}
+#footeraccess ul ul ul {
+	left: 100%;
+	top: 0;
+}
+#footeraccess ul ul a {
+	background: #f9f9f9;
+	border-bottom: 1px dotted #ddd;
+	color: #444;
+	font-size: 13px;
+	font-weight: normal;
+	height: auto;
+	line-height: 1.4em;
+	padding: 10px 10px;
+	width: 168px;
+}
+#footeraccess li:hover > a,
+#footeraccess ul ul :hover > a,
+#footeraccess a:focus {
+	background: #efefef;
+}
+#footeraccess li:hover > a,
+#footeraccess a:focus {
+	background: #f9f9f9; /* Show a solid color for older browsers */
+	background: -moz-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -o-linear-gradient(#f9f9f9, #e5e5e5);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9f9f9), to(#e5e5e5)); /* Older webkit syntax */
+	background: -webkit-linear-gradient(#f9f9f9, #e5e5e5);
+	color: #373737;
+}
+#footeraccess ul li:hover > ul {
+	display: block;
+}
+#footeraccess .current-menu-item > a,
+#footeraccess .current-menu-ancestor > a,
+#footeraccess .current_page_item > a,
+#footeraccess .current_page_ancestor > a {
+	font-weight: bold;
 }
 
 /* Media Queries */
