@@ -315,8 +315,8 @@ div#site-generator {
 	font-weight: bold;
 }
 
-/* pages */
-p { margin: 15px 0;}
+/* content */
+#content p, #content ul { margin: 15px 0;}
 
 /* Media Queries */
 @media (max-width: 800px) {
