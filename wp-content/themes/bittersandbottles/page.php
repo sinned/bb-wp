@@ -18,7 +18,7 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<div class="primary page-header">
 			<div class="main">				
-				<h2><?php echo the_title(); ?></h2>
+				<h3><?php echo the_title(); ?></h3>
 			</div>
 		</div>
 
