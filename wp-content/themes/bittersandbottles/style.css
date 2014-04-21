@@ -74,6 +74,11 @@ ul#menu-top-menu {
 	background: url(images/global/BB-section-title-plus-sign-superscript.png) no-repeat top right;
 }
 
+#fc_quantity {
+	padding: 0px 6px;
+	background: url(images/header/BB-header-cart-qty-blank.png) no-repeat;	
+}
+
 /* Buttons */
 a.btn, .foxyshop_button {
   font-family: "Abel", arial, sans-serif!important;
