@@ -106,13 +106,13 @@ a.btn:hover, a.foxyshop_button:hover {
 	min-height: 400px;
 }
 
-.primary-content {
+.primary {
 	float: right;
 	margin: 0 0 0 -26.4%;
 	width: 100%;	
 }
 
-.main-content {
+.main {
 	clear: both;
 	padding: 1.625em 0 0;	
 	margin: 0 7.6%;
@@ -162,7 +162,7 @@ a.btn:hover, a.foxyshop_button:hover {
 footer#colophon { 
 	background: black;
 	color: #fff;
-	padding: 20px;
+	padding: 20px 0;
 }
 
 div#site-generator {
@@ -224,7 +224,7 @@ div#site-generator {
 
 #footeraccess {
 	clear: both;
-	margin: 5%;
+	margin: 0;
 	text-transform: uppercase;	
 }
 #footeraccess ul {
@@ -298,6 +298,10 @@ div#site-generator {
 
 /* pages */
 p { margin: 15px 0;}
+
+.page-header {
+	background:#000;color:#fff;text-align:center;padding-bottom:30px;
+}
 
 /* Media Queries */
 @media (max-width: 800px) {

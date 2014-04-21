@@ -24,8 +24,8 @@ get_header(); ?>
 			</p>
 		</div>
 
-		<div class="primary-content">
-			<div class="main-content centered">
+		<div class="primary">
+			<div class="main centered">
 					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
 					<div class="bb-process">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" />
@@ -46,8 +46,8 @@ get_header(); ?>
 		</div>
 
 		<div id="sub-hero">
-			<div class="primary-content">
-				<div class="main-content">			
+			<div class="primary">
+				<div class="main">			
 					<div class="hp-cocktails">
 						<div style="float:right;text-align:left;padding:10px;">
 							<h3>Classic Cocktails</h3>
@@ -69,17 +69,10 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-
-
-
 				<?php while ( have_posts() ) : the_post(); ?>
-
 					<?php the_content(); ?>
-
 					<?php //comments_template( '', true ); ?>
-
 				<?php endwhile; // end of the loop. ?>
-
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
