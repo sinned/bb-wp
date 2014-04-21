@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {font-size:60pt;line-height:60pt;font-weight:bold;}
 h2 {font-size:48pt;line-height:48pt;font-weight:bold;}
-h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
+h3, .entry-content h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
 h4 {font-size:25pt;line-height:25pt;}
 h5 {font-size:16pt;line-height:24pt;text-transform: none;}
 h6 {font-size:16pt;line-height:22pt;}
@@ -296,6 +296,9 @@ div#site-generator {
 #footeraccess .current_page_ancestor > a {
 	font-weight: bold;
 }
+
+/* pages */
+p { margin: 15px 0;}
 
 /* Media Queries */
 @media (max-width: 800px) {
