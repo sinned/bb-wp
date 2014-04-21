@@ -73,6 +73,11 @@ body #cboxClose span {
 	max-width: 90%;
 }
 
+#foxyshop_breadcrumbs {
+	background: none;
+	border: none;
+}
+
 /* ----------  BUTTONS  ------------ */
 
 .foxyshop_button, .foxyshop_button:visited {
