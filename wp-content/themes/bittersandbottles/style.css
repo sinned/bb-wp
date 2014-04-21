@@ -302,6 +302,9 @@ p { margin: 15px 0;}
 
 /* Media Queries */
 @media (max-width: 800px) {
+	#sharebuttons {
+		display: none;
+	}
 	#top-hero, #sub-hero {
 		padding: 100px 20px 100px 20px;
 	}
