@@ -26,6 +26,21 @@ get_header(); ?>
 			<div id="content" role="main" class="pagecontent">
 				<?php echo the_content(); ?>
 				<?php //comments_template( '', true ); ?>
+
+				<div class="subscribe">
+					<div class="row">
+						<button>This is for me</button>
+						<button>This is a gift</button>
+					</div>
+					<div class="row">
+						<button>I need bar tools</button>
+						<button>I don&rsquo;t need bar tools</button>
+					</div>
+					<div class="row">
+						<button>Add to cart</button>
+					</div>
+				</div>
+
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

@@ -1,6 +1,6 @@
 <div class="primary page-header">
 	<div class="main">				
-		<h3>Shop</h3>
+		<h3><span class="super-plus">Shop</span></h3>
 	</div>
 </div>
 

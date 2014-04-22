@@ -64,14 +64,19 @@ ul#menu-top-menu {
 .page-header {
 	background:#000;
 	color:#fff;
-	text-align:center;
 	padding-bottom:25px;
 }
 
 .page-header h3 {
-	display:inline;
-	padding-right: 24px;
+	text-align:center;
+}
+
+span.super-plus {
+	padding-right: 25px;
 	background: url(images/global/BB-section-title-plus-sign-superscript.png) no-repeat top right;
+	margin: 0 auto;
+	background-size: 24px 24px;
+	background-position: 100% 10px;
 }
 
 #fc_quantity {
