@@ -18,7 +18,7 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<div class="primary page-header">
 			<div class="main">				
-				<h3><span class="super-plus"><?php echo the_title(); ?></span></h3>
+				<h3><span class="super-plus">Subscribe</span></h3>
 			</div>
 		</div>
 
