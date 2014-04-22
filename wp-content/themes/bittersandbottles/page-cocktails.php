@@ -27,20 +27,36 @@ get_header(); ?>
 				<?php echo the_content(); ?>
 				<?php //comments_template( '', true ); ?>
 
-				<div class="subscribe">
-					<div class="row">
-						<button>This is for me</button>
-						<button>This is a gift</button>
+				<div class="centered">
+					<div class="subscribe">
+						<div class="row">
+							<ul>
+								<li>Step 1<li>
+								<li><a href="#" class="subscribe-btn">This is for me</a></li>
+								<li><a href="#" class="subscribe-btn">This is a gift</a></li>
+							</ul>
+						</div>
+						<div class="row">
+							<ul>
+								<li>Step 2</li>
+								<li><a href="#" class="subscribe-btn">I need bar tools</a></li>
+								<li><a href="#" class="subscribe-btn">I don&rsquo;t need bar tools</a></li>
+							</ul>
+						</div>
 					</div>
-					<div class="row">
-						<button>I need bar tools</button>
-						<button>I don&rsquo;t need bar tools</button>
-					</div>
-					<div class="row">
-						<button>Add to cart</button>
-					</div>
+					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">
+					<input type="hidden" name="name" value="Monthly Cocktails Subscription" />
+					<input type="hidden" name="category" value="SUBSCRIPTION" />
+					<input type="hidden" name="price" value="95" />
+					<input type="hidden" name="code" value="COCKTAILS-MONTHLY" />
+					<input type="hidden" name="sub_frequency" value="1m" />
+					<input type="hidden" name="sub_startdate" value="" />
+					<input type="hidden" name="shipto" value="" />
+					<input type="hidden" name="Gift_Message" value="" />
+					<!-- <input type="hidden" name="empty" value="true" /> -->
+					<button class="btn">Add to cart</button>
+					</form>							
 				</div>
-
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

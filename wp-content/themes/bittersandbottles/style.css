@@ -85,7 +85,7 @@ span.super-plus {
 }
 
 /* Buttons */
-a.btn, .foxyshop_button {
+button.btn, a.btn, .foxyshop_button {
   font-family: "Abel", arial, sans-serif!important;
   color: #ffffff;
   font-size: 16px!important;
@@ -101,9 +101,10 @@ a.btn:visited, a.foxyshop_button:visited {
   text-decoration: none;
 }
 
-a.btn:hover, a.foxyshop_button:hover {
+button.btn:hover, a.btn:hover, a.foxyshop_button:hover {
   background: #BD977E url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Home Page */
@@ -400,8 +401,52 @@ div#site-generator {
 }
 
 /* content */
+#content {padding-bottom: 15px;}
 #content p, #content ul, .main p { margin: 15px 0;}
 #content img, .main img { max-width: 100%; }
+
+/* subscribe page */
+
+.subscribe .row {
+	display: inline-block;
+	border-bottom: 1px dashed #999;
+	padding-bottom: 10px;	
+	clear:both;
+	margin: 0 auto;
+
+}
+a.subscribe-btn  {
+	display:inline-block;
+	padding: 20px 40px;
+	margin:0 3px;
+	width: 200px;
+	font-family: "Abel", arial, sans-serif!important;
+	color: #A52E1D;
+	font-size: 16px!important;
+	background: #DADBDD;
+	padding: 10px 40px 10px 20px;
+	text-decoration: none;
+	font-weight: normal!important;
+	text-transform: uppercase;	
+
+}
+a.subscribe-btn:hover {
+	background: #BD977E;
+}
+a.selected {
+	background: #898989;
+	color: #ffffff;
+}
+.subscribe .row ul {
+	list-style: none;
+}
+
+.subscribe .row li {
+	float: left;
+	position: relative;
+}
+
+
 
 /* Media Queries */
 @media (max-width: 800px) {
