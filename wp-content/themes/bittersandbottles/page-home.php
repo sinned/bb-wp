@@ -115,28 +115,26 @@ get_header(); ?>
 		</div>
 
 		<div id="knock-hero" class="hero">
+			<h3 class="centered">Come and Knock on Our Door</h3>
 			<div class="primary">
-				<div class="main">
-					<h3 class="centered">Come and Knock on Our Door</h3>
+				<div class="main">					
 					<p>
 						We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
-						<br />
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
 					</p>
 				</div>
-			</div>		
-			<br />
+			</div>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
 		</div>
 
 		<div id="insta-hero" class="hero">
 			<div class="primary">
 				<div class="main">
-					<h3 class="centered">Come and Knock on Our Door</h3>
-					<p>
-						We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
-						<br />
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
-					</p>
+						<a href="http://www.instagram.com/bittersandbottles/">@bittersandbottles</a> on 
+						<img style="width:80px;margin-bottom:-10px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/instagram.png" alt="Instagram" />
+						<div class="hp-instagrid">
+							<!-- SnapWidget -->
+							<iframe src="http://snapwidget.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8bm98NXxub25lfG9uU3RhcnR8eWVz&v=21414" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:910px; height:260px"></iframe>
+						</div>
 				</div>
 			</div>		
 			<br />
