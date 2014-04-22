@@ -406,6 +406,9 @@ div#site-generator {
 	.hero {
 		padding: 100px 20px 100px 20px;
 	}
+	#sub-hero {
+		min-height: 600px;
+	}
 	.hp-cocktails {
 		padding: 260px 20px 20px 20px;
 	}	
@@ -419,7 +422,11 @@ div#site-generator {
 		float: none;
 	}
 	div.seriously {
-		width: 80%;
+		width: 100%;
+		text-align:center;
+	}
+	div.seriously p {
+		text-align:left;
 	}
 	.quote {
 		width: 100%;

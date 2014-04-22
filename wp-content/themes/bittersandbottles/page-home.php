@@ -97,7 +97,7 @@ get_header(); ?>
 		<div id="ship-hero" class="hero">
 			<div class="primary">
 				<div class="main centered">			
-					<h3>Protective Packaging <br />and Free Shipping</h3>
+					<h3 class="centered">Protective Packaging <br />and Free Shipping</h3>
 					<p>We use an innovative packaging product that surrounds bottles with a protective wall of air. The clear film is recyclable with 90% source reduction. We then pack the air-wrapped bottles tightly in your box. And if something doesn&rsquo;t arrive safely. We&rsquo;ll replace it.</p>	
 				</div>
 			</div>
