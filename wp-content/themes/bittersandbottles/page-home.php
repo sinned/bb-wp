@@ -28,17 +28,17 @@ get_header(); ?>
 			<div class="main centered">
 					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" alt="Register" />
 						<h4>Register</h4>
 						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/products/cocktails-subscription/">Sign up today</a>.</p>
 					</div>
 					<div class="bb-process">				
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" alt="Receive" />
 						<h4>Receive</h4>
 						<p>FedEx is at the door. <br />Today is a good day.</p>
 					</div>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" alt="Reveal"/>
 						<h4>Reveal</h4>
 						<p>Open your box of perfection. It's time to tend bar. <br /><a href="/products/cocktails-subscription/">Register now.</a></p>
 					</div>
@@ -59,12 +59,29 @@ get_header(); ?>
 					<br />
 					<div class="hp-box">
 						<p>
-							Setting up a home bar is a journey. Over the course of a year's cocktail subscription, we'll take you through recipes for 60 noteworth classics, and set up your top shelf home bar. Each delivery builds on its predecessor, adding new bottles to your bar and five new recipes to your repertoire.
+							Setting up a home bar is a journey. Over the course of a year's cocktail subscription, we'll take you through recipes for 60 noteworthy classics, and set up your top shelf home bar. Each delivery builds on its predecessor, adding new bottles to your bar and five new recipes to your repertoire.
 						</p>
 					</div>		
 				</div>
 			</div>
 		</div>
+
+		<div class="primary">
+			<div class="main centered">
+				<h3 class="centered">Don't Take Our Word For It. <br />The Critics Have Spoken.</h3>
+				<p class="quote">&ldquo; The best gift on the planet! My buddy had just got his long overdue promotion at the William Morris Agency (see ya later mailroom!), and I knew there was no better way to send my props from across the States than with a box of Top Shelf! Highly Recommended! &rdquo;</p>
+				<p class="quoteby">Kanye West<br /><small>Steamboat Springs, CO</small></p>
+			
+				<br clear="both" />
+				<hr />
+				<img class="seriously" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-seriously-img-fw.jpg" alt="Seriously, we take quality seriously." />
+				<div class="seriously">
+					<h3>Seriously, we take <br />quality seriously.</h3>
+					<p>Bitters + Bottles is a small team of liquor experts whose mission is for you to enjoy and serve the world's best spirits and cocktails at home. We find the highest quality spirits and ingredients, from the best producers, and bring them to your doorstep every month.</p>
+				</div>
+
+			</div>
+		</div>		
 
 
 		<div id="primary">

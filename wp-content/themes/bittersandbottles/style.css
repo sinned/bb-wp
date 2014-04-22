@@ -176,6 +176,33 @@ a.btn:hover, a.foxyshop_button:hover {
 	height:10px;
 }
 
+.seriously {
+	float:left;
+}
+
+.quote {
+	width:60%;
+	float:left;
+	padding:20px 20px 20px 50px;
+	display:inline;
+	text-align:left;
+}
+.quoteby {
+		width:28%;
+		color:#bd977e;
+		float:left;
+		display:inline;
+		text-align:left;padding:30px 0 0 0;
+		font-size:24px;
+		line-height:20px;
+		text-transform:uppercase;
+}
+.quoteby small { font-size: 12px;text-transform: uppercase;}
+
+div.seriously {
+	padding-left:20px;width:50%;	
+}
+
 /* Footer */
 footer#colophon { 
 	background: black;
@@ -316,7 +343,7 @@ div#site-generator {
 }
 
 /* content */
-#content p, #content ul { margin: 15px 0;}
+#content p, #content ul, .main p { margin: 15px 0;}
 
 /* Media Queries */
 @media (max-width: 800px) {
@@ -334,4 +361,19 @@ div#site-generator {
 		float:none;
 		margin: auto;
 	}	
+	.seriously {
+		margin: 0 auto;
+		float: none;
+	}
+	div.seriously {
+		width: 80%;
+	}
+	.quote {
+		width: 100%;
+		padding: 10px 10px 0 10px;
+	}
+	.quoteby {
+		width: 100%;
+		padding: 0 0 0 10px;
+	}
 }
