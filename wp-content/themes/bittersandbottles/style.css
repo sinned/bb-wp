@@ -401,7 +401,7 @@ div#site-generator {
 }
 
 /* content */
-#content {padding-bottom: 15px;}
+#content {padding: 15px 0;}
 #content p, #content ul, .main p { margin: 15px 0;}
 #content img, .main img { max-width: 100%; }
 
