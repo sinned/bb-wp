@@ -14,6 +14,15 @@
 
 get_header(); ?>
 
+		<div id="primary">
+			<div id="content" role="main">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php the_content(); ?>
+					<?php //comments_template( '', true ); ?>
+				<?php endwhile; // end of the loop. ?>
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
 		<div id="top-hero" class="hero">
 			<h3>Your bar, hand-picked + delivered.</h3>
 			<p>Artisanal Spirits + Classic Cocktail Recipes + Supplies.</p>
@@ -119,13 +128,17 @@ get_header(); ?>
 			<br />
 		</div>
 
-		<div id="primary">
-			<div id="content" role="main">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-					<?php //comments_template( '', true ); ?>
-				<?php endwhile; // end of the loop. ?>
-			</div><!-- #content -->
-		</div><!-- #primary -->
-
+		<div id="insta-hero" class="hero">
+			<div class="primary">
+				<div class="main">
+					<h3 class="centered">Come and Knock on Our Door</h3>
+					<p>
+						We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
+						<br />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
+					</p>
+				</div>
+			</div>		
+			<br />
+		</div>
 <?php get_footer(); ?>
