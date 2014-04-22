@@ -134,10 +134,18 @@ a.btn:hover, a.foxyshop_button:hover {
 	color: #000;
 }
 
+#knock-hero {
+	background: #d6cbc4;
+	padding: 20px;
+	color: #000;
+	min-height: 600px;
+}
+
 .primary {
 	float: right;
 	margin: 0 0 0 -26.4%;
-	width: 100%;	
+	width: 100%;
+	padding-bottom: 20px;
 }
 
 .main {
@@ -217,7 +225,7 @@ div.seriously {
 footer#colophon { 
 	background: black;
 	color: #fff;
-	padding: 20px 0;
+	padding: 0;
 }
 
 div#site-generator {
@@ -240,7 +248,7 @@ div#site-generator {
 	float: left;
 	margin-right: 10px;
 	font-size: 17px;
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 #sharebuttons ul {
@@ -354,6 +362,7 @@ div#site-generator {
 
 /* content */
 #content p, #content ul, .main p { margin: 15px 0;}
+#content img, .main img { max-width: 100%; }
 
 /* Media Queries */
 @media (max-width: 800px) {

@@ -92,6 +92,32 @@ get_header(); ?>
 			</div>
 		</div>			
 
+		<div class="primary">
+			<div class="main centered">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-sns-box-fw.jpg" alt="Still not sure?" />
+				<h3>Still not sure?</h3>
+				<p>
+					At Bitters + Bottles we believe strongly in everything that we serve and ship. We work tirelessly to select only the best spirits and worthwhile classic cocktail recipes. Every month will bring you closer to the perfect home bar. Even the monthly deliveries that aren&rsquo;t your favorites will help make your home bar complete.
+					<br /><br />
+				<p>
+					<a href="/contact/" class="btn">Ask Us A Question</a>
+				</p>
+			</div>
+		</div>
+
+		<div id="knock-hero" class="hero">
+			<div class="primary">
+				<div class="main">
+					<h3 class="centered">Come and Knock on Our Door</h3>
+					<p>
+						We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
+						<br />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
+					</p>
+				</div>
+			</div>		
+			<br />
+		</div>
 
 		<div id="primary">
 			<div id="content" role="main">
