@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-		<div id="top-hero">
+		<div id="top-hero" class="hero">
 			<h3>Your bar, hand-picked + delivered.</h3>
 			<p>Artisanal Spirits + Classic Cocktail Recipes + Supplies.</p>
 			<p>Curated + Delivered to your doorstep every month.</p>
@@ -40,12 +40,12 @@ get_header(); ?>
 					<div class="bb-process">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" alt="Reveal"/>
 						<h4>Reveal</h4>
-						<p>Open your box of perfection. It's time to tend bar. <br /><a href="/products/cocktails-subscription/">Register now.</a></p>
+						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/products/cocktails-subscription/">Register now.</a></p>
 					</div>
 			</div>
 		</div>
 
-		<div id="sub-hero">
+		<div id="sub-hero" class="hero">
 			<div class="primary">
 				<div class="main">			
 					<div class="hp-cocktails">
@@ -59,7 +59,7 @@ get_header(); ?>
 					<br />
 					<div class="hp-box">
 						<p>
-							Setting up a home bar is a journey. Over the course of a year's cocktail subscription, we'll take you through recipes for 60 noteworthy classics, and set up your top shelf home bar. Each delivery builds on its predecessor, adding new bottles to your bar and five new recipes to your repertoire.
+							Setting up a home bar is a journey. Over the course of a year&rsquo;s cocktail subscription, we&rsquo;ll take you through recipes for 60 noteworthy classics, and set up your top shelf home bar. Each delivery builds on its predecessor, adding new bottles to your bar and five new recipes to your repertoire.
 						</p>
 					</div>		
 				</div>
@@ -69,7 +69,7 @@ get_header(); ?>
 		<div class="primary">
 			<div class="main centered">
 				<h3 class="centered">Don't Take Our Word For It. <br />The Critics Have Spoken.</h3>
-				<p class="quote">&ldquo; The best gift on the planet! My buddy had just got his long overdue promotion at the William Morris Agency (see ya later mailroom!), and I knew there was no better way to send my props from across the States than with a box of Top Shelf! Highly Recommended! &rdquo;</p>
+				<p class="quote">&ldquo;The best gift on the planet! My buddy had just got his long overdue promotion at the William Morris Agency (see ya later mailroom!), and I knew there was no better way to send my props from across the States than with a box of Top Shelf! Highly Recommended!&rdquo;</p>
 				<p class="quoteby">Kanye West<br /><small>Steamboat Springs, CO</small></p>
 			
 				<br clear="both" />
@@ -81,7 +81,16 @@ get_header(); ?>
 				</div>
 
 			</div>
-		</div>		
+		</div>	
+
+		<div id="ship-hero" class="hero">
+			<div class="primary">
+				<div class="main centered">			
+					<h3>Protective Packaging <br />and Free Shipping</h3>
+					<p>We use an innovative packaging product that surrounds bottles with a protective wall of air. The clear film is recyclable with 90% source reduction. We then pack the air-wrapped bottles tightly in your box. And if something doesn&rsquo;t arrive safely. We&rsquo;ll replace it.</p>	
+				</div>
+			</div>
+		</div>			
 
 
 		<div id="primary">

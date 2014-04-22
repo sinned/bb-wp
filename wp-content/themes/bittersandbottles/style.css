@@ -103,7 +103,7 @@ a.btn:hover, a.foxyshop_button:hover {
 
 /* Home Page */
 
-#top-hero, #sub-hero {
+.hero {
 	margin: 0;
 	padding: 400px 20px 100px 20px;
 	color: #ffffff;
@@ -122,6 +122,16 @@ a.btn:hover, a.foxyshop_button:hover {
 	background-size: cover;
 	padding: 100px 20px;
 	min-height: 400px;
+}
+
+#ship-hero {
+	text-align: right;
+	background: url(images/homepage/_high_compression/BB-HP-packaging-fw.jpg) no-repeat;
+	background-size: cover;
+	background-position:center;
+	padding: 20px;
+	min-height: 300px;
+	color: #000;
 }
 
 .primary {
@@ -350,7 +360,7 @@ div#site-generator {
 	#sharebuttons {
 		display: none;
 	}
-	#top-hero, #sub-hero {
+	.hero {
 		padding: 100px 20px 100px 20px;
 	}
 	.hp-cocktails {
