@@ -140,7 +140,8 @@ get_header(); ?>
 						</div>
 						<div class="hp-instagrid">
 							<!-- www.intagme.com -->
-							<iframe src="http://www.intagme.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8eWVzfDV8dW5kZWZpbmVkfHllcw==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:980px; height: 280px" ></iframe>						</div>
+							<iframe src="http://www.intagme.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8eWVzfDV8dW5kZWZpbmVkfHllcw==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:980px; height: 260px" ></iframe>						
+						</div>
 				</div>
 			</div>		
 			<br />

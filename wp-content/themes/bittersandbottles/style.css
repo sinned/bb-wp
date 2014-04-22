@@ -255,7 +255,7 @@ div.seriously {
 }
 .hp-instagrid {
 	background: #dadadc url(images/homepage/BB-HP-instagrid.bg);	
-	padding: 5px;
+	padding: 5px 5px 0;
 	color: #000;
 	max-width: 900px;
 	margin: auto;
