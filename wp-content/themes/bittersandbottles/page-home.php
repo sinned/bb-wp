@@ -139,9 +139,8 @@ get_header(); ?>
 							<img style="width:80px;margin-bottom:-10px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/instagram.png" alt="Instagram" />
 						</div>
 						<div class="hp-instagrid">
-							<!-- SnapWidget -->
-							<iframe src="http://snapwidget.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8bm98NXxub25lfG9uU3RhcnR8eWVz&v=21414" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:910px; height:260px"></iframe>
-						</div>
+							<!-- www.intagme.com -->
+							<iframe src="http://www.intagme.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8eWVzfDV8dW5kZWZpbmVkfHllcw==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:980px; height: 280px" ></iframe>						</div>
 				</div>
 			</div>		
 			<br />
