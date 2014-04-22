@@ -29,7 +29,7 @@ get_header(); ?>
 			<p>Curated + Delivered to your doorstep every month.</p>
 			<p>
 				<br />
-				<a href="/products/cocktails-subscription/" class="btn">Get Started</a>
+				<a href="/cocktails/" class="btn">Get Started</a>
 			</p>
 		</div>
 
@@ -39,7 +39,7 @@ get_header(); ?>
 					<div class="bb-process">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" alt="Register" />
 						<h4>Register</h4>
-						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/products/cocktails-subscription/">Sign up today</a>.</p>
+						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/cocktails/">Sign up today</a>.</p>
 					</div>
 					<div class="bb-process">				
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" alt="Receive" />
@@ -49,7 +49,7 @@ get_header(); ?>
 					<div class="bb-process">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" alt="Reveal"/>
 						<h4>Reveal</h4>
-						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/products/cocktails-subscription/">Register now.</a></p>
+						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/cocktails/">Register now.</a></p>
 					</div>
 			</div>
 		</div>
@@ -62,7 +62,7 @@ get_header(); ?>
 							<h3>Classic Cocktails</h3>
 							<h5>Your Home Bar, Selected by Experts</h5>
 							<br />
-							<a href="/products/cocktails-subscription/" class="btn">Subscribe Cocktails</a>
+							<a href="/cocktails/" class="btn">Subscribe Cocktails</a>
 						</div>
 					</div>		
 					<br />
