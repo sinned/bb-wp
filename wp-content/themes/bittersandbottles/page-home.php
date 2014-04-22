@@ -129,8 +129,10 @@ get_header(); ?>
 		<div id="insta-hero" class="hero">
 			<div class="primary">
 				<div class="main">
-						<a href="http://www.instagram.com/bittersandbottles/">@bittersandbottles</a> on 
-						<img style="width:80px;margin-bottom:-10px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/instagram.png" alt="Instagram" />
+						<div class="hp-instagrid-head">
+							<a href="http://www.instagram.com/bittersandbottles/">@bittersandbottles</a> on 
+							<img style="width:80px;margin-bottom:-10px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/instagram.png" alt="Instagram" />
+						</div>
 						<div class="hp-instagrid">
 							<!-- SnapWidget -->
 							<iframe src="http://snapwidget.com/in/?u=Yml0dGVyc2FuZGJvdHRsZXN8aW58MTI1fDd8Mnx8bm98NXxub25lfG9uU3RhcnR8eWVz&v=21414" title="Instagram Widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:910px; height:260px"></iframe>

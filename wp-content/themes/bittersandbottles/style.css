@@ -240,11 +240,16 @@ div.seriously {
 	padding-left:20px;width:50%;	
 }
 
+.hp-instagrid-head {
+	padding: 0 0 7px;
+	max-width: 900px;
+	margin: auto;
+}
 .hp-instagrid {
 	background: #dadadc url(images/homepage/BB-HP-instagrid.bg);	
 	padding: 5px;
 	color: #000;
-	max-width: 1000px;
+	max-width: 900px;
 	margin: auto;
 }
 
