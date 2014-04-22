@@ -14,14 +14,17 @@
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
-				<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php if (get_the_content()) { ?>
+			<div id="primary">
+				<div id="content" role="main">
 					<?php the_content(); ?>
 					<?php //comments_template( '', true ); ?>
-				<?php endwhile; // end of the loop. ?>
-			</div><!-- #content -->
-		</div><!-- #primary -->
+				</div><!-- #content -->
+			</div><!-- #primary -->
+			<?php } // end-if ?>
+		<?php endwhile; // end of the loop. ?>
+
 
 		<div id="top-hero" class="hero">
 			<h3>Your bar, hand-picked + delivered.</h3>
