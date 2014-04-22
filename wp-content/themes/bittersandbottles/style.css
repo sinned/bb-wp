@@ -111,6 +111,7 @@ a.btn:hover, a.foxyshop_button:hover {
 }
 
 .hero img {
+	max-width: 100%;
 }
 
 #top-hero {
