@@ -83,7 +83,9 @@ get_header(); ?>
 			
 				<br clear="both" />
 				<hr />
-				<img class="seriously" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-seriously-img-fw.jpg" alt="Seriously, we take quality seriously." />
+				<div class="centered">
+					<img class="seriously" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-seriously-img-fw.jpg" alt="Seriously, we take quality seriously." />
+				</div>
 				<div class="seriously">
 					<h3>Seriously, we take <br />quality seriously.</h3>
 					<p>Bitters + Bottles is a small team of liquor experts whose mission is for you to enjoy and serve the world's best spirits and cocktails at home. We find the highest quality spirits and ingredients, from the best producers, and bring them to your doorstep every month.</p>

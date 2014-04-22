@@ -238,6 +238,7 @@ a.btn:hover, a.foxyshop_button:hover {
 .quoteby small { font-size: 12px;text-transform: uppercase;}
 
 div.seriously {
+	text-align: centered;
 	padding-left:20px;width:50%;	
 }
 
