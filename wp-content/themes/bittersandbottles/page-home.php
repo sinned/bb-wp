@@ -16,8 +16,8 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php if (get_the_content()) { ?>
-			<div id="primary">
-				<div id="content" role="main">
+			<div class="primary" style="padding:0;">
+				<div class="main" style="padding:0;">
 					<?php the_content(); ?>
 					<?php //comments_template( '', true ); ?>
 				</div><!-- #content -->
