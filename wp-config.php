@@ -25,7 +25,7 @@ if (getenv("CLEARDB_DATABASE_URL")) {
 	$cleardb_password = $cleardb_url["pass"];
 	$cleardb_db = substr($cleardb_url["path"],1);	
 } else {
-	$cleardb_server = '127.0.0.1';
+	$cleardb_server = 'localhost';
 	$cleardb_username = 'bitters';
 	$cleardb_password = 'bottles';
 	$cleardb_db = 'bitters';	
