@@ -23,10 +23,15 @@ body #cboxClose span {
 	vertical-align: -23%;
 }
 
-
-
 .foxyshop_price {
 	color: #A52F1D;
+}
+
+.foxyshop_oldprice {
+}
+
+.foxyshop_saleprice {
+	color: #D74125;
 }
 
 #foxyshop_container {
