@@ -1594,6 +1594,7 @@ function foxyshop_currency($input, $currencysymbol = true) {
 		$currency = money_format(apply_filters("foxyshop_money_format_string", $money_format_string), (double)$input);
 	} else {
 		//Windows: no internationalisation support
+		echo "No i18n support";
 		$currency_code = ($foxyshop_settings['locale_code'] == "en_GB" ? "&pound;" : "$");
 		$currency = $currency_code . number_format((double)$input, FOXYSHOP_DECIMAL_PLACES, ".", ",");
 	}
