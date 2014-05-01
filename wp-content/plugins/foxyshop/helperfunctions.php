@@ -1589,26 +1589,15 @@ function foxyshop_get_pagination($range = 4) {
 
 function foxyshop_currency($input, $currencysymbol = true) {
 	global $foxyshop_settings;
-	echo "input is $input ";
 	if (function_exists('money_format')) {
-		setlocale(LC_MONETARY, 'en_US');
 		$money_format_string = "%" . ($currencysymbol ? "" : "!") . "." . FOXYSHOP_DECIMAL_PLACES . "n";
 		$currency = money_format(apply_filters("foxyshop_money_format_string", $money_format_string), (double)$input);
-		echo " money format used $money_format_string $currency ";
 	} else {
 		//Windows: no internationalisation support
-		echo "No i18n support";
 		$currency_code = ($foxyshop_settings['locale_code'] == "en_GB" ? "&pound;" : "$");
 		$currency = $currency_code . number_format((double)$input, FOXYSHOP_DECIMAL_PLACES, ".", ",");
 	}
-	if (strpos($foxyshop_settings['locale_code'], "utf8") === false) {
-		echo "utf8 ";
-		$currency = utf8_encode($currency);
-	}
-
-	echo "The currency is " . $currency . " ";
-	echo "The locale is " . $foxyshop_settings['locale_code'] . " ";
-
+	if (strpos($foxyshop_settings['locale_code'], "utf8") === false) $currency = utf8_encode($currency);
 	return apply_filters("foxyshop_currency", $currency);
 }
 
