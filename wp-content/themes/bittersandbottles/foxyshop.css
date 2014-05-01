@@ -296,6 +296,9 @@ div.foxyshop_categories_top {
   float: left;
   clear: none;
 }
+.foxyshop_product_image_holder img {
+	width: auto;
+}
 
 .foxyshop_product .foxyshop_product_image {
 	width: 70%;
@@ -303,6 +306,10 @@ div.foxyshop_categories_top {
 }
 .foxyshop_product .foxyshop_product_info {
 	width: 100%;
+}
+
+button#productsubmit {
+	width: auto;
 }
 
 }
@@ -335,6 +342,9 @@ div.foxyshop_categories_top {
 }
 .foxyshop_product .foxyshop_product_info {
 	width: 100%;
+}
+button#productsubmit {
+	width: auto;
 }
 
 }
