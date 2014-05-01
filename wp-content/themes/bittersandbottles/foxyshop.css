@@ -26,6 +26,7 @@ body #cboxClose span {
 .foxyshop_product .foxyshop_product_info {
 	width: 530px;
 }
+
 #foxyshop_container {
 	margin-bottom: 30px;
 	overflow: auto;
@@ -98,11 +99,19 @@ ul.foxyshop_categories li:first-child {
 .foxyshop_product_list .foxyshop_product_info {
 	background: #D6CBC4;
 	width: 182px;
-	min-height: 80px;
+	min-height: 55px;
 	padding: 10px;
 	margin: 0;
 	text-align: center;
+	position: relative;
 }
+
+.foxyshop_product_info_bottom {
+	position: absolute; bottom: 0; left: 0;
+	text-align: center;
+	width: 100%;
+}
+
 .foxyshop_product_list .foxyshop_product_info h5 {
 	font-size: 12pt;
 	line-height: 12pt;

@@ -43,7 +43,9 @@ if (!$product['hide_product']) {
   //echo '<a href="'.foxyshop_product_link("", true).'" class="foxyshop_button">Add To Cart</a>';
 
   //Show Price (and sale if applicable)
+  echo '<div class="foxyshop_product_info_bottom">';
   foxyshop_price();
+  echo '</div>';
 
   echo "</div>\n";
 
