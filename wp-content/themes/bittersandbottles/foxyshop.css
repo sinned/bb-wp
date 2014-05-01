@@ -297,7 +297,7 @@ div.foxyshop_categories_top {
   clear: none;
 }
 .foxyshop_product_image_holder img {
-	width: auto;
+	width: 300px;
 }
 
 .foxyshop_product .foxyshop_product_image {
