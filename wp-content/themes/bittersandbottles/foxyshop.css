@@ -83,8 +83,8 @@ ul.foxyshop_categories li:first-child {
 }
 
 .foxyshop_category_children li {
-	width: 70px;
-	padding: 10px 0;
+	width: auto;
+	padding: 10px 12px;
 }
 
 .foxyshop_categories li a {
