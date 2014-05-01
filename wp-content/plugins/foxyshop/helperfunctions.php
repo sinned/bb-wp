@@ -1589,9 +1589,11 @@ function foxyshop_get_pagination($range = 4) {
 
 function foxyshop_currency($input, $currencysymbol = true) {
 	global $foxyshop_settings;
+	echo "input is $input ";
 	if (function_exists('money_format')) {
 		$money_format_string = "%" . ($currencysymbol ? "" : "!") . "." . FOXYSHOP_DECIMAL_PLACES . "n";
 		$currency = money_format(apply_filters("foxyshop_money_format_string", $money_format_string), (double)$input);
+		echo " money format used $money_format_string $currency ";
 	} else {
 		//Windows: no internationalisation support
 		echo "No i18n support";
