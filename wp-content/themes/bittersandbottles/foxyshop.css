@@ -27,6 +27,10 @@ body #cboxClose span {
 	width: 530px;
 }
 
+.foxyshop_price {
+	color: #A52F1D;
+}
+
 #foxyshop_container {
 	margin: 0 auto 30px auto;
 	overflow: auto;
