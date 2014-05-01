@@ -1598,6 +1598,10 @@ function foxyshop_currency($input, $currencysymbol = true) {
 		$currency = $currency_code . number_format((double)$input, FOXYSHOP_DECIMAL_PLACES, ".", ",");
 	}
 	if (strpos($foxyshop_settings['locale_code'], "utf8") === false) $currency = utf8_encode($currency);
+
+	echo "The currency is " . $currency . " ";
+	echo "The locale is " . $foxyshop_settings['locale_code'] . " ";
+
 	return apply_filters("foxyshop_currency", $currency);
 }
 

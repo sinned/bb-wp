@@ -8,7 +8,7 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
+ * @subpackage bittersandbottles
  * @since Twenty Eleven 1.0
  */
 
