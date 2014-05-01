@@ -1591,6 +1591,7 @@ function foxyshop_currency($input, $currencysymbol = true) {
 	global $foxyshop_settings;
 	echo "input is $input ";
 	if (function_exists('money_format')) {
+		setlocale(LC_MONETARY, 'en_US');
 		$money_format_string = "%" . ($currencysymbol ? "" : "!") . "." . FOXYSHOP_DECIMAL_PLACES . "n";
 		$currency = money_format(apply_filters("foxyshop_money_format_string", $money_format_string), (double)$input);
 		echo " money format used $money_format_string $currency ";
