@@ -23,9 +23,7 @@ body #cboxClose span {
 	vertical-align: -23%;
 }
 
-.foxyshop_product .foxyshop_product_info {
-	width: 530px;
-}
+
 
 .foxyshop_price {
 	color: #A52F1D;
@@ -87,6 +85,11 @@ ul.foxyshop_categories li.selected h2 a {
 	text-align: center;
 }
 
+.foxyshop_category_children {
+	width: 800px;
+	margin: auto;
+}
+
 .foxyshop_category_children li {
 	width: auto;
 	padding: 10px 12px;
@@ -123,7 +126,7 @@ ul.foxyshop_categories li.selected h2 a {
 	line-height: 12pt;
 }
 .foxyshop_product_list .foxyshop_product_info h5 a {
-	color: #000;
+	color: #111C1C;
 }
 .foxyshop_product_list li.foxyshop_product_box .foxyshop_price {
 	float: none;
@@ -141,6 +144,58 @@ ul.foxyshop_categories li.selected h2 a {
 	border: 1px solid #BD977E;
 }
 
+/* Product Detail */
+.product_detail {
+	width: 800px;
+	margin: 20px auto;
+}
+
+#foxyshop_main_price {
+	margin: 10px 0;
+}
+
+#foxyshop_main_price span.foxyshop_currentprice,  #foxyshop_main_price span.foxyshop_oldprice{
+	float: left;
+	margin-top: 6px;
+}
+
+#foxyshop_main_price input {
+	text-align: center;
+	background: #111C1C;
+	color: #fff;
+}
+
+#foxyshop_main_price span.quantity_dec {
+	margin-left: 10px;
+}
+
+span.quantity_dec {
+  background: url(images/shop/quantity-decrease.png) top left no-repeat;
+  margin-right:3px;
+}
+
+span.quantity_inc {
+  background: url(images/shop/quantity-increase.png) top left no-repeat;
+  margin-left:3px;
+}
+
+span.quantity_dec, span.quantity_inc {
+  cursor: pointer;
+  width: 18px;
+  height: 26px;
+  display:inline-block;
+  background-position: 0px 8px;
+}
+
+.foxyshop_product_info hr {
+	border-top: 1px dashed #898989;
+	background: none;
+	margin: 20px 0;
+}
+
+.foxyshop_variations label {
+    width: auto;
+}
 .foxyshop_variations select {
 	margin-top: 5px;
 }
@@ -157,14 +212,19 @@ ul.foxyshop_categories li.selected h2 a {
 	font-size: 18px;
 	font-weight: bold;
 }
+
+.foxyshop_product .foxyshop_product_info {
+	width: 270px;
+}
 .foxyshop_product .foxyshop_product_image {
-	width: 37%;
+	width: 62%;
+	margin-left: 20px;
 }
 .foxyshop_product .foxyshop_product_image img {
-	border: none;
+	border: 1px solid #BD977E;
 }
 .foxyshop_product_image_holder img {
-	max-width: 90%;
+	width: 100%;
 }
 
 #foxyshop_breadcrumbs {
@@ -175,9 +235,9 @@ ul.foxyshop_categories li.selected h2 a {
 /* ----------  BUTTONS  ------------ */
 
 .foxyshop_button, .foxyshop_button:visited {
-	background: #9e1d20 url(images/alert-overlay.png) repeat-x; 
+	background: #D74125; 
 	display: inline-block; 
-	padding: 5px 10px 6px; 
+	padding: 15px 50px 16px; 
 	color: #fff; 
 	text-decoration: none;
 	-moz-border-radius: inherit; 
@@ -197,7 +257,9 @@ ul.foxyshop_categories li.selected h2 a {
 .medium.foxyshop_button, .medium.foxyshop_button:visited 		{ font-size: 13px; font-weight: bold; line-height: 1; text-shadow: 0 -1px 1px rgba(0,0,0,0.25); }
 .large.foxyshop_button, .large.foxyshop_button:visited 			{ font-size: 14px; padding: 8px 14px 9px; }
 
-
+button#productsubmit {
+	width: 100%;
+}
 
 
 /* ----------  RESPONSIVE TINY  ------------ */
@@ -225,21 +287,30 @@ div.foxyshop_categories_top {
   text-align: center;
 }
 
+.foxyshop_category_children {
+	width: auto;
+}
+
 .foxyshop_category_children ul.foxyshop_categories li {
   width: auto;	
   float: left;
   clear: none;
 }
 
-.foxyshop_variations label {
-    width: auto;
+.foxyshop_product .foxyshop_product_image {
+	width: 70%;
+	margin: 20px;
 }
+.foxyshop_product .foxyshop_product_info {
+	width: 100%;
+}
+
 }
 
 
 
 /* ----------  RESPONSIVE SMALL  ------------ */
-@media all and (min-width:571px) and (max-width:830px) {
+@media all and (min-width:571px) and (max-width:844px) {
 
 div.foxyshop_categories_top {
 	width: 400px;
@@ -249,12 +320,21 @@ div.foxyshop_categories_top {
   width: 100px;
 }
 
+.foxyshop_category_children {
+	width: auto;
+}
+
 .foxyshop_product_list .foxyshop_product_image img {
 	width: 200px;
 }
 
-.foxyshop_variations label {
-    width: auto;
+.foxyshop_product .foxyshop_product_image {
+	width: 62%;
+	margin: 0;
+	float:none;
+}
+.foxyshop_product .foxyshop_product_info {
+	width: 100%;
 }
 
 }
@@ -263,5 +343,4 @@ div.foxyshop_categories_top {
 @media all and (min-width:845px) and (max-width:1070px) {
 
 }
-
 
