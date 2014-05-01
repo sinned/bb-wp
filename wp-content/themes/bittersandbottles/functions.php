@@ -18,3 +18,50 @@ function special_nav_class($classes, $item){
      }
      return $classes;
 }
+
+//returns the parent category ID
+function get_foxyshop_category_parent($categoryID = 0) {
+  $parentCategoryID = false;
+  $ancestors = get_ancestors($categoryID, 'foxyshop_categories');
+  if (count($ancestors)) {
+    $parentCategoryID = $ancestors[0];
+  } 
+  return $parentCategoryID;
+}
+
+//Writes the Children Categories of a Category (if available)
+function foxyshop_category_siblings($categoryID = 0, $showCount = false, $showDescription = true, $categoryImageSize = "thumbnail") {
+  global $taxonomy_images_plugin;
+  $write = "";
+
+  $ancestors = get_ancestors($categoryID, 'foxyshop_categories');
+  $parentCategoryID = $ancestors[0];
+
+  $args = array('hide_empty' => 0, 'hierarchical' => 0, 'parent' => $parentCategoryID, 'orderby' => 'name', 'order' => 'ASC');
+  $termchildren = get_terms('foxyshop_categories', apply_filters('foxyshop_category_children_query',$args));
+  if ($termchildren) {
+
+    //Sort Categories
+    $termchildren = foxyshop_sort_categories($termchildren, $parentCategoryID);
+
+    foreach ($termchildren as $child) {
+      $term = get_term_by('id', $child->term_id, "foxyshop_categories");
+      if (substr($term->name,0,1) == "_") continue;
+
+      $productCount = ($showCount ? " (" . $term->count . ")" : "");
+      $url = get_term_link($term, "foxyshop_categories");
+      $liwrite = "";
+      $liwrite .= '<li id="foxyshop_category_' . $term->term_id . '">';
+      $liwrite .= '<h2><a href="' . $url . '">' . $term->name . '</a>' . $productCount . '</h2>';
+      if ($showDescription && $term->description) $liwrite .= apply_filters('the_content', $term->description);
+      if (isset($taxonomy_images_plugin)) {
+        $img = $taxonomy_images_plugin->get_image_html($categoryImageSize, $term->term_taxonomy_id);
+        if(!empty($img)) $liwrite .= '<a href="' . $url . '" class="foxyshop_category_image">' . $img . '</a>';
+      }
+      $liwrite .= '</li>'."\n";
+      $write .= apply_filters('foxyshop_category_children_write', $liwrite, $term);
+    }
+    if ($write) echo '<ul class="foxyshop_categories">' . $write . '</ul>' . apply_filters('foxyshop_after_category_display', '<div class="clr"></div>');
+  }
+  
+}
