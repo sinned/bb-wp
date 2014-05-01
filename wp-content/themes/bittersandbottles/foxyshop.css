@@ -28,7 +28,7 @@ body #cboxClose span {
 }
 
 #foxyshop_container {
-	margin-bottom: 30px;
+	margin: 0 auto 30px auto;
 	overflow: auto;
 }
 #foxyshop_container h1 {
@@ -41,6 +41,11 @@ body #cboxClose span {
 }
 .foxyshop_product_list {
 	margin: 30px 0 15px 0;
+}
+
+div.foxyshop_categories_top {
+	width: 600px;
+	margin: 0 auto;
 }
 
 ul.foxyshop_categories {
@@ -56,16 +61,12 @@ ul.foxyshop_categories li.selected h2 a {
 	color: #A52F1D;
 }
 
-ul.foxyshop_categories li:first-child {
-	margin-left: 10%;
-}
-
-.foxyshop_category_children ul.foxyshop_categories li:first-child {
-	margin-left: 0;
-}
-
 #foxyshop_container .foxyshop_category_children li {
-	height: 30px;
+	height: 20px;
+}
+
+#foxyshop_container .foxyshop_category_children li.selected {
+	height: 19px;
 }
 
 #foxyshop_container .foxyshop_category_children li h2 {
@@ -113,8 +114,12 @@ ul.foxyshop_categories li:first-child {
 }
 
 .foxyshop_product_list .foxyshop_product_info h5 {
-	font-size: 12pt;
+	font-family: 'Avenir 55 Roman';
+	font-size: 11pt;
 	line-height: 12pt;
+}
+.foxyshop_product_list .foxyshop_product_info h5 a {
+	color: #000;
 }
 .foxyshop_product_list li.foxyshop_product_box .foxyshop_price {
 	float: none;
@@ -198,10 +203,6 @@ ul.foxyshop_categories li:first-child {
 	min-width: 410px;
 }
 
-ul.foxyshop_categories li:first-child {
-	margin-left: 0;
-}
-
 .foxyshop_product_list li.foxyshop_product_box {
 	clear: both;
 	margin-left: auto;
@@ -209,11 +210,21 @@ ul.foxyshop_categories li:first-child {
 	float: none;
 }
 
+div.foxyshop_categories_top {
+	width: auto;
+}
+
 .foxyshop_categories li {
-    clear: both;
-    width: 100%;
-    float: none;
-    text-align: center;
+  clear: both;
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+
+.foxyshop_category_children ul.foxyshop_categories li {
+  width: auto;	
+  float: left;
+  clear: none;
 }
 
 .foxyshop_variations label {
@@ -224,10 +235,14 @@ ul.foxyshop_categories li:first-child {
 
 
 /* ----------  RESPONSIVE SMALL  ------------ */
-@media all and (max-width:830px) {
+@media all and (min-width:571px) and (max-width:830px) {
 
-ul.foxyshop_categories li:first-child {
-	margin-left: 0;
+div.foxyshop_categories_top {
+	width: 400px;
+}
+
+.foxyshop_categories li {
+  width: 100px;
 }
 
 .foxyshop_product_list .foxyshop_product_image img {

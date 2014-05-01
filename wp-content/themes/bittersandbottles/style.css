@@ -8,9 +8,12 @@ Version: 1.0
 
 @import url("../twentyeleven/style.css");
 
+/* fontshop preview */
+#mfPreviewBarShow, #mfPreviewBar { display: none;}
+
 /* Bitters+Bottles */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
 	text-transform: uppercase;
 }
 
@@ -18,13 +21,18 @@ h1 {font-size:60pt;line-height:60pt;font-weight:bold;}
 h2 {font-size:48pt;line-height:48pt;font-weight:bold;}
 h3, .entry-content h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
 h4 {font-size:25pt;line-height:25pt;text-transform: none;}
-h5 {font-size:16pt;line-height:18pt;text-transform: none;}
+h5 {font-family: 'Avenir 35 Light', Arial, sans-serif;font-size:16pt;line-height:18pt;text-transform: none;}
 h6 {font-size:16pt;line-height:18pt;}
 
-p {margin:0;padding:0;}
+p {margin:0;padding:0;font-family: 'Avenir 35 Light', Arial, sans-serif;}
 
 body {
 	padding: 0;
+	font-family: 'Avenir 35 Light', Verdana, sans-serif;
+}
+
+li {
+	font-family: 'Avenir 35 Light', Verdana, sans-serif;
 }
 
 .centered {

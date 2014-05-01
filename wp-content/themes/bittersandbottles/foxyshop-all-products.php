@@ -10,8 +10,10 @@ global $product;
   //Write Category Title
   //echo '<h1 id="foxyshop_category_title">Products</h1>'."\n";
 
+  echo '<div class="foxyshop_categories_top">';
   foxyshop_category_children(0, false);
-  
+  echo '</div>';
+    
   //Write Product Sort Dropdown
   //foxyshop_sort_dropdown();
 
