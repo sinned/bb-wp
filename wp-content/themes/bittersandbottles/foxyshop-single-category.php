@@ -64,7 +64,6 @@
 <script type="text/javascript">
 jQuery(document).ready(function($){
   // highlight the current category
-  console.log('hi dennis');
   $('#foxyshop_category_<?php echo $currentCategoryID; ?>').addClass('selected');
   $('#foxyshop_category_<?php echo get_foxyshop_category_parent($currentCategoryID); ?>').addClass('selected');
 });
