@@ -1600,7 +1600,10 @@ function foxyshop_currency($input, $currencysymbol = true) {
 		$currency_code = ($foxyshop_settings['locale_code'] == "en_GB" ? "&pound;" : "$");
 		$currency = $currency_code . number_format((double)$input, FOXYSHOP_DECIMAL_PLACES, ".", ",");
 	}
-	if (strpos($foxyshop_settings['locale_code'], "utf8") === false) $currency = utf8_encode($currency);
+	if (strpos($foxyshop_settings['locale_code'], "utf8") === false) {
+		echo "utf8 ";
+		$currency = utf8_encode($currency);
+	}
 
 	echo "The currency is " . $currency . " ";
 	echo "The locale is " . $foxyshop_settings['locale_code'] . " ";
