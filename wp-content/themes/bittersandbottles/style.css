@@ -70,6 +70,10 @@ ul#menu-top-menu li {
   font-family: "Abel", arial, sans-serif;
 }
 
+li.current-menu-item a {
+	color: #D74125!important;
+}
+
 .page-header {
 	background:#000;
 	color:#fff;
