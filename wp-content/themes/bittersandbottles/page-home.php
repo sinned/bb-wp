@@ -32,7 +32,7 @@ get_header(); ?>
 			<p>Curated + Delivered to your doorstep every month.</p>
 			<p>
 				<br />
-				<a href="/cocktails/" class="btn">Get Started</a>
+				<a href="/cocktails/" class="btn btn-arrow">Get Started</a>
 			</p>
 		</div>
 
@@ -65,7 +65,7 @@ get_header(); ?>
 							<h3>Classic Cocktails</h3>
 							<h5>Your Home Bar, Selected by Experts</h5>
 							<br />
-							<a href="/cocktails/" class="btn">Subscribe Cocktails</a>
+							<a href="/cocktails/" class="btn btn-arrow">Subscribe Cocktails</a>
 						</div>
 					</div>		
 					<br />
@@ -114,7 +114,7 @@ get_header(); ?>
 					At Bitters + Bottles we believe strongly in everything that we serve and ship. We work tirelessly to select only the best spirits and worthwhile classic cocktail recipes. Every month will bring you closer to the perfect home bar. Even the monthly deliveries that aren&rsquo;t your favorites will help make your home bar complete.
 					<br /><br />
 				<p>
-					<a href="/contact/" class="btn">Ask Us A Question</a>
+					<a href="/contact/" class="btn btn-arrow">Ask Us A Question</a>
 				</p>
 			</div>
 		</div>

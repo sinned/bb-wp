@@ -34,7 +34,7 @@ get_header(); ?>
 				</div>
 
 				<div class="show_subscription_choices centered">
-					<button class="btn">Get Started</button>
+					<button class="btn btn-arrow">Get Started</button>
 				</div>
 
 				<div class="subscription_choices centered" style="display:none;">
@@ -44,24 +44,26 @@ get_header(); ?>
 							<ul>
 								<li>Step 1<li>
 								<li><a href="#" class="subscribe-btn">This is for me</a></li>
-								<li><a href="#" class="subscribe-btn">This is a gift</a></li>
+								<li><a href="#" id="gift_yes" class="subscribe-btn">This is a gift</a></li>
 							</ul>
-						</div>
-						<div class="row giftoptions" style="display:none;">
-							<select name="Gift_Title">
-								<option value="">Title</option>
-								<option>Mr.</option>
-								<option>Ms.</option>
-								<option>Dr.</option>
-							</select>
-							<input type="text" name="shipto" placeholder='Lucky Recipient&rsquo;s Name'>
-							<textarea name="Gift_Message"></textarea>
+							<br clear="both"/>
+							<div class="giftoptions" style="display:none;">
+								<select name="Gift_Title">
+									<option value="">Title</option>
+									<option>Dr.</option>
+									<option>Ms.</option>
+									<option>Mr.</option>
+								</select>
+								<input type="text" name="shipto" placeholder='Lucky Recipient&rsquo;s Name'>
+								<textarea name="Gift_Message"></textarea>
 
+							</div>
 						</div>
+
 						<div class="row needbartools">
 							<ul>
 								<li>Step 2</li>
-								<li><a href="#" class="subscribe-btn">I need bar tools</a></li>
+								<li><a href="#" id="bartools_yes" class="subscribe-btn">I need bar tools</a></li>
 								<li><a href="#" class="subscribe-btn">I don&rsquo;t need bar tools</a></li>
 							</ul>
 						</div>
@@ -73,7 +75,7 @@ get_header(); ?>
 					<input type="hidden" name="sub_frequency" value="1m" />
 					<input type="hidden" name="sub_startdate" value="" />
 					<!-- <input type="hidden" name="empty" value="true" /> -->
-					<button class="btn">Add to cart</button>
+					<button id="subscribe_process" class="btn btn-arrow">Add to cart</a>
 					</form>							
 				</div>
 			</div><!-- #content -->

@@ -50,7 +50,8 @@ bb.age_verify = (function() {
       scrolling:false,
       opacity: .9,
       open: true,
-      overlayClose: false
+      overlayClose: false,
+      trapFocus: true
     });
     $('#cboxClose').hide();
     _gaq.push(['_trackPageview', window.location.pathname + '?verify']);
@@ -85,9 +86,11 @@ bb.subscription = (function() {
     $('.giftornot a').click(function(e) {
       e.preventDefault();
       if ($(this).html() == 'This is a gift') {
-        $('.giftoptions').show();      
+        $('.giftoptions').show('fast');      
       } else {
-        $('.giftoptions').hide();         
+        $('.giftoptions').hide('fast');
+        $('form#buy-subscription [name=shipto]').val('');         
+        $('form#buy-subscription [name=Gift_Message]').val(''); 
       }
 
     });
@@ -95,6 +98,21 @@ bb.subscription = (function() {
     $('.needbartools a').click(function(e) {
       e.preventDefault();
     });  
+
+    $('button#subscribe_process').click(function(e) {
+      e.preventDefault();
+      console.log('checking required fields');   
+      $('#buy-subscription').submit();   
+
+      // add the starter kit if it's selected.
+      if ($('a#bartools_yes').hasClass('selected')) {
+        var whofor = $('form#buy-subscription [name=shipto]').val();
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=35&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+        $.getJSON(carturl, function(data) {
+        });            
+      }      
+    })
+
   }
 
   function process() {

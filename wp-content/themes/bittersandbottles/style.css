@@ -92,11 +92,6 @@ span.super-plus {
 	background: url(images/header/BB-header-cart-qty-blank.png) no-repeat;	
 }
 
-.btn-arrow {
-  background-image: url(images/UI/BB-UI-button-arrow-right.png) no-repeat ;
-  background-position: 90% 7px;
-  padding: 9px 50px 10px 30px;
-}
 
 
 /* Buttons */
@@ -115,14 +110,21 @@ button.btn, a.btn, .foxyshop_button {
 
 a.btn:visited, a.foxyshop_button:visited {
   background: #A52F1D;
-  text-decoration: none;
 }
 
 button.btn:hover, a.btn:hover, a.foxyshop_button:hover {
   background: #BD977E;
-  text-decoration: none;
   cursor: pointer;
 }
+
+a.btn-arrow , a.btn-arrow:visited, a.btn-arrow:hover, a.btn-arrow:active, 
+button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
+  background-image: url(images/UI/BB-UI-button-arrow-right.png) ;
+  background-repeat: no-repeat;
+  background-position: 90% 7px;
+  padding: 9px 50px 10px 30px;
+}
+
 
 /* Home Page */
 
@@ -498,8 +500,14 @@ a.selected {
 	font-size: 30px;
 	margin: 20px 0;
 }
-.giftoptions { text-align: left;}
-.giftoptions input { width: 200px;}
+.giftoptions { 
+	clear: both;
+	margin: 20px 0;
+	text-align: left;
+}
+.giftoptions input { 
+	width: 200px;
+}
 
 /* Media Queries */
 @media (max-width: 800px) {
