@@ -6,7 +6,7 @@ bb.age_verify = (function() {
   var age_verified_check = 'aug20a';
 
   function init() {
-    console.log('initing the age verification');
+    //console.log('initing the age verification');
 
     $('#ageModal a').click(function(e) {
       e.preventDefault();
@@ -27,7 +27,9 @@ bb.age_verify = (function() {
     // set the cookie
     $.cookie('age_verified', age_verified_check, { expires: 14 });
     // close the modal
+    $('#ageModal').hide();
     $.colorbox.close();
+
   }
 
   function verify() {
@@ -38,7 +40,8 @@ bb.age_verify = (function() {
   }
 
   function showmodal() {
-    console.log('showing age verification modal');
+    //console.log('showing age verification modal');
+    $('#ageModal').show();
     $.colorbox({
       inline:true, 
       closeButton:true,

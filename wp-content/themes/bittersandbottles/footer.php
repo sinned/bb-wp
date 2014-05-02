@@ -50,7 +50,7 @@
 <?php wp_footer(); ?>
 
 <?php if (!isset($notcheckout)) { ?>
-  <div id="ageModal" class="reveal-modal small">
+  <div id="ageModal" style="display:none;">
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/global/bb-logo.png" alt="Bitters+Bottles" />
     <h3 style="font-weight:300;">Are you over 21 years of age?</h3>
     <br />
