@@ -65,8 +65,9 @@ li.home-nav-class a {
   opacity:0;
 }
 
-ul#menu-top-menu {
+ul#menu-top-menu li {
   text-transform: uppercase;
+  font-family: "Abel", arial, sans-serif;
 }
 
 .page-header {
@@ -124,7 +125,6 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
   background-position: 90% 7px;
   padding: 9px 50px 10px 30px;
 }
-
 
 /* Home Page */
 
@@ -441,7 +441,7 @@ div#site-generator {
 
 .subscribe .row {
 	display: inline-block;
-	border-bottom: 1px dashed #999;
+	border-bottom: 1px dashed #898989;
 	padding-bottom: 10px;	
 	clear:both;
 	margin: 0 auto;
@@ -494,6 +494,36 @@ a.selected {
 	background: url(images/global/BB-navigation-plus-sign-superscript.png) no-repeat 9px 15px;
 
 }
+.subscription_choices {
+	width: 700px;
+	margin: 0 auto;
+}
+.subscription_choices .row {
+	clear:both;
+	height: 40px;
+	border-bottom: 1px dashed #898989;
+	margin: 0 0 20px;
+
+}
+.subscription_choices .col1, .subscription_choices .col2 {
+	float:left;
+}
+.subscription_choices .col1 {
+	width: 60px;
+	text-align: right;
+	padding: 15px 20px;
+  font-family: "Abel", arial, sans-serif!important;
+	text-transform: uppercase;	
+}
+.subscription_choices .col2{
+	text-align: left;
+	width: 600px;
+}
+.subscription_choices select {
+	width: 100%;
+	text-transform: uppercase;
+}
+
 
 .subscription_price {
 	color:#A52F1D;
@@ -507,6 +537,26 @@ a.selected {
 }
 .giftoptions input { 
 	width: 200px;
+}
+
+/* form stuff */
+select {
+  font-family: "Abel", arial, sans-serif!important;
+	padding: 5px 8px;
+	font-size: 16px;
+	border: 1px solid #D6CBC4;
+	border-radius: 0;
+  -webkit-appearance: none;	
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50px' height='50px'><polyline points='46.139,15.518 25.166,36.49 4.193,15.519'/></svg>") right no-repeat; 
+  background-color: #F2ECE9;
+  background-transparency: 0.5;
+  background-position: right 15px top 7px;
+  background-size: 18px 18px;    
+}
+
+select:active {
+  font-family: "Abel", arial, sans-serif!important;
+    border: 1px solid #000;  	
 }
 
 /* Media Queries */

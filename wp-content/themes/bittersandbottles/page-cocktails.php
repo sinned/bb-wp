@@ -38,36 +38,56 @@ get_header(); ?>
 				</div>
 
 				<div class="subscription_choices centered" style="display:none;">
-					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
-					<div class="subscribe">
-						<div class="row giftornot">
-							<ul>
-								<li>Step 1<li>
-								<li><a href="#" class="subscribe-btn">This is for me</a></li>
-								<li><a href="#" id="gift_yes" class="subscribe-btn">This is a gift</a></li>
-							</ul>
-							<br clear="both"/>
-							<div class="giftoptions" style="display:none;">
-								<select name="Gift_Title">
-									<option value="">Title</option>
-									<option>Dr.</option>
-									<option>Ms.</option>
-									<option>Mr.</option>
-								</select>
-								<input type="text" name="shipto" placeholder='Lucky Recipient&rsquo;s Name'>
-								<textarea name="Gift_Message"></textarea>
 
-							</div>
-						</div>
-						<br clear="both"/>
-						<div class="row needbartools">
-							<ul>
-								<li>Step 2</li>
-								<li><a href="#" id="bartools_yes" class="subscribe-btn">I need bar tools</a></li>
-								<li><a href="#" class="subscribe-btn">I don&rsquo;t need bar tools</a></li>
-							</ul>
+					<div class="row">
+						<div class="col1">Step 1</div>
+						<div class="col2">
+							<select>
+								<option value="">Select Your Recipient</option>
+								<option>This is a Gift</option>
+								<option>This is for myself</option>
+							</select>
 						</div>
 					</div>
+
+					<div class="row giftoptions" style="display:none;">
+							<select name="Gift_Title">
+								<option value="">Title</option>
+								<option>Dr.</option>
+								<option>Ms.</option>
+								<option>Mr.</option>
+							</select>
+							<input type="text" name="shipto" placeholder='Enter Gift Recipient Name'>
+							<textarea name="Gift_Message" placeholder="Enter Gift Message Here"></textarea>
+					</div>
+
+					<div class="row">
+						<div class="col1">Step 2</div>
+						<div class="col2">
+							<select>
+								<option value="">Select Subscription Duration</option>
+								<option>1 month</option>
+								<option>3 months</option>
+								<option>6 months</option>		
+								<option>12 months</option>																
+							</select>
+						</div>
+					</div>					
+
+					<div class="row">
+						<div class="col1">Step 3</div>
+						<div class="col2">
+							<select>
+								<option value="">Do you need bartools?</option>
+								<option>Yes</option>
+								<option>No</option>
+							</select>
+						</div>
+					</div>
+
+
+					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
+
 					<input type="hidden" name="name" value="Monthly Cocktails Subscription" />
 					<input type="hidden" name="category" value="SUBSCRIPTION" />
 					<input type="hidden" name="price" value="95" />
