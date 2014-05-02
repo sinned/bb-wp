@@ -59,7 +59,7 @@ get_header(); ?>
 
 							</div>
 						</div>
-
+						<br clear="both"/>
 						<div class="row needbartools">
 							<ul>
 								<li>Step 2</li>
