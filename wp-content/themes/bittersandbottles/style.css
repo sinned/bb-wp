@@ -65,7 +65,7 @@ li.home-nav-class a {
   opacity:0;
 }
 
-ul#menu-top-menu li {
+ul#menu-top-menu li, ul#menu-footer-menu li {
   text-transform: uppercase;
   font-family: "Abel", arial, sans-serif;
 }
