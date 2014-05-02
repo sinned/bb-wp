@@ -17,12 +17,12 @@ h1, h2, h3, h4, h6 {
 	text-transform: uppercase;
 }
 
-h1 {font-size:60pt;line-height:60pt;font-weight:bold;}
-h2 {font-size:48pt;line-height:48pt;font-weight:bold;}
-h3, .entry-content h3 {font-size:30pt;line-height:30pt;font-weight:bold;}
-h4 {font-size:25pt;line-height:25pt;text-transform: none;}
-h5 {font-family: 'Avenir 35 Light', Arial, sans-serif;font-size:16pt;line-height:18pt;text-transform: none;}
-h6 {font-size:16pt;line-height:18pt;}
+h1 {font-size:60px;line-height:60px;font-weight:bold;}
+h2 {font-size:48px;line-height:48px;font-weight:bold;}
+h3, .entry-content h3 {font-size:30px;line-height:30px;font-weight:bold;}
+h4 {font-size:25px;line-height:25px;text-transform: none;}
+h5 {font-family: 'Avenir 35 Light', Arial, sans-serif;font-size:16px;line-height:18px;text-transform: none;}
+h6 {font-size:16px;line-height:18px;}
 
 p {margin:0;padding:0;font-family: 'Avenir 35 Light', Arial, sans-serif;}
 
@@ -92,25 +92,34 @@ span.super-plus {
 	background: url(images/header/BB-header-cart-qty-blank.png) no-repeat;	
 }
 
+.btn-arrow {
+  background-image: url(images/UI/BB-UI-button-arrow-right.png) no-repeat ;
+  background-position: 90% 7px;
+  padding: 9px 50px 10px 30px;
+}
+
+
 /* Buttons */
 button.btn, a.btn, .foxyshop_button {
   font-family: "Abel", arial, sans-serif!important;
   color: #ffffff;
+  padding: 9px 30px 10px 30px;  
   font-size: 16px!important;
-  background: #D74125 url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
-  padding: 10px 40px 10px 20px;
+  background: #D74125;
   text-decoration: none;
   font-weight: normal!important;
   text-transform: uppercase;
+	text-shadow: none;
+	border: none;
 }
 
 a.btn:visited, a.foxyshop_button:visited {
-  background: #A52F1D url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
+  background: #A52F1D;
   text-decoration: none;
 }
 
 button.btn:hover, a.btn:hover, a.foxyshop_button:hover {
-  background: #BD977E url(images/UI/BB-UI-button-arrow-right.png) no-repeat 95% 10px;
+  background: #BD977E;
   text-decoration: none;
   cursor: pointer;
 }
@@ -262,12 +271,25 @@ div.seriously {
 	margin: auto;
 }
 .hp-instagrid {
-	background: #dadadc url(images/homepage/BB-HP-instagrid.bg);	
+	background: #dadadc url(images/homepage/BB-HP-instagrid-bg.png);	
 	padding: 5px 5px 0;
 	color: #000;
 	max-width: 900px;
 	margin: auto;
 }
+
+/* Age Modal */
+#ageModal {
+  text-align: center; 
+  padding: 30px;
+}
+
+#ageModal h3 {
+  margin-top: 25px; }
+
+#ageModal input {
+  max-width: 300px;
+  margin: auto; }
 
 /* Footer */
 footer#colophon { 
@@ -442,7 +464,7 @@ a.subscribe-btn:hover {
 	background: #BD977E;
 }
 a.selected {
-	background: #898989;
+	background: #A52F1D;
 	color: #ffffff;
 }
 .subscribe .row ul {
@@ -453,6 +475,31 @@ a.selected {
 	float: left;
 	position: relative;
 }
+
+/* Cocktails Subscription Page */
+.cocktails-page {
+	width: 800px;
+	margin: 30px auto;
+}
+
+.cocktails-page ul {
+	list-style : none;
+}
+
+.cocktails-page ul li {
+	border-bottom: 1px dashed #898989;
+	padding: 10px 10px 10px 20px;
+	background: url(images/global/BB-navigation-plus-sign-superscript.png) no-repeat 9px 15px;
+
+}
+
+.subscription_price {
+	color:#A52F1D;
+	font-size: 30px;
+	margin: 20px 0;
+}
+.giftoptions { text-align: left;}
+.giftoptions input { width: 200px;}
 
 /* Media Queries */
 @media (max-width: 800px) {

@@ -6,6 +6,25 @@ function foxyshop_custom_css() {
 	return;
 }
 
+// adding our application script a la http://codex.wordpress.org/Function_Reference/wp_enqueue_script
+function bittersandbottles_scripts_method() {
+  wp_enqueue_script(
+    'bittersandbottles-script',
+    get_stylesheet_directory_uri() . '/js/bittersandbottles.js',
+    array( 'jquery' )
+  );
+}
+add_action( 'wp_enqueue_scripts', 'bittersandbottles_scripts_method' );
+
+function jquerycookie_scripts_method() {
+  wp_enqueue_script(
+    'jquerycookie-script',
+    get_stylesheet_directory_uri() . '/js/jquery.cookie.js',
+    array( 'jquery' )
+  );
+}
+add_action( 'wp_enqueue_scripts', 'jquerycookie_scripts_method' );
+
 //--------------------------------------------------------------------------------------------------------------
 
 
