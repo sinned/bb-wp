@@ -67,8 +67,22 @@ bb.age_verify = (function() {
 
 bb.subscription = (function() {
 
+  function calculate_price() {
+    console.log('calculating price');
+    if ($('#choice_isgift').val() == 'gift') {
+      var gift_price = $('#choice_giftduration').val() * 95;      
+      $('.subscription_choices .price').html('$' +gift_price.toLocaleString());
+      $('.price_disclaimer').hide();
+    } else {
+      $('.subscription_choices .price').html('$95 / month');
+      $('.price_disclaimer').show();      
+    }
+
+  }
+
   function init() {
 
+    // get started button
     $('.show_subscription_choices button').click(function(e) { 
       e.preventDefault();
       $('.subscription_choices').show('fast', function () {
@@ -76,23 +90,22 @@ bb.subscription = (function() {
       $('.show_subscription_choices').hide();
     });
 
-    // toggle selected button
-    $('.subscription_choices a').click(function(e) {
-      e.preventDefault();
-      $(this).parents('ul').find('a').removeClass('selected');
-      $(this).addClass('selected');
-    });
+    // recalculate price every time you pick something
+    $('.subscription_choices select').change(function(e) {
+      calculate_price();
+    });       
 
-    $('.giftornot a').click(function(e) {
+    $('#choice_isgift').change(function(e) {
       e.preventDefault();
-      if ($(this).html() == 'This is a gift') {
-        $('.giftoptions').show('fast');      
+      if ($('#choice_isgift').val() == 'gift') {
+        $('.giftoptions').show('fast');    
+        $('#choice_isgift').parents('.row').height(200);
+        $('#choice_bartools_question').html('Do they need bartools?');
       } else {
         $('.giftoptions').hide('fast');
-        $('form#buy-subscription [name=shipto]').val('');         
-        $('form#buy-subscription [name=Gift_Message]').val(''); 
+        $('#choice_isgift').parents('.row').height(40);      
+        $('#choice_bartools_question').html('Do you need bartools?');   
       }
-
     });
 
     $('.needbartools a').click(function(e) {
@@ -102,13 +115,32 @@ bb.subscription = (function() {
     $('button#subscribe_process').click(function(e) {
       e.preventDefault();
       console.log('checking required fields');   
+      
+      if ($('#choice_isgift').val() == 'gift') {
+        console.log('this is a gift');
+         $('form#buy-subscription [name=code]').val('COCKTAILS-GIFT-' +$('#choice_giftduration').val()+ 'MO');
+         var gift_price = $('#choice_giftduration').val() * 95;
+         $('form#buy-subscription [name=price]').val(gift_price);           
+         $('form#buy-subscription [name=category]').val('DEFAULT'); 
+         $('form#buy-subscription [name=sub_frequency]').val(''); 
+         $('form#buy-subscription [name=shipto]').val($('#choice_giftname').val());         
+         $('form#buy-subscription [name=Gift_Message]').val($('#choice_giftmessage').val()); 
+         $('form#buy-subscription [name=Gift_Title]').val($('#choice_gifttitle').val()); 
+      } else {
+         $('form#buy-subscription [name=code]').val('COCKTAILS-MONTHLY-SUBSCRIPTION');   
+         $('form#buy-subscription [name=price]').val(95);                    
+         $('form#buy-subscription [name=category]').val('SUBSCRIPTION');                
+         $('form#buy-subscription [name=sub_frequency]').val('1m'); 
+      }      
+
       $('#buy-subscription').submit();   
 
       // add the starter kit if it's selected.
-      if ($('a#bartools_yes').hasClass('selected')) {
-        var whofor = $('form#buy-subscription [name=shipto]').val();
+      if ($('#choice_bartools').val() == 'yes') {
+        console.log('add bar toools');
+        var whofor = $('form#buy-subscription [name=shipto]').val() ? $('form#buy-subscription [name=shipto]').val() : '';
         var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=35&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
-        $.getJSON(carturl, function(data) {
+          $.getJSON(carturl, function(data) {
         });            
       }      
     })

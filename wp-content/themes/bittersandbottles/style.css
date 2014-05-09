@@ -507,13 +507,19 @@ a.selected {
 	height: 40px;
 	border-bottom: 1px dashed #898989;
 	margin: 0 0 20px;
-
+	text-align:left;
+	width: 100%;
 }
+
+.subscription_choices .no_border {
+	border-bottom: none;
+}
+
 .subscription_choices .col1, .subscription_choices .col2 {
-	float:left;
+	float: left;
 }
 .subscription_choices .col1 {
-	width: 60px;
+	width: 160px;
 	text-align: right;
 	padding: 15px 20px;
   font-family: "Abel", arial, sans-serif!important;
@@ -521,18 +527,24 @@ a.selected {
 }
 .subscription_choices .col2{
 	text-align: left;
-	width: 600px;
+	width: 500px;
 }
 .subscription_choices select {
 	width: 100%;
 	text-transform: uppercase;
 }
 
+.subscription_price, .price, .shipdate {
+	color:#A52F1D;
+}
 
 .subscription_price {
 	color:#A52F1D;
 	font-size: 30px;
 	margin: 20px 0;
+}
+#content p.price_disclaimer { 
+	margin: 0; padding: 0;
 }
 .giftoptions { 
 	clear: both;
@@ -540,7 +552,7 @@ a.selected {
 	text-align: left;
 }
 .giftoptions input { 
-	width: 200px;
+	width: 98%;
 }
 
 /* form stuff */
@@ -605,9 +617,23 @@ select:active {
 	.cocktails-page {
 		width: 100%;
 	}
-	.subscription_choices li {
-		clear:both;
-		margin: 5px 0;
+
+	.subscription_choices {
+		width: 100%;
+	}
+
+	.subscription_choices .row {
+		border: none;
+		height: 50px;
+	}
+
+	.subscription_choices .col1, 	.subscription_choices .col2 {
+		clear: both;
+		float: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		text-align: left;
 	}
 }
 
