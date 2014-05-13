@@ -551,8 +551,26 @@ a.selected {
 	margin: 20px 0;
 	text-align: left;
 }
-.giftoptions input { 
+.giftoptions input, .giftoptions textarea { 
 	width: 98%;
+	color: #111C1C;
+	background: #BD977E;
+	padding: 10px;
+}
+
+.giftoptions ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #F2ECE9;
+}
+.giftoptions :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #F2ECE9;
+    opacity:  1;
+}
+.giftoptions ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #F2ECE9;
+    opacity:  1;
+}
+.giftoptions :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #F2ECE9;
 }
 
 /* form stuff */

@@ -125,7 +125,6 @@ bb.subscription = (function() {
          $('form#buy-subscription [name=sub_frequency]').val(''); 
          $('form#buy-subscription [name=shipto]').val($('#choice_giftname').val());         
          $('form#buy-subscription [name=Gift_Message]').val($('#choice_giftmessage').val()); 
-         $('form#buy-subscription [name=Gift_Title]').val($('#choice_gifttitle').val()); 
       } else {
          $('form#buy-subscription [name=code]').val('COCKTAILS-MONTHLY-SUBSCRIPTION');   
          $('form#buy-subscription [name=price]').val(95);                    

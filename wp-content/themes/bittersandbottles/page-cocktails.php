@@ -47,12 +47,6 @@ get_header(); ?>
 								<option value="gift">This is a Gift</option>
 							</select>
 							<div class="giftoptions" style="display:none;">		
-									<select id="choice_gifttitle">
-										<option value="">Title</option>
-										<option>Dr.</option>
-										<option>Ms.</option>
-										<option>Mr.</option>
-									</select>
 									<input id="choice_giftname" type="text" placeholder='Enter Gift Recipient Name'>
 									<textarea id="choice_giftmessage" placeholder="Enter Gift Message Here"></textarea>
 							</div>
@@ -76,8 +70,8 @@ get_header(); ?>
 						<div class="col2">
 							<select id="choice_bartools">
 								<option value="" id="choice_bartools_question">Do you need bartools?</option>
-								<option value="yes">Yes</option>
-								<option value="no">No</option>
+								<option value="yes">Yes, bartools please.</option>
+								<option value="no">No bartools please.</option>
 							</select>
 						</div>
 					</div>
@@ -104,7 +98,6 @@ get_header(); ?>
 						<input type="hidden" name="code" value="COCKTAILS-MONTHLY-SUBSCRIPTION" />
 						<input type="hidden" name="sub_frequency" value="1m" />
 						<input type="hidden" name="sub_startdate" value="" />
-						<input type="hidden" name="Gift_Title" value= "" />
 						<input type="hidden" name="Gift_Message" value="" />
 						<input type="hidden" name="shipto" />
 						<!-- <input type="hidden" name="empty" value="true" /> -->
