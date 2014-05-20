@@ -655,6 +655,16 @@ select:active {
 }
 
 /* foxyshop checkout styles */
-#fc_checkout_container, #fc_receipt_container {
+#fc_checkout_container, #fc_receipt_container, #foxyshop_container {
+	width: 95%!important;
+	float: none!important;
 	background: #fff!important;
+	padding-top: 10px!important;
+	margin: auto!important;
+}
+
+#fc_checkout_cart {
+	width: 95%!important;
+	float: none!important;
+	margin: 10px auto!important;
 }
