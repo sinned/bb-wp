@@ -655,7 +655,12 @@ select:active {
 }
 
 /* foxyshop checkout styles */
-#fc_checkout_container, #fc_receipt_container, #foxyshop_container {
+#fc_cart_container td.fc_cart_item_image img {
+	width: 100px!important;
+	max-width: 100px!important;
+}
+
+#fc_checkout_container, #fc_receipt_container, #foxyshop_container, .fc_fieldset_container {
 	width: 95%!important;
 	float: none!important;
 	background: #fff!important;
@@ -667,4 +672,8 @@ select:active {
 	width: 95%!important;
 	float: none!important;
 	margin: 10px auto!important;
+}
+
+#fc_checkout_container input.fc_text {
+	width: auto!important;
 }
