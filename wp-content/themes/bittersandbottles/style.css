@@ -654,3 +654,7 @@ select:active {
 	}
 }
 
+/* foxyshop checkout styles */
+#fc_checkout_container {
+	background: #fff;
+}
