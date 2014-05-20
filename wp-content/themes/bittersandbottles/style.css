@@ -655,6 +655,6 @@ select:active {
 }
 
 /* foxyshop checkout styles */
-#fc_checkout_container {
-	background: #fff;
+#fc_checkout_container, #fc_receipt_container {
+	background: #fff!important;
 }
