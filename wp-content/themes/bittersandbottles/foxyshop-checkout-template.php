@@ -309,7 +309,14 @@ jQuery("#fc_custom_shipping_methods_container").html('<h2>Shipping Options</h2><
 
 get_header(); ?>
 
-<?php foxyshop_include('header'); ?>
+<div class="primary page-header">
+  <div class="main">        
+    <h3><span class="super-plus">Checkout</span></h3>
+  </div>
+</div>
+
+<div id="primary">
+<div id="content" role="main">
 <div id="foxyshop_container">
 
 ^^cart^^
