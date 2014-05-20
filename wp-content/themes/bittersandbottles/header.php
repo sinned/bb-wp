@@ -143,7 +143,7 @@
 
 wp_nav_menu( array( 
 	'theme_location' => 'primary', 
-	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
+	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles-stage.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles-stage.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
 </ul>' ) ); 
 
 ?>
