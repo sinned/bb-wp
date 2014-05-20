@@ -1,4 +1,34 @@
 <?php
+// hide admin bar
+add_filter('show_admin_bar', '__return_false');
+
+/**
+ * Redirect user after successful login.
+ *
+ * @param string $redirect_to URL to redirect to.
+ * @param string $request URL the user is coming from.
+ * @param object $user Logged user's data.
+ * @return string
+ */
+function my_login_redirect( $redirect_to, $request, $user ) {
+  //is there a user to check?
+  global $user;
+  if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+    //check for admins
+    if ( in_array( 'administrator', $user->roles ) ) {
+      // redirect them to the default place
+      return $redirect_to;
+    } else {
+      return home_url();
+    }
+  } else {
+    return $redirect_to;
+  }
+}
+
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+?>
+<?php
 add_action('wp_print_scripts', 'foxyshop_custom_css', 20);
 
 function foxyshop_custom_css() {

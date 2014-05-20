@@ -137,11 +137,16 @@
 				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 
-					'theme_location' => 'primary', 
-					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
-</ul>' ) ); ?>
+<?php 
+/* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */
+// commented out to build it out manually
+
+wp_nav_menu( array( 
+	'theme_location' => 'primary', 
+	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
+</ul>' ) ); 
+
+?>
 
 
 			</nav><!-- #access -->
