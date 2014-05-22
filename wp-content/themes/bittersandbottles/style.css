@@ -456,7 +456,7 @@ a.subscribe-btn  {
 	margin:0 3px;
 	width: 200px;
 	font-family: "Abel", arial, sans-serif!important;
-	color: #A52E1D;
+	color: #A52F1D;
 	font-size: 16px!important;
 	background: #DADBDD;
 	padding: 10px 40px 10px 20px;
@@ -655,12 +655,12 @@ select:active {
 }
 
 /* foxyshop checkout styles */
-#fc_cart_container td.fc_cart_item_image img {
-	width: 100px!important;
-	max-width: 100px!important;
+#fc_cart_container td.fc_cart_item_image img, #fc_checkout_cart #fc_cart_container td.fc_cart_item_image img {
+	width: 50px!important;
+	max-width: 50px!important;
 }
 
-#fc_checkout_container, #fc_receipt_container, #foxyshop_container, .fc_fieldset_container {
+#fc_checkout_container, #fc_receipt_container, #foxyshop_container, div.fc_fieldset_container {
 	width: 95%!important;
 	float: none!important;
 	background: #fff!important;

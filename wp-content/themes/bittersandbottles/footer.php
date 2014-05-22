@@ -84,6 +84,7 @@ jQuery(document).ready(function($){
   // init the bb logic
   bb.age_verify.init();
   bb.subscription.init();
+  bb.shop.init();
 });
 </script>
 </body>

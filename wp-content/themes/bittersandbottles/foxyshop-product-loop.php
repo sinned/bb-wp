@@ -44,8 +44,14 @@ if (!$product['hide_product']) {
 
   //Show Price (and sale if applicable)
   echo '<div class="foxyshop_product_info_bottom">';
+  echo '<div class="plus">+</div>';
   foxyshop_price();
+  echo '<div class="addtocart_space"></div>';  
+  echo '<div class="addtocart">';
+  foxyshop_product_link();
+  echo'</div>';
   echo '</div>';
+
 
   echo "</div>\n";
 

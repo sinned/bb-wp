@@ -62,9 +62,9 @@ bb.age_verify = (function() {
     init: init,
     verify:verify
   }
-
 })();
 
+// jquery functions for the subscription logic
 bb.subscription = (function() {
 
   function calculate_price() {
@@ -153,5 +153,19 @@ bb.subscription = (function() {
   return {
     init: init
   }
+})();
 
+// jquery functions for the shop
+bb.shop = (function() {
+
+  function init() {
+    $('.foxyshop_product_info_bottom div.plus').click(function (e) {
+      $(this).siblings('.foxyshop_product_info_bottom div.addtocart_space').toggle('fast');
+      $(this).siblings('.foxyshop_product_info_bottom div.addtocart').toggle('fast');
+    });
+  }
+
+  return {
+    init: init
+  }  
 })();
