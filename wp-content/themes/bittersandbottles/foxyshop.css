@@ -112,7 +112,7 @@ ul.foxyshop_categories li.selected h2 a {
 .foxyshop_product_list .foxyshop_product_info {
 	background: #D6CBC4;
 	width: 182px;
-	min-height: 85px;
+	min-height: 80px;
 	padding: 10px;
 	margin: 0;
 	text-align: center;
@@ -139,13 +139,13 @@ ul.foxyshop_categories li.selected h2 a {
 .foxyshop_product_info_bottom div.addtocart {
 	display: none;
 	padding: 5px;
-	height: 35px;
+	height: 30px;
 }
 
 .foxyshop_product_info_bottom div.addtocart_space {
 	background: #fff;	
 	padding: 5px 0;	
-	height: 35px;
+	height: 30px;
 }
 
 
