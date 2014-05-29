@@ -37,6 +37,7 @@ body #cboxClose span {
 #foxyshop_container {
 	margin: 0 auto 30px auto;
 	overflow: auto;
+	padding: 10px;
 }
 #foxyshop_container h1 {
 	font-size: 22px;
