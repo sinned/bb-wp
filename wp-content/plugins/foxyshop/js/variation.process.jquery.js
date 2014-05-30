@@ -177,6 +177,8 @@ jQuery(document).ready(function($){
 			original_max_quantity_hash = $("#original_quantity_max_" + current_product_id).attr("rel");
 			if (!foxyshop_allow_backorder && newcount < original_max_quantity) {
 				$("#fs_quantity_max_" + current_product_id).val(newcount);
+			} else if (!foxyshop_allow_backorder && original_max_quantity == 0) {
+				$("#fs_quantity_max_" + current_product_id).val(newcount);				
 			} else if (!foxyshop_allow_backorder && newcount >= original_max_quantity && original_max_quantity > 0) {
 				$("#fs_quantity_max_" + current_product_id).val(original_max_quantity);
 			} else {
