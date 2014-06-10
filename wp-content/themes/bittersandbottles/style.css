@@ -298,9 +298,13 @@ div.seriously {
 
 /* Footer */
 footer#colophon { 
-	background: black;
+	background: #000;
 	color: #fff;
 	padding: 0;
+}
+
+footer#colophon div.primary {
+	background: #000;
 }
 
 div#site-generator {
