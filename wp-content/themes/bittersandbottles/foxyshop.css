@@ -52,7 +52,7 @@ body #cboxClose span {
 }
 
 div.foxyshop_categories_top {
-	width: 600px;
+	width: 750px;
 	margin: 0 auto;
 }
 
@@ -293,7 +293,7 @@ button#productsubmit {
 
 
 /* ----------  RESPONSIVE TINY  ------------ */
-@media all and (max-width:570px) {
+@media all and (max-width:611px) {
 
 #page {
 	min-width: 410px;
@@ -347,10 +347,10 @@ button#productsubmit {
 
 
 /* ----------  RESPONSIVE SMALL  ------------ */
-@media all and (min-width:571px) and (max-width:844px) {
+@media all and (min-width:612px) and (max-width:922px) {
 
 div.foxyshop_categories_top {
-	width: 400px;
+	width: 500px;
 }
 
 .foxyshop_categories li {
