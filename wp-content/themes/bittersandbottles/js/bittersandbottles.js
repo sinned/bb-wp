@@ -108,6 +108,14 @@ bb.subscription = (function() {
       }
     });
 
+    $('span.quantity_inc').click(function(e) {
+      $(this).siblings('input').val(parseInt($(this).siblings('input').val()) + 1);
+    })
+
+    $('span.quantity_dec').click(function(e) {
+      $(this).siblings('input').val(Math.max(1,parseInt($(this).siblings('input').val()) - 1));
+    })    
+
     $('.needbartools a').click(function(e) {
       e.preventDefault();
     });  
