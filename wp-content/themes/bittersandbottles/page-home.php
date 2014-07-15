@@ -50,7 +50,7 @@ get_header(); ?>
 						<p>FedEx is at the door. <br />Today is a good day.</p>
 					</div>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-03-fw.jpg" alt="Reveal"/>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/reveal.jpg" alt="Reveal"/>
 						<h4>Reveal</h4>
 						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/cocktails/">Register now.</a></p>
 					</div>

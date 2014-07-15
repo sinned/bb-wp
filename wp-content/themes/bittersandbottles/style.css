@@ -144,13 +144,13 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 #top-hero {
 	text-align: center;
-	background: url(images/homepage/splash.jpg) no-repeat center;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/splash.jpg) no-repeat center;
 	background-size: cover;
 }
 
 #sub-hero {
 	text-align: right;
-	background: url(images/homepage/_high_compression/BB-HP-subscriptions-bg-fw.jpg) no-repeat;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/_high_compression/BB-HP-subscriptions-bg-fw.jpg) no-repeat;
 	background-size: cover;
 	padding: 100px 20px;
 	min-height: 400px;
@@ -158,7 +158,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 #ship-hero {
 	text-align: right;
-	background: url(images/homepage/_high_compression/BB-HP-packaging-fw.jpg) no-repeat;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/_high_compression/BB-HP-packaging-fw.jpg) no-repeat;
 	background-size: cover;
 	background-position:center;
 	padding: 20px;
@@ -168,7 +168,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 #insta-hero {
 	text-align: right;
-	background: url(images/homepage/BB-wood-2.jpg);
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/BB-wood-2.jpg);
 	background-size: cover;
 	background-position:center;
 	padding: 20px;
@@ -216,7 +216,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 }
 
 .hp-cocktails {
-	background: #dadadc url(images/homepage/_high_compression/BB-HP-cocktails-fw.jpg) no-repeat top left;	
+	background: #dadadc url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/_high_compression/BB-HP-cocktails-fw.jpg) no-repeat top left;	
 	padding: 20px;
 	margin: 20px 0;
 	color: #000;
@@ -236,7 +236,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 }
 
 .hp-divider {
-	background: url(images/homepage/BB-HP-div-line.png) no-repeat;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/BB-HP-div-line.png) no-repeat;
 	background-position:center;	
 	width:100%;
 	height:10px;
@@ -276,7 +276,7 @@ div.seriously {
 	margin: auto;
 }
 .hp-instagrid {
-	background: #dadadc url(images/homepage/BB-HP-instagrid-bg.png);	
+	background: #dadadc url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/BB-HP-instagrid-bg.png);	
 	padding: 5px 5px 0;
 	color: #000;
 	max-width: 900px;
@@ -311,7 +311,7 @@ div#site-generator {
 	color: #fff;
 	text-align: left;
 	padding: 0;
-	background: url(images/footer/BB-footer-logo-transp.png) no-repeat right;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/footer/BB-footer-logo-transp.png) no-repeat right;
 	border: none;
 	clear: both;
 	margin-bottom: 20px;
@@ -340,7 +340,7 @@ div#site-generator {
 	margin: 5px;
 	width: 75px;
 	height: 75px;
-	background: url(images/footer/BB-footer-share-sprites.png);
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/footer/BB-footer-share-sprites.png);
 }
 
 #sharebuttons li a {
@@ -560,7 +560,7 @@ a.selected {
 .cocktails-page ul li {
 	border-bottom: 1px dashed #898989;
 	padding: 10px 10px 10px 20px;
-	background: url(images/global/BB-navigation-plus-sign-superscript.png) no-repeat 9px 15px;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/global/BB-navigation-plus-sign-superscript.png) no-repeat 9px 15px;
 
 }
 .subscription_choices {
