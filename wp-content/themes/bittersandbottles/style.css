@@ -133,7 +133,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 .hero {
 	margin: 0;
-	padding: 400px 20px 100px 20px;
+	padding: 200px 20px 100px 20px;
 	color: #ffffff;
 	clear: both;
 }
@@ -144,7 +144,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 #top-hero {
 	text-align: center;
-	background: url(images/homepage/_high_compression/BB-HP-billboard-hero-01-fw.jpg) no-repeat;
+	background: url(images/homepage/splash.jpg) no-repeat center;
 	background-size: cover;
 }
 
@@ -446,6 +446,9 @@ div#site-generator {
 
 /* subscribe page */
 
+.slidesjs-pagination { display: none; }
+.slidesjs-navigation { margin-right: 10px; }
+
 .subscribe .row {
 	display: inline-block;
 	border-bottom: 1px dashed #898989;
@@ -484,6 +487,65 @@ a.selected {
 	float: left;
 	position: relative;
 }
+
+/* SlideJS */
+    #slides {
+      display: none
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(http://i.bittersandbottles.com/img/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
 
 /* Cocktails Subscription Page */
 .cocktails-page {

@@ -40,12 +40,12 @@ get_header(); ?>
 			<div class="main centered">
 					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-01-fw.jpg" alt="Register" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/register.jpg" alt="Register" />
 						<h4>Register</h4>
 						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/cocktails/">Sign up today</a>.</p>
 					</div>
 					<div class="bb-process">				
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-process-02-fw.jpg" alt="Receive" />
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/receive.jpg" alt="Receive" />
 						<h4>Receive</h4>
 						<p>FedEx is at the door. <br />Today is a good day.</p>
 					</div>

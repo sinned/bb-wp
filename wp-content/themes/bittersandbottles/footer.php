@@ -77,6 +77,28 @@
     });    
   }
   </script>
+
+  <!-- SlidesJS Required: Link to jquery.slides.js -->
+  <script src="//i.bittersandbottles.com/js/jquery.slides.min.js"></script>
+  <!-- End SlidesJS Required -->
+
+  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+  <script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 815,
+        height: 371,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+  </script>
+  <!-- End SlidesJS Required -->
+
 <?php } // if notcheckout ?>
 
 <script type="text/javascript">

@@ -25,6 +25,17 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main" class="pagecontent">
 				<div class="cocktails-page">
+
+					<h3 style="text-align: center;">Your Bar, Curated + Delivered</h3>
+					<p style="text-align: center;">Subscribe today and let us curate your top shelf.</p>
+
+					<hr />
+
+					<div id="slides">
+						<img src="http://i.bittersandbottles.com/wp-content/uploads/2014/05/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
+						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/recipes.jpg" alt="Recipes"  />
+					</div>
+
 					<?php echo the_content(); ?>
 					<?php //comments_template( '', true ); ?>
 				</div>
