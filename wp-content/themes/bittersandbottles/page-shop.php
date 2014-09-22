@@ -25,6 +25,8 @@ get_header(); ?>
     <div id="primary">
       <div id="content" role="main" class="pagecontent">
 
+        <?php echo the_content(); ?>
+
         <iframe width="100%" height="1800" src="http://bittersandbottles.lightspeedwebstore.com/"></iframe>
 
 
