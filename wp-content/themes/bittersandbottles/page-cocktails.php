@@ -91,7 +91,7 @@ get_header(); ?>
 						<div class="col1"></div>
 						<div class="col2">
 							<h3>Price: <span class="price">$95 / month</span></h3>
-							<p class="price_disclaimer"><small>(You can cancel at any time.)</small></p>
+							<p class="price_disclaimer"><small>(You can pause or cancel at any time.)</small></p>
 						</div>
 					</div>
 					<div class="row">
