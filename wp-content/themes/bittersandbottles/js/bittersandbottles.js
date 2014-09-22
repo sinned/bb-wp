@@ -3,7 +3,7 @@ var bb = {};
 
 bb.age_verify = (function() {
 
-  var age_verified_check = 'aug20a';
+  var age_verified_check = 'sep22';
 
   function init() {
     //console.log('initing the age verification');
@@ -33,14 +33,14 @@ bb.age_verify = (function() {
   }
 
   function verify() {
-    console.log('Reading age cookie', $.cookie('age_verified'));
-    if ($.cookie('age_verified') != age_verified_check || document.location.search == '?verify') {
+    console.log('Reading age cookie', $.cookie('age_verified'), ' matches ' , age_verified_check);
+    if ($.cookie('age_verified') !== age_verified_check || document.location.search == '?verify') {
       showmodal();
     }
   }
 
   function showmodal() {
-    //console.log('showing age verification modal');
+    console.log('showing age verification modal');
     $('#ageModal').show();
     $.colorbox({
       inline:true, 

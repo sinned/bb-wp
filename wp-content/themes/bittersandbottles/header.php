@@ -49,6 +49,12 @@
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/twentyeleven/style.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+<!-- BEGIN FOXYCART FILES -->
+<link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
+<script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
+<!-- END FOXYCART FILES -->
+
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
@@ -66,6 +72,7 @@
 	 */
 	wp_head();
 ?>
+
 <script type="text/javascript">
     (function() {
         var path = '//easy.myfonts.net/v2/js?sid=10336(font-family=Avenir+35+Light)&sid=10338(font-family=Avenir+55+Roman)&sid=10340(font-family=Avenir+85+Heavy)&key=LHQOOEogEp',
@@ -144,7 +151,7 @@
 
 wp_nav_menu( array( 
 	'theme_location' => 'primary', 
-	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles-stage.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles-stage.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
+	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
 </ul>' ) ); 
 
 ?>

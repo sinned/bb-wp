@@ -86,18 +86,23 @@
 
   <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
   <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 815,
-        height: 371,
-        play: {
-          active: true,
-          auto: true,
-          interval: 4000,
-          swap: true
-        }
-      });
+    jQuery(document).ready(function($){
+      if ($('#slides').length == 1) {
+        console.log('showing slides');
+        $('#slides').slidesjs({
+          width: 815,
+          height: 371,
+          play: {
+            active: true,
+            auto: true,
+            interval: 4000,
+            swap: true
+          }
+        });
+      }
     });
+
+
   </script>
   <!-- End SlidesJS Required -->
 
@@ -108,7 +113,6 @@ jQuery(document).ready(function($){
   // init the bb logic
   bb.age_verify.init();
   bb.subscription.init();
-  bb.shop.init();
 });
 </script>
 </body>
