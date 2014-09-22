@@ -27,32 +27,33 @@ get_header(); ?>
 
 
 		<div id="top-hero" class="hero">
-			<h3>Your bar, hand-picked + delivered.</h3>
-			<p>Artisanal Spirits + Classic Cocktail Recipes + Supplies.</p>
-			<p>Curated + Delivered to your doorstep every month.</p>
-			<p>
-				<br />
-				<a href="/cocktails/" class="btn btn-arrow">Get Started</a>
-			</p>
+
 		</div>
 
 		<div class="primary">
 			<div class="main centered">
-					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
+
+				<h3 class="centered">Build your home bar, and learn how to use it.</h3>
+				<p class="centered">The Best Quality Ingredients and Supplies + Classic Cocktail Recipes + Education
+				<br />Delivered to your doorstep every month.
+				<p class="centered">
+					<a href="/cocktails/" class="btn btn-arrow">Get Started</a>
+				</p>
+
 					<div class="bb-process">
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/register.jpg" alt="Register" />
-						<h4>Register</h4>
-						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/cocktails/">Sign up today</a>.</p>
+						<h4>Subscribe</h4>
+						<p><a href="/cocktails/">Sign up</a>. Your first box ships on the 15th of each month</p>
 					</div>
 					<div class="bb-process">				
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/receive.jpg" alt="Receive" />
 						<h4>Receive</h4>
-						<p>FedEx is at the door. <br />Today is a good day.</p>
+						<p>FedEx shows up at your door with all you need to start shaking things up!</p>
 					</div>
 					<div class="bb-process">
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/reveal.jpg" alt="Reveal"/>
-						<h4>Reveal</h4>
-						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/cocktails/">Register now.</a></p>
+						<h4>Mix</h4>
+						<p>The hardest part is to decide which cocktail to try first. </p>
 					</div>
 			</div>
 		</div>
@@ -65,7 +66,7 @@ get_header(); ?>
 							<h3>Classic Cocktails</h3>
 							<h5>Your Home Bar, Selected by Experts</h5>
 							<br />
-							<a href="/cocktails/" class="btn btn-arrow">Subscribe Cocktails</a>
+							<a href="/cocktails/" class="btn btn-arrow">Subscribe</a>
 						</div>
 					</div>		
 					<br />
@@ -81,8 +82,8 @@ get_header(); ?>
 		<div class="primary">
 			<div class="main centered">
 				<h3 class="centered">Don't Take Our Word For It. <br />The Critics Have Spoken.</h3>
-				<p class="quote">&ldquo;The best gift on the planet! My buddy had just got his long overdue promotion at the William Morris Agency (see ya later mailroom!), and I knew there was no better way to send my props from across the States than with a box of Top Shelf! Highly Recommended!&rdquo;</p>
-				<p class="quoteby">Kanye West<br /><small>Steamboat Springs, CO</small></p>
+				<p class="quote">&ldquo;My best friend just got engaged and what better way to show how happy I am for him than building his home bar?  A bottle of Champagne says congrats once.  A cocktail subscription says congrats every month and every night.  Thanks for helping me set the &ldquo;bar&rdquo; for what a best man should be.&rdquo;</p>
+				<p class="quoteby">Sam M.<br /><small>New York, NY</small></p>
 			
 				<br clear="both" />
 				<hr />
@@ -121,11 +122,17 @@ get_header(); ?>
 
 		<div id="knock-hero" class="hero">
 			<a href="/visit-us" style="color:#000000;text-decoration:none;">
-				<h3 class="centered">Come and Knock on Our Door</h3>
+				<h3 class="centered">SHOP THE WHOLE STORE?  <br />JOIN FOR A TASTING?</h3>
 				<div class="primary">
 					<div class="main">					
 						<p>
-							We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
+							A subscription and online shop is just the beginning.  We are the finest home bar boutique and barware store in the state.  With over 1,000 bottles of spirits, plus all bitters, barware, and glassware you need to complete your home bar, we are your one stop shop for all your mixing and sipping needs.
+							<br/><br/>
+							We are located in the heart of South San Francisco’s Old Town, rich in community, heritage and history. 
+							<br/><br/>
+							Our shop was built in the early 1900’s, and we are only the second tenants. The store was run by a single family for generations, and served as a community hardware and liquor store. After being shuttered for two decades, months of sanding and painting have revitalized the original redwood floors, restored the 1920’s service counters, and refreshed the mid-century cold box. We are so excited to also preserve the spirit of the space by serving as an independent barware and spirits shop for the local DIY mixologist.
+							<br/><br/>
+							We feel honored to be a part of the South San Francisco revitalization and would love to welcome so you can judge for yourself. CHEERS!
 						</p>
 					</div>
 				</div>
