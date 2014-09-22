@@ -105,6 +105,7 @@ get_header(); ?>
 					<p>We use an innovative packaging product that surrounds bottles with a protective wall of air. The clear film is recyclable with 90% source reduction. We then pack the air-wrapped bottles tightly in your box. And if something doesn&rsquo;t arrive safely, we&rsquo;ll replace it.</p>	
 				</div>
 			</div>
+			<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/34-packaging-mailer.jpg" alt="A protective wall of air" />
 		</div>			
 
 		<div class="primary">
