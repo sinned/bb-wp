@@ -27,7 +27,6 @@ get_header(); ?>
 
 
 		<div id="top-hero" class="hero">
-
 		</div>
 
 		<div class="primary">

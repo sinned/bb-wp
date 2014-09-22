@@ -144,8 +144,9 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 
 #top-hero {
 	text-align: center;
-	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/splash.jpg) no-repeat center;
+	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/splash.jpg) no-repeat bottom left;
 	background-size: cover;
+  min-height: 150px;
 }
 
 #sub-hero {
