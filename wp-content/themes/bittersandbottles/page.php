@@ -23,7 +23,7 @@ get_header(); ?>
 		</div>
 
 		<div id="primary">
-			<div id="content" role="main" class="pagecontent">
+			<div id="content" role="main" class="pagecontent indentedlists">
 				<?php echo the_content(); ?>
 				<?php //comments_template( '', true ); ?>
 			</div><!-- #content -->

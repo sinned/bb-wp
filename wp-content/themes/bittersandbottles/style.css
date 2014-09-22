@@ -720,6 +720,10 @@ select:active {
 	}
 }
 
+.indentedlists li {
+  margin-left: 20px;
+}
+
 /* foxyshop checkout styles */
 #fc_cart_container td.fc_cart_item_image img, #fc_checkout_cart #fc_cart_container td.fc_cart_item_image img {
 	width: 50px!important;
