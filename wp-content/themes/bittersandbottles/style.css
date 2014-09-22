@@ -19,7 +19,7 @@ h1, h2, h3, h4, h6 {
 h1 {font-size:60px;line-height:60px;font-weight:bold;}
 h2 {font-size:48px;line-height:48px;font-weight:bold;}
 h3, .entry-content h3 {font-size:30px;line-height:30px;font-weight:bold;}
-h4 {font-size:25px;line-height:25px;text-transform: none;}
+h4 {font-size:20px;line-height:22px;text-transform: none;}
 h5 {font-family: 'Avenir 35 Light', Arial, sans-serif;font-size:16px;line-height:18px;text-transform: none;}
 h6 {font-size:16px;line-height:18px;}
 
