@@ -40,17 +40,17 @@ get_header(); ?>
 			<div class="main centered">
 					<h3 class="centered">Delivered to your doorstep, <br />Each + Every Month</h3>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/register.jpg" alt="Register" />
+						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/register.jpg" alt="Register" />
 						<h4>Register</h4>
 						<p>Decide which subscription best suits your style, Mixing Cocktails or Sipping Spirits. <a href="/cocktails/">Sign up today</a>.</p>
 					</div>
 					<div class="bb-process">				
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/receive.jpg" alt="Receive" />
+						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/receive.jpg" alt="Receive" />
 						<h4>Receive</h4>
 						<p>FedEx is at the door. <br />Today is a good day.</p>
 					</div>
 					<div class="bb-process">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/reveal.jpg" alt="Reveal"/>
+						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/reveal.jpg" alt="Reveal"/>
 						<h4>Reveal</h4>
 						<p>Open your box of perfection. It&rsquo;s time to tend bar. <br /><a href="/cocktails/">Register now.</a></p>
 					</div>
@@ -87,7 +87,7 @@ get_header(); ?>
 				<br clear="both" />
 				<hr />
 				<div class="centered">
-					<img class="seriously" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-seriously-img-fw.jpg" alt="Seriously, we take quality seriously." />
+					<img class="seriously" src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/cheers-circle.jpg" alt="Seriously, we take quality seriously." />
 				</div>
 				<div class="seriously">
 					<h3>Seriously, we take <br />quality seriously.</h3>
@@ -108,7 +108,7 @@ get_header(); ?>
 
 		<div class="primary">
 			<div class="main centered">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-sns-box-fw.jpg" alt="Still not sure?" />
+				<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/_high_compression/BB-HP-sns-box-fw.jpg" alt="Still not sure?" />
 				<h3>Still not sure?</h3>
 				<p>
 					At Bitters + Bottles we believe strongly in everything that we serve and ship. We work tirelessly to select only the best spirits and worthwhile classic cocktail recipes. Every month will bring you closer to the perfect home bar. Even the monthly deliveries that aren&rsquo;t your favorites will help make your home bar complete.
@@ -120,15 +120,17 @@ get_header(); ?>
 		</div>
 
 		<div id="knock-hero" class="hero">
-			<h3 class="centered">Come and Knock on Our Door</h3>
-			<div class="primary">
-				<div class="main">					
-					<p>
-						We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
-					</p>
+			<a href="/visit-us" style="color:#000000;text-decoration:none;">
+				<h3 class="centered">Come and Knock on Our Door</h3>
+				<div class="primary">
+					<div class="main">					
+						<p>
+							We&rsquo;ve been waiting for you. Come visit our shop in South San Francisco, where we have all of the spirits, mixers, barware and glassware you need to supplement your subscription. Swing by, we&rsquo;d love to meet you. We are open <span style="color:#a52f1d;">Tuesday to Saturday, 11am &rsquo;til 7pm</span>. We&rsquo;re more than happy to help you select what you need to complete your bar, or as a gift to complete a friend&rsquo;s bar/barware and glassware make wonderful gifts.
+						</p>
+					</div>
 				</div>
-			</div>
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/_high_compression/BB-HP-store-w-border-fw.jpg" alt="Come and knock on our door" />
+				<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/door-store.jpg" alt="Come and knock on our door" />
+			</a>
 		</div>
 
 		<div id="insta-hero" class="hero">
@@ -136,7 +138,7 @@ get_header(); ?>
 				<div class="main">
 						<div class="hp-instagrid-head">
 							<a href="http://www.instagram.com/bittersandbottles/">@bittersandbottles</a> on 
-							<img style="width:80px;margin-bottom:-10px;" src="<?php echo get_stylesheet_directory_uri(); ?>/images/homepage/instagram.png" alt="Instagram" />
+							<img style="width:80px;margin-bottom:-10px;" src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/instagram.png" alt="Instagram" />
 						</div>
 						<div class="hp-instagrid">
 							<!-- www.intagme.com -->

@@ -30,8 +30,10 @@
 					</p>
 					<ul>
 						<li><a href="http://www.twitter.com/bittersbottles/">Twitter</a></li>
+          <!--
 						<li class="pinterest"><a href="http://www.pinterest.com/bittersandbottles/">Pinterest</a></li>
 						<li class="facebook"><a href="http://www.facebook.com/bittersandbottles/">Facebook</a></li>
+          -->
 						<li class="instagram"><a href="http://www.instagram.com/bittersandbottles/">Instagram</a></li>
 					</ul>
 				</div>
