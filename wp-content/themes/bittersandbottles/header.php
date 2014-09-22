@@ -52,7 +52,6 @@
 
 <!-- BEGIN FOXYCART FILES -->
 <link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
-<script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
 <!-- END FOXYCART FILES -->
 
 <!--[if lt IE 9]>
@@ -151,8 +150,9 @@
 
 wp_nav_menu( array( 
 	'theme_location' => 'primary', 
-	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a>
-</ul>' ) ); 
+	//'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=updateinfo">My Account</a></li><li class="menu-item menu-item-type-post_type"><a href="https://bittersandbottles.foxycart.com/cart?cart=view" id="fc_minicart">cart <span id="fc_quantity">0</span></a></ul>' 
+) ); 
+
 
 ?>
 

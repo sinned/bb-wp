@@ -62,6 +62,15 @@ function jquerycookie_scripts_method() {
 }
 add_action( 'wp_enqueue_scripts', 'jquerycookie_scripts_method' );
 
+function colorbox_scripts_method() {
+  wp_enqueue_script(
+    'colorbox-script',
+    get_stylesheet_directory_uri() . '/js/jquery.colorbox-min.js',
+    array( 'jquery' )
+  );
+}
+add_action( 'wp_enqueue_scripts', 'colorbox_scripts_method' );
+
 //--------------------------------------------------------------------------------------------------------------
 
 

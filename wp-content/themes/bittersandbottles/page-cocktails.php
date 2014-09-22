@@ -97,12 +97,12 @@ get_header(); ?>
 					<div class="row">
 						<div class="col1"></div>						
 						<div class="col2">
-							<h6>Ships: <span class="shipdate">2nd week of July</span></h6>
+							<h6>Ships: <span class="shipdate">2nd week of October</span></h6>
 						</div>
 					</div>
-						<button id="subscribe_process" class="btn btn-arrow">Add to cart</a>
+						<button id="subscribe_process" class="btn btn-arrow">Buy</a>
 
-					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
+					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart?cart=checkout&amp;empty=true" method="post" accept-charset="utf-8">				
 						<input type="hidden" name="name" value="Monthly Cocktails Subscription" />
 						<input type="hidden" name="category" value="SUBSCRIPTION" />
 						<input type="hidden" name="price" value="95" />
