@@ -32,8 +32,9 @@ get_header(); ?>
 					<hr />
 
 					<div id="slides">
-						<img src="http://i.bittersandbottles.com/wp-content/uploads/2014/05/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
+						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/recipes.jpg" alt="Recipes"  />
+					
 					</div>
 
 					<?php echo the_content(); ?>
