@@ -228,6 +228,12 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 	margin: auto;
 }
 
+.hp-cocktails div {
+  float:left;
+  text-align:left;
+  margin-left:500px;
+}
+
 .hp-box {
 	clear: both;
 	background: #dadadc;	
@@ -675,6 +681,11 @@ select:active {
 	.hp-cocktails {
 		padding: 260px 20px 20px 20px;
 	}	
+
+  .hp-cocktails div {
+    margin-left:20px;
+  }
+  
 	.bb-process {
 		width:80%;		
 		float:none;

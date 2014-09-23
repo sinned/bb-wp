@@ -61,12 +61,12 @@ get_header(); ?>
 			<div class="primary">
 				<div class="main">			
 					<div class="hp-cocktails">
-						<div style="float:left;text-align:left;margin-left:500px;">
-							<h3>Classic Cocktails</h3>
-							<h5>Your Home Bar, Selected by Experts</h5>
-							<br />
-							<a href="/cocktails/" class="btn btn-arrow">Subscribe</a>
-						</div>
+							<div>
+								<h3>Classic Cocktails</h3>
+								<h5>Your Home Bar, Selected by Experts</h5>
+								<br />
+								<a href="/cocktails/" class="btn btn-arrow">Subscribe</a>
+							</div>
 					</div>		
 					<br />
 					<div class="hp-box">
