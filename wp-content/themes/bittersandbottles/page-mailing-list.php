@@ -35,7 +35,7 @@ get_header(); ?>
      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="http://bittersandbottles.us7.list-manage.com/subscribe/post?u=6b7a97b26106dc31cd32d56b0&amp;id=9eafd3aa24" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form style="padding:0" action="http://bittersandbottles.us7.list-manage.com/subscribe/post?u=6b7a97b26106dc31cd32d56b0&amp;id=9eafd3aa24" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
 <div class="mc-field-group">
   <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
