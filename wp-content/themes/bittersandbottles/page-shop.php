@@ -27,14 +27,12 @@ get_header(); ?>
 
         <?php echo the_content(); ?>
 
-        <iframe width="100%" height="1800" src="http://bittersandbottles.lightspeedwebstore.com/"></iframe>
+        <iframe id="lightspeed" width="100%" height="3000" src="http://bittersandbottles.lightspeedwebstore.com/"></iframe>
 
 
       </div><!-- #content -->
     </div><!-- #primary -->
 
   <?php endwhile; // end of the loop. ?>
-
-
 
 <?php get_footer(); ?>
