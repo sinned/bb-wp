@@ -679,13 +679,15 @@ select:active {
 		min-height: 600px;
 	}
 	.hp-cocktails {
-		padding: 260px 20px 20px 20px;
+		padding: 260px 20px 0px 20px;
 	}	
 
   .hp-cocktails div {
-    margin-left:20px;
+    width: 100%;
+    margin-left:0px;
+    text-align: center;
   }
-  
+
 	.bb-process {
 		width:80%;		
 		float:none;
