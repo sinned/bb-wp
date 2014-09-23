@@ -734,6 +734,11 @@ select:active {
 		width: 100%;
 		text-align: left;
 	}
+
+  div#site-generator {
+    padding-bottom: 50px;
+    background-position: left;
+  }
 }
 
 .indentedlists li {
