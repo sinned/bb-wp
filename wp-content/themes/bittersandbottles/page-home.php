@@ -126,7 +126,7 @@ get_header(); ?>
 				<div class="primary">
 					<div class="main">					
 						<p>
-							A subscription and online shop is just the beginning.  We are the finest home bar boutique and barware store in the state.  With over 1,000 bottles of spirits, plus all bitters, barware, and glassware you need to complete your home bar, we are your one stop shop for all your mixing and sipping needs.
+							A subscription and online shop is just the beginning. We are a boutique spirits shop and home barware store. With over 1,000 bottles of spirits, plus all bitters, barware, and glassware you need to complete your home bar, we are your one stop shop for all your mixing and sipping needs.
 							<br/><br/>
 							We are located in the heart of South San Francisco’s Old Town, rich in community, heritage and history. 
 							<br/><br/>
