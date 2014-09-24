@@ -34,7 +34,7 @@ get_header(); ?>
 
 				<h3 class="centered">Build your home bar, and learn how to use it.</h3>
 				<p class="centered">The Best Quality Ingredients and Supplies + Classic Cocktail Recipes + Education
-				<br />Delivered to your doorstep every month.
+				<br />Delivered to your doorstep every month
 				<p class="centered">
 					<a href="/cocktails/" class="btn btn-arrow">Get Started</a>
 				</p>
