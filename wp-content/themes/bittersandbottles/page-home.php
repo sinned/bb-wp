@@ -52,7 +52,7 @@ get_header(); ?>
 					<div class="bb-process">
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/reveal.jpg" alt="Reveal"/>
 						<h4>Mix</h4>
-						<p>The hardest part is to decide which cocktail to try first. </p>
+						<p>The hardest part is deciding which cocktail to make first. </p>
 					</div>
 			</div>
 		</div>
