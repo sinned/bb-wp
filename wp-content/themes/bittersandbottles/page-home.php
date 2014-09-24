@@ -122,7 +122,7 @@ get_header(); ?>
 
 		<div id="knock-hero" class="hero">
 			<a href="/visit-us" style="color:#000000;text-decoration:none;">
-				<h3 class="centered">SHOP THE WHOLE STORE?  <br />JOIN FOR A TASTING?</h3>
+				<h3 class="centered">SHOP THE WHOLE STORE?  <br />JOIN US FOR A TASTING?</h3>
 				<div class="primary">
 					<div class="main">					
 						<p>
