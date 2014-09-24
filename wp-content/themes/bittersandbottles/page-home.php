@@ -42,7 +42,7 @@ get_header(); ?>
 					<div class="bb-process">
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/register.jpg" alt="Register" />
 						<h4>Subscribe</h4>
-						<p><a href="/cocktails/">Sign up</a>. Your first box ships on the 15th of each month</p>
+						<p><a href="/cocktails/">Sign up</a>. Your first box ships on the 15th of each month.</p>
 					</div>
 					<div class="bb-process">				
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/receive.jpg" alt="Receive" />
