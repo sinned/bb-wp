@@ -39,7 +39,7 @@ function foxyshop_custom_css() {
 // removing the local jquery
 // comment out the next two lines to load the local copy of jQuery
 wp_deregister_script('jquery'); 
-wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', false, '1.10.2'); 
+wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', false, '1.9.0'); 
 wp_enqueue_script('jquery');
 
 

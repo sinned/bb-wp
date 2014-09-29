@@ -30,15 +30,11 @@ get_header(); ?>
 					<p style="text-align: center;">Subscribe today and let us curate your top shelf.</p>
 
 					<hr />
-
-					<div id="slides">
-						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
 						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/recipes.jpg" alt="Recipes"  />
-					
-					</div>
 
 					<?php echo the_content(); ?>
 					<?php //comments_template( '', true ); ?>
+
 				</div>
 
 				<div class="row centered">
@@ -77,14 +73,15 @@ get_header(); ?>
 						</div>
 					</div>					
 
-					<div class="row">
-						<div class="col1">And, finally</div>
+					<div class="row" style="height:100px;">
+						<div class="col1">Bar tools?</div>
 						<div class="col2">
 							<select id="choice_bartools">
-								<option value="" id="choice_bartools_question">Do you need bartools?</option>
-								<option value="yes">Yes, bartools please.</option>
-								<option value="no">No bartools please.</option>
+								<option value="" id="choice_bartools_question">Do you need bar tools?</option>
+								<option value="yes">Yes, please ($35).</option>
+								<option value="no">No bar tools, thanks.</option>
 							</select>
+							<p><small>$35 Starter kit includes: shaker (28 oz), pint glass, 1 oz x 2 oz jigger, .5 oz x .75 oz jigger, Hawhtorne Strainer, and a Barspoon</small></p>
 						</div>
 					</div>
 
@@ -103,7 +100,7 @@ get_header(); ?>
 					</div>
 						<button id="subscribe_process" class="btn btn-arrow">Buy</a>
 
-					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart?cart=checkout&amp;empty=true" method="post" accept-charset="utf-8">				
+					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
 						<input type="hidden" name="name" value="Monthly Cocktails Subscription" />
 						<input type="hidden" name="category" value="SUBSCRIPTION" />
 						<input type="hidden" name="price" value="95" />
@@ -115,6 +112,11 @@ get_header(); ?>
 						<!-- <input type="hidden" name="empty" value="true" /> -->
 					</form>							
 				</div>
+
+				<div class="row centered" style="margin-top:20px;">
+					<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
+				</div>
+				
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

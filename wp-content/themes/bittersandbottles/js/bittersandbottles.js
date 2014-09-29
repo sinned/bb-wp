@@ -101,10 +101,12 @@ bb.subscription = (function() {
         $('.giftoptions').show('fast');    
         $('#choice_isgift').parents('.row').height(200);
         $('#choice_bartools_question').html('Do they need bartools?');
+
       } else {
+        $('form#buy-subscription [name=shipto]').val(''); // blank out shipto
         $('.giftoptions').hide('fast');
-        $('#choice_isgift').parents('.row').height(40);      
-        $('#choice_bartools_question').html('Do you need bartools?');   
+        $('#choice_isgift').parents('.row').height(40);    
+        $('#choice_bartools_question').html('Do you need bartools?');  
       }
     });
 

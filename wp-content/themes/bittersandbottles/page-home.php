@@ -80,9 +80,40 @@ get_header(); ?>
 
 		<div class="primary">
 			<div class="main centered">
-				<h3 class="centered">Don't Take Our Word For It. <br />The Critics Have Spoken.</h3>
-				<p class="quote">&ldquo;My best friend just got engaged and what better way to show how happy I am for him than building his home bar?  A bottle of Champagne says congrats once.  A cocktail subscription says congrats every month and every night.  Thanks for helping me set the &ldquo;bar&rdquo; for what a best man should be.&rdquo;</p>
-				<p class="quoteby">Sam M.<br /><small>New York, NY</small></p>
+				<h3 class="centered">Spirited Reviews</h3>
+
+<div class="banner">
+    <ul>
+    		<li>
+    			<p class="quote">&ldquo;
+    				It's easy to find the most expensive sipping whiskeys at the large liquor stores around town. But to find the best to shake into a Manhattan can take an investment of trial and error. So for the budding mixologist, a monthly subscription to new, South SF-based start-up Bitters and Bottles is a must.
+    				&rdquo;</p>
+    			<p class="quoteby"><a href="http://sf.racked.com/archives/2014/01/27/bitters-and-bottles-delivers-the-perfect-home-bar-to-your-door.php">Racked</a></p>
+    		</li>
+        <li>
+					<p class="quote">&ldquo;
+						…For some fellas, navigating the labyrinthine world of hooch — especially if you want to build an impeccable home bar — requires more than just bottle delivery.  So for that, we’d like to introduce Bitters + Bottles, a just-launched Golden State concern now shipping quality spirits (and the mixology know-how to go with them) to New York imbibers. B+B knows the aforementioned home bar isn’t built in one fell swoop. Their solution: subscribe for monthly deliveries and flesh it out over time.
+						&rdquo;
+					</p>
+					<p class="quoteby"><a href="http://www.insidehook.com/new-york/bitters-and-bottles/">Inside Hook</a></p>
+        </li>
+        <li>
+        	<p class="quote">&ldquo;
+        		Witness the miraculous adult bounty of Bitters + Bottles, your new munitions depot for all things home bar and bottled spirit.
+        		&rdquo;</p>
+        	<p class="quoteby"><a href="http://www.urbandaddy.com/sfo/leisure/31367/Bitters_Bottles_A_Rather_Attractive_Place_with_So_Much_Liquor_San_Francisco_SFO_Store">Urban Daddy</a></p>
+        </li>
+        <li>
+        	<p class="quote">&ldquo;
+        		The co-owners of [...] Bitters &amp; Bottles, a liquor store in a spare South San Francisco storefront rescued after decades of neglect, are a little like Stacy and Clinton of What Not to Wear&mdash;only less judge-y and far, far more pro-vermouth.
+        		&rdquo;</p>
+        	<p class="quoteby"><a href="http://www.tastingtable.com/entry_detail/sf/15643/Bitters_and_Bottles_Liquor_Store_Online_Cocktail_Subscripti.htm#ixzz3ENLLTLvG">Tasting Table</a></p>
+        </li>
+    </ul>
+</div>
+
+
+				
 			
 				<br clear="both" />
 				<hr />
@@ -90,7 +121,7 @@ get_header(); ?>
 					<img class="seriously" src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/cheers-circle.jpg" alt="Seriously, we take quality seriously." />
 				</div>
 				<div class="seriously">
-					<h3>Seriously, we take <br />quality seriously.</h3>
+					<h3>The Top Shelf. <br />The Right Shelf.</h3>
 					<p>Bitters + Bottles is a small team of liquor experts whose mission is for you to enjoy and serve the world's best spirits and cocktails at home. We find the highest quality spirits and ingredients, from the best producers, and bring them to your doorstep every month.</p>
 				</div>
 

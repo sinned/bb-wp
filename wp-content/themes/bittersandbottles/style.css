@@ -272,6 +272,7 @@ button.btn-arrow , button.btn-arrow:visited, button.btn-arrow:hover  {
 		line-height:20px;
 		text-transform:uppercase;
 }
+.quoteby a {    color:#bd977e; }
 .quoteby small { font-size: 12px;text-transform: uppercase;}
 
 div.seriously {
@@ -453,6 +454,11 @@ div#site-generator {
 #content p, #content ul, .main p { margin: 15px 0;}
 #content img, .main img { max-width: 100%; }
 
+/* unslider banners */
+.banner { position: relative; overflow: auto; }
+.banner li { list-style: none; }
+.banner ul li { float: left; }
+
 /* subscribe page */
 
 .slidesjs-pagination { display: none; }
@@ -578,11 +584,16 @@ a.selected {
 }
 .subscription_choices .row {
 	clear:both;
-	height: 40px;
+	min-height: 50px;
 	border-bottom: 1px dashed #898989;
 	margin: 0 0 20px;
 	text-align:left;
 	width: 100%;
+}
+
+.subscription_choices .row p  {
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .subscription_choices .no_border {
@@ -704,9 +715,10 @@ select:active {
 	div.seriously p {
 		text-align:left;
 	}
+
 	.quote {
-		width: 100%;
-		padding: 10px 10px 0 10px;
+    width: 80%;
+		padding: 0px;
 	}
 	.quoteby {
 		width: 100%;

@@ -81,7 +81,9 @@
   </script>
 
   <!-- SlidesJS Required: Link to jquery.slides.js -->
+  <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
   <script src="//i.bittersandbottles.com/js/jquery.slides.min.js"></script>
+  <script src="//unslider.com/unslider.min.js"></script>
   <!-- End SlidesJS Required -->
 
   <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
@@ -99,6 +101,13 @@
             swap: true
           }
         });
+      }
+      if ($('.banner').length == 1) {
+            $(function() {
+                $('.banner').unslider({
+
+                  });
+            });      
       }
     });
 
