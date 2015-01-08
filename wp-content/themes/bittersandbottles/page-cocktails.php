@@ -81,7 +81,7 @@ get_header(); ?>
 								<option value="yes">Yes, please ($35).</option>
 								<option value="no">No bar tools, thanks.</option>
 							</select>
-							<p><small>$35 Starter kit includes: shaker (28 oz), pint glass, 1 oz x 2 oz jigger, .5 oz x .75 oz jigger, Hawhtorne Strainer, and a Barspoon</small></p>
+							<p><small>$35 Starter kit includes: shaker (28 oz), pint glass, 1 oz x 2 oz jigger, .5 oz x .75 oz jigger, Hawthorne Strainer, and a Barspoon</small></p>
 						</div>
 					</div>
 
