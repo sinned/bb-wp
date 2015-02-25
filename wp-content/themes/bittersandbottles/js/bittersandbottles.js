@@ -148,7 +148,7 @@ bb.subscription = (function() {
       if ($('#choice_bartools').val() == 'yes') {
         console.log('add bar toools');
         var whofor = $('form#buy-subscription [name=shipto]').val() ? $('form#buy-subscription [name=shipto]').val() : '';
-        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=35&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=55&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
           $.getJSON(carturl, function(data) {
         });            
       }      

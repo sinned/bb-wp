@@ -78,10 +78,10 @@ get_header(); ?>
 						<div class="col2">
 							<select id="choice_bartools">
 								<option value="" id="choice_bartools_question">Do you need bar tools?</option>
-								<option value="yes">Yes, please ($35).</option>
+								<option value="yes">Yes, please ($55).</option>
 								<option value="no">No bar tools, thanks.</option>
 							</select>
-							<p><small>$35 Starter kit includes: shaker (28 oz), pint glass, 1 oz x 2 oz jigger, .5 oz x .75 oz jigger, Hawthorne Strainer, and a Barspoon</small></p>
+							<p><small>$55 Starter kit includes: modern hawthorne strainer, modern 4x1 jigger, modern bar spoon, modern shaker, and a pint glass</small></p>
 						</div>
 					</div>
 
