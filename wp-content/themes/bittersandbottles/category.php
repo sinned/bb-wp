@@ -20,7 +20,7 @@ get_header(); ?>
 					</div>
 				</div>				
 
-				<div id="primary">
+				<div id="primary" class="singular">
 						<div id="content" role="main" class="pagecontent indentedlists">
 							<?php twentyeleven_content_nav( 'nav-above' ); ?>
 
