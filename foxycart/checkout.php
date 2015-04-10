@@ -65,7 +65,7 @@
     /* BEGIN CUSTOM LOCATION LOGIC */
  
     FC.locations.limitCountriesTo("US", "shipping");
-    FC.locations.limitStatesTo("US", ["CA","NY"], "shipping");
+    FC.locations.limitStatesTo("US", ["AL","AZ","CA","CO","DC","ID","IL","LA","MO","NE","NV", "NH", "NJ","NM","NY","ND", "WA", "WI", "WY"], "shipping");
     FC.checkout.requireShippingAddress();
  
     /* END CUSTOM LOCATION LOGIC */
