@@ -21,9 +21,7 @@ class PMXI_CsvParser
 
     $xpath = '',
 
-    $delimiter = '',
-
-    $large_import = false,    
+    $delimiter = '',    
 
     $htmlentities = false,    
 
@@ -32,6 +30,10 @@ class PMXI_CsvParser
     $iteration = 0,
 
     $csv_encoding = 'UTF-8',
+
+    $is_csv = false,
+
+    $targetDir = '',
 
     $auto_encoding = true;
 
@@ -70,31 +72,49 @@ class PMXI_CsvParser
      * @see load()
      * @return void
      */
-    public function __construct($filename = null, $large_import = false, $xpath = '', $delimiter = '', $encoding = '', $xml_path = '')
+    public function __construct( $options = array('filename' => null, 'xpath' => '', 'delimiter' => '', 'encoding' => '', 'xml_path' => '', 'targetDir' => false) ) 
     {
-        PMXI_Plugin::$csv_path = $filename;
-
-        $this->large_import = $large_import;
-        $this->xpath = (!empty($xpath) ? $xpath : ((!empty($_POST['xpath'])) ? $_POST['xpath'] : '/node'));        
-        $this->delimiter = $delimiter;
-        if ('' != $encoding){ 
-            $this->csv_encoding = $encoding;
+        PMXI_Plugin::$csv_path = $options['filename'];
+        
+        $this->xpath = (!empty($options['xpath']) ? $options['xpath'] : ((!empty($_POST['xpath'])) ? $_POST['xpath'] : '/node'));        
+            
+        if ( ! empty($options['delimiter']) ){
+            $this->delimiter = $options['delimiter'];    
+        }
+        else{
+            $input = new PMXI_Input();
+            $id = $input->get('id', 0);
+            if (!$id){
+                $id = $input->get('import_id', 0);
+            }
+            if ( $id ){
+                $import = new PMXI_Import_Record();
+                $import->getbyId($id);
+                if ( ! $import->isEmpty() ){
+                    $this->delimiter = $import->options['delimiter'];
+                }
+            }
+        }        
+        if ( ! empty($options['encoding'])){ 
+            $this->csv_encoding = $options['encoding'];
             $this->auto_encoding = false;
         }
-        if ('' != $xml_path) $this->xml_path = $xml_path;
+        if (!empty($options['xml_path'])) $this->xml_path = $options['xml_path'];
 
         @ini_set( "display_errors", 0);
         @ini_set('auto_detect_line_endings', true);        
         
-        $file_params = self::analyse_file($filename, 1);
+        $file_params = self::analyse_file($options['filename'], 1);
 
         $this->set_settings(array('delimiter' => $file_params['delimiter']['value'], 'eol' => $file_params['line_ending']['value']));        
 
         unset($file_params);
 
-        //stream_filter_register('msaccessxml', 'MSAccessXmlFilter');
+        $wp_uploads = wp_upload_dir();
+        
+        $this->targetDir = (empty($options['targetDir'])) ? wp_all_import_secure_file($wp_uploads['basedir'] . DIRECTORY_SEPARATOR . PMXI_Plugin::UPLOADS_DIRECTORY) : $options['targetDir'];
 
-        $this->load($filename);
+        $this->load($options['filename']);
     }
 
     /**
@@ -902,14 +922,13 @@ class PMXI_CsvParser
     {
         if (!$this->validates()) {            
             return false;
-        }              
+        }                      
 
-        $wp_uploads = wp_upload_dir();
-
-        $tmpname = wp_unique_filename($wp_uploads['path'], str_replace("csv", "xml", basename($this->_filename)));
-        if ("" == $this->xml_path) $this->xml_path = $wp_uploads['path']  .'/'. url_title($tmpname);            
+        $tmpname = wp_unique_filename($this->targetDir, str_replace("csv", "xml", basename($this->_filename)));
+        if ("" == $this->xml_path) 
+            $this->xml_path = $this->targetDir  .'/'. wp_all_import_url_title($tmpname);            
         
-        $this->toXML(true);
+        $this->toXML(true);        
 
         /*$file = new PMXI_Chunk($this->xml_path, array('element' => 'node'));
 
@@ -928,7 +947,17 @@ class PMXI_CsvParser
         $e = $this->settings['escape'];
         $l = $this->settings['length'];       
 
-        PMXI_Plugin::$is_csv = $d;  
+        $this->is_csv = $d;          
+
+        $is_html = false;
+        $f = @fopen($this->_filename, "rb");       
+        while (!@feof($f)) {
+          $chunk = @fread($f, 1024);         
+          if (strpos($chunk, "<!DOCTYPE") === 0) $is_html = true;
+          break;      
+        }  
+
+        if ($is_html) return;
 
         $res = fopen($this->_filename, 'rb');                    
 
@@ -947,7 +976,7 @@ class PMXI_CsvParser
                 $buf_keys = $keys;
                 foreach ($keys as $key => $value) {    
                     if (!$create_new_headers and (preg_match('%\W(http:|https:|ftp:)$%i', $value) or is_numeric($value))) $create_new_headers = true;                                                                    
-                    $value = trim(strtolower(preg_replace('/^[0-9]{1}/','el_', preg_replace('/[^a-z0-9_]/i', '', $value))));                    
+                    $value = trim(strtolower(preg_replace('/^[0-9]{1}/','el_', preg_replace('/[^a-z0-9_]/i', '', $value))));
                     $keys[$key] = (!empty($value)) ? $value : 'undefined' . $key;
                 }            
                 $this->headers = $keys;                                
@@ -971,6 +1000,7 @@ class PMXI_CsvParser
                         foreach ($chunk as $header => $value) 
                         {
                             $xmlWriter->startElement($header);
+                                $value = preg_replace('/\]\]>/s', '', preg_replace('/<!\[CDATA\[/s', '', $value ));
                                 if ($fixBrokenSymbols){
                                     // Remove non ASCII symbols and write CDATA
                                     $xmlWriter->writeCData(preg_replace('/[^\x{0009}\x{000a}\x{000d}\x{0020}-\x{D7FF}\x{E000}-\x{FFFD}]+/u', ' ', $value));                                

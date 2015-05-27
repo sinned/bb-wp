@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) exit();
 
 //Decrypt Data From Source
 function foxyshop_decrypt($src) {
-    	global $foxyshop_settings;
+	global $foxyshop_settings;
 	return rc4crypt::decrypt($foxyshop_settings['api_key'],urldecode($src));
 }
 
@@ -80,7 +80,7 @@ function foxyshop_datafeed_inventory_update($xml) {
 			if (!$product_code) continue;
 
 			//Get List of Target ID's for Inventory Update
-			$meta_list = $wpdb->get_results("SELECT post_id, meta_id, meta_value FROM $wpdb->postmeta WHERE meta_key = '_inventory_levels' AND meta_value LIKE '%" . $wpdb->escape($product_code) . "%'");
+			$meta_list = $wpdb->get_results("SELECT post_id, meta_id, meta_value FROM $wpdb->postmeta WHERE meta_key = '_inventory_levels' AND meta_value LIKE '%" . esc_sql($product_code) . "%'");
 			foreach ($meta_list as $meta) {
 				$productID = $meta->post_id;
 				$val = unserialize($meta->meta_value);
@@ -173,15 +173,18 @@ function foxyshop_datafeed_user_update($xml) {
 		$customer_last_name = (string)$transaction->customer_last_name;
 		$customer_email = (string)$transaction->customer_email;
 		$customer_password = (string)$transaction->customer_password;
+		$is_anonymous = (int)$transaction->is_anonymous;
 
 		//Add or Update WordPress User If Not Guest Checkout
-		if ($customer_id != '0') {
+		if ($customer_id != '0' && $is_anonymous == 0) {
 
 			//Check To See if WordPress User Already Exists
 			$current_user = get_user_by("email", $customer_email);
+			$foxyshop_new_password_hash = $customer_password;
 
 			//No Return, Add New User, Username will be email address
 			if (!$current_user) {
+				remove_action('user_register', 'foxyshop_profile_add', 5);
 				$new_user_id = wp_insert_user(array(
 					'user_login' => $customer_email,
 					'user_email' => $customer_email,
@@ -192,23 +195,24 @@ function foxyshop_datafeed_user_update($xml) {
 					'user_nicename' => $customer_first_name . ' ' . $customer_last_name,
 					'display_name' => $customer_first_name . ' ' . $customer_last_name,
 					'nickname' => $customer_first_name . ' ' . $customer_last_name,
-					'role' => 'subscriber'
+					'role' => apply_filters('foxyshop_default_user_role', 'subscriber'),
 				));
 				add_user_meta($new_user_id, 'foxycart_customer_id', $customer_id, true);
 
-				//Set Password
+				//Set Password In WordPress Database
 				$wpdb->query("UPDATE $wpdb->users SET user_pass = '" . esc_sql($customer_password) . "' WHERE ID = $new_user_id");
-				$foxyshop_new_password_hash = $customer_password;
+
+				//Set Original Password at FoxyCart
+				//foxyshop_get_foxycart_data(array("api_action" => "customer_save", "customer_id" => $customer_id, "customer_password_hash" => $customer_password));
 
 				//Run Your Custom Actions Here with add_action()
-				do_action("foxyshop_datafeed_add_wp_user", $xml, $user_id);
+				do_action("foxyshop_datafeed_add_wp_user", $xml, $new_user_id);
 
 			//Update User
 			} else {
 
 				//Set Password
 				$wpdb->query("UPDATE $wpdb->users SET user_pass = '" . esc_sql($customer_password) . "' WHERE ID = " . $current_user->ID);
-				$foxyshop_new_password_hash = $customer_password;
 
 				//Update First Name and Last Name
 				$updated_user_id = wp_update_user(array(
@@ -216,6 +220,9 @@ function foxyshop_datafeed_user_update($xml) {
 					'first_name' => $customer_first_name,
 					'last_name' => $customer_last_name
 				));
+
+				//Reset Password Again
+				$wpdb->query("UPDATE $wpdb->users SET user_pass = '" . esc_sql($customer_password) . "' WHERE ID = " . $current_user->ID);
 
 				//Add FoxyCart User ID if not added before
 				add_user_meta($current_user->ID, 'foxycart_customer_id', $customer_id, true);
@@ -286,7 +293,7 @@ class rc4crypt {
 	 * @access public
 	 * @return string
 	 */
-	function encrypt ($pwd, $data, $ispwdHex = 0) {
+	public static function encrypt ($pwd, $data, $ispwdHex = 0) {
 		if ($ispwdHex) $pwd = @pack('H*', $pwd); // valid input, please!
  		$key[] = '';
 		$box[] = '';
@@ -323,7 +330,7 @@ class rc4crypt {
 	 * @access public
 	 * @return string
 	 */
-	function decrypt ($pwd, $data, $ispwdHex = 0) {
+	public static function decrypt ($pwd, $data, $ispwdHex = 0) {
 		return rc4crypt::encrypt($pwd, $data, $ispwdHex);
 	}
 }

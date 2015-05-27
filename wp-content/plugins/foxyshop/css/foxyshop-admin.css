@@ -147,7 +147,7 @@ body .foxyshop-list-table tbody tr.foxyshop-row-updated {
 
 
 .inventory_update_width {
-	width: 40px;
+	width: 44px;
 	margin-top: -2px;
 	padding: 2px 3px;
 }
@@ -929,6 +929,9 @@ table.widefat tr:last-child td {
 }
 #foxyshop_settings_wrap #foxydomainsimplelabel {
 	margin-left: 5px;
+}
+body.post-type-foxyshop_product #postimagediv {
+	display: none;
 }
 
 

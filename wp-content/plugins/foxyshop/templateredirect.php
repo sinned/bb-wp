@@ -149,6 +149,12 @@ function foxyshop_theme_redirect() {
 		include FOXYSHOP_PATH . '/ssoendpoint.php';
 		die;
 
+	//FoxyCart Checkout Complete (SSO Reverse Login)
+	} elseif ($currentPageName == 'foxycart-checkout-complete' || $currentName == 'foxycart-checkout-complete') {
+		status_header(200);
+		foxyshop_reverse_sso_login();
+		die;
+
 	//FoxyCart Checkout Template
 	} elseif ($currentPageName == 'foxycart-checkout-template' || $currentName == 'foxycart-checkout-template') {
 		if ($foxyshop_settings['browser_title_6']) add_filter('wp_title', 'title_filter_checkout_template', 9, 3);
@@ -156,7 +162,11 @@ function foxyshop_theme_redirect() {
 		status_header(200);
 		$wp_query->is_404 = false;
 		if (!defined("IS_FOXYSHOP")) define("IS_FOXYSHOP", 1);
-		include foxyshop_get_template_file('foxyshop-checkout-template.php');
+		if (version_compare($foxyshop_settings['version'], '2.0', ">=")) {
+			include foxyshop_get_template_file('foxyshop-checkout-template-2.php');
+		} else {
+			include foxyshop_get_template_file('foxyshop-checkout-template.php');
+		}
 		die;
 
 	//FoxyCart Receipt Template
@@ -166,7 +176,11 @@ function foxyshop_theme_redirect() {
 		status_header(200);
 		$wp_query->is_404 = false;
 		if (!defined("IS_FOXYSHOP")) define("IS_FOXYSHOP", 1);
-		include foxyshop_get_template_file('foxyshop-receipt-template.php');
+		if (version_compare($foxyshop_settings['version'], '2.0', ">=")) {
+			include foxyshop_get_template_file('foxyshop-receipt-template-2.php');
+		} else {
+			include foxyshop_get_template_file('foxyshop-receipt-template.php');
+		}
 		die;
 
 	//File Upload

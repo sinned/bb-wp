@@ -150,7 +150,7 @@ function foxyshop_order_management() {
 	$transaction_search_type = isset($_GET['transaction_search_type']) ? $_GET['transaction_search_type'] : '';
 
 	if ($foxyshop_settings["orderdesk_url"]) {
-		$orderdesk_link = ' <a class="' . (version_compare(get_bloginfo('version'), '3.2', "<") ? "button " : '') . 'add-new-h2" href="https://foxytools.com/app/orderdesk/" target="_blank">' . __('Launch Order Desk', 'foxyshop') . '</a>';
+		$orderdesk_link = ' <a class="' . (version_compare(get_bloginfo('version'), '3.2', "<") ? "button " : '') . 'add-new-h2" href="https://app.orderdesk.me/" target="_blank">' . __('Launch Order Desk', 'foxyshop') . '</a>';
 	} else {
 		$orderdesk_link = "";
 	}
@@ -358,7 +358,7 @@ function foxyshop_order_management() {
 					<?php do_action("foxyshop_order_table_foot"); ?>
 				</tr>
 			</tfoot>
-			<tbody>
+			<tbody id="the-list">
 
 		<?php
 		$holder = "";
@@ -449,6 +449,7 @@ function foxyshop_order_management() {
 			if ((string)$transaction->cc_exp_month != "") $holder .= '<li>' . __('Exp', 'foxyshop') . ': ' . (string)$transaction->cc_exp_month . '-' . (string)$transaction->cc_exp_year . '</li>';
 			if ($minfraud_score > 0) $holder .= '<li>' . __('MinFraud Score', 'foxyshop') . ': ' . $minfraud_score . '</li>';
 			if ((string)$transaction->shipto_shipping_service_description != "") $holder .= '<li>' . __('Shipping Type', 'foxyshop') . ': ' . (string)$transaction->shipto_shipping_service_description . '</li>';
+			if ((string)$transaction->processor_response == "Purchase Order") $holder .= '<li>PO #: ' . (string)$transaction->purchase_order . '</li>';
 			$holder .= '</ul>';
 			$holder .= '</div>';
 

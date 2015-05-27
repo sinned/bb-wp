@@ -5,12 +5,12 @@ Plugin Name: FoxyShop
 Plugin URI: http://www.foxy-shop.com/
 Description: FoxyShop is a full integration for FoxyCart and WordPress, providing a robust shopping cart and inventory management tool.
 Author: SparkWeb Interactive, Inc.
-Version: 4.4.4
+Version: 4.6.1
 Author URI: http://www.foxy-shop.com/
 
 **************************************************************************
 
-Copyright (C) 2012 SparkWeb Interactive, Inc.
+Copyright (C) 2014 SparkWeb Interactive, Inc.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -38,7 +38,7 @@ the most out of FoxyShop.
 if (!defined('ABSPATH')) exit();
 
 //Setup Plugin Variables
-define('FOXYSHOP_VERSION', "4.4.4");
+define('FOXYSHOP_VERSION', "4.6.1");
 define('FOXYSHOP_DIR', (is_ssl() ? str_replace("http://", "https://", WP_PLUGIN_URL) : WP_PLUGIN_URL) . "/foxyshop");
 define('FOXYSHOP_PATH', dirname(__FILE__));
 $foxyshop_document_root = $_SERVER['DOCUMENT_ROOT'];
@@ -51,10 +51,10 @@ if (!defined('FOXYSHOP_PRODUCT_NAME_PLURAL')) define('FOXYSHOP_PRODUCT_NAME_PLUR
 if (!defined('FOXYSHOP_URL_BASE')) define('FOXYSHOP_URL_BASE', '');
 if (!defined('FOXYSHOP_PRODUCT_SITEMAP_SLUG')) define('FOXYSHOP_PRODUCT_SITEMAP_SLUG', 'product-sitemap');
 if (!defined('FOXYSHOP_API_ENTRIES_PER_PAGE')) define('FOXYSHOP_API_ENTRIES_PER_PAGE', 50);
-if (!defined('FOXYSHOP_JQUERY_VERSION')) define('FOXYSHOP_JQUERY_VERSION', '1.10.2');
+if (!defined('FOXYSHOP_JQUERY_VERSION')) define('FOXYSHOP_JQUERY_VERSION', '1.11.2');
 if (!defined('FOXYSHOP_DECIMAL_PLACES')) define('FOXYSHOP_DECIMAL_PLACES', 2);
 load_plugin_textdomain('foxyshop', 0, dirname(plugin_basename(__FILE__)).'/languages/');
-$foxycart_version_array = array('1.1' => '1.1', '1.0' => '1.0', '0.7.2' => '0.7.2', '0.7.1' => '0.7.1', '0.7.0' => '0.7.0');
+$foxycart_version_array = array('2.0' => '2.0', '1.1' => '1.1', '1.0' => '1.0', '0.7.2' => '0.7.2', '0.7.1' => '0.7.1', '0.7.0' => '0.7.0');
 $google_product_field_names = array('google_product_category', 'mpn', 'gtin', 'brand', 'condition', 'age_group', 'gender', 'color', 'size', 'material', 'pattern');
 
 //Setup Admin Functions
@@ -90,7 +90,12 @@ if (is_admin()) {
 //Load FoxyShop Scripts and Styles on Public Site
 } else {
 	if ($foxyshop_settings['use_jquery']) add_action('wp_enqueue_scripts', 'foxyshop_insert_jquery', 15);
-	add_action('wp_head', 'foxyshop_insert_foxycart_files');
+
+	if (version_compare($foxyshop_settings['version'], '2.0', ">=")) {
+		add_action('wp_footer', 'foxyshop_insert_foxycart_loader');
+	} else {
+		add_action('wp_head', 'foxyshop_insert_foxycart_files');
+	}
 	add_action('init', 'foxyshop_load_site_scripts', 1);
 	add_action('wp', 'foxyshop_check_include_status', 11);
 	if ($foxyshop_settings['ga']) add_action('wp_footer', 'foxyshop_insert_google_analytics', 100);

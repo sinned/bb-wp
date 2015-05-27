@@ -17,7 +17,7 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 	/**
 	 * Previous Imports list
 	 */
-	public function index() {
+	public function index() {		
 		
 		$get = $this->input->get(array(
 			's' => '',
@@ -29,6 +29,14 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 		$get['pagenum'] = absint($get['pagenum']);
 		extract($get);
 		$this->data += $get;
+
+		if ( ! in_array($order_by, array('registered_on', 'id', 'name'))){
+			$order_by = 'registered_on';
+		}
+
+		if ( ! in_array($order, array('DESC', 'ASC'))){
+			$order = 'DESC';
+		}
 		
 		$list = new PMXI_Import_List();
 		$post = new PMXI_Post_Record();
@@ -47,14 +55,16 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 			
 		$this->data['page_links'] = paginate_links(array(
 			'base' => add_query_arg('pagenum', '%#%', $this->baseUrl),
+			'add_args' => array('page' => 'pmxi-admin-manage'),
 			'format' => '',
-			'prev_text' => __('&laquo;', 'pmxi_plugin'),
-			'next_text' => __('&raquo;', 'pmxi_plugin'),
+			'prev_text' => __('&laquo;', 'wp_all_import_plugin'),
+			'next_text' => __('&raquo;', 'wp_all_import_plugin'),
 			'total' => ceil($list->total() / $perPage),
 			'current' => $pagenum,
 		));
 		
-		pmxi_session_unset();		
+		//pmxi_session_unset();		
+		PMXI_Plugin::$session->clean_session();
 
 		$this->render();
 	}
@@ -62,9 +72,7 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 	/**
 	 * Edit Template
 	 */
-	public function edit() {
-		
-		pmxi_session_unset();
+	public function edit() {				
 
 		// deligate operation to other controller
 		$controller = new PMXI_Admin_Import();
@@ -75,9 +83,7 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 	/**
 	 * Edit Options
 	 */
-	public function options() {
-
-		pmxi_session_unset();
+	public function options() {		
 		
 		// deligate operation to other controller
 		$controller = new PMXI_Admin_Import();
@@ -98,117 +104,118 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 
 		$this->render();
 	}
+
+	/**
+	 * Cancel import processing
+	 */
+	public function cancel(){
+
+		$nonce = (!empty($_REQUEST['_wpnonce'])) ? $_REQUEST['_wpnonce'] : '';
+		if ( ! wp_verify_nonce( $nonce, '_wpnonce-cancel_import' ) ) {		    
+		    die( __('Security check', 'wp_all_import_plugin') ); 
+		} else {
+		
+			$id = $this->input->get('id');
+			
+			PMXI_Plugin::$session->clean_session( $id );
+
+			$item = new PMXI_Import_Record();
+			if ( ! $id or $item->getById($id)->isEmpty()) {
+				wp_redirect($this->baseUrl); die();
+			}
+			$item->set(array(
+				'triggered'   => 0,
+				'processing'  => 0,
+				'executing'   => 0,
+				'canceled'    => 1,
+				'canceled_on' => date('Y-m-d H:i:s')
+			))->update();		
+
+			wp_redirect(add_query_arg('pmxi_nt', urlencode(__('Import canceled', 'wp_all_import_plugin')), $this->baseUrl)); die();
+		}
+	}
 	
 	/**
-	 * Reimport
+	 * Re-run import
 	 */
 	public function update() {
-		$id = $this->input->get('id');
-		$action_type = $this->input->get('type');
 
-		$this->data['item'] = $item = new PMXI_Import_Record();
+		$id = $this->input->get('id');
+		
+		PMXI_Plugin::$session->clean_session( $id );
+		
+		$action_type = false;
+
+		$this->data['import'] = $item = new PMXI_Import_Record();
 		if ( ! $id or $item->getById($id)->isEmpty()) {
 			wp_redirect($this->baseUrl); die();
 		}				
+
+		$this->data['isWizard'] = false;
+
+		$default = PMXI_Plugin::get_default_import_options();
+
+		$DefaultOptions = $item->options + $default;
+		foreach (PMXI_Admin_Addons::get_active_addons() as $class) {
+			if (class_exists($class)) $DefaultOptions += call_user_func(array($class, "get_default_import_options"));			
+		}		
+
+		$this->data['post'] =& $DefaultOptions;	
+
+		$this->data['source'] = array(
+			'path' => $item->path,
+			'root_element' => $item->root_element			
+		);
+
+		$this->data['xpath'] = $item->xpath;
+		$this->data['count'] = $item->count;	
 		
-		pmxi_session_unset();
+		$history = new PMXI_File_List();
+		$history->setColumns('id', 'name', 'registered_on', 'path')->getBy(array('import_id' => $item->id), 'id DESC');				
+		if ($history->count()){
+			foreach ($history as $file){						
+				if (@file_exists($file['path'])) {
+					$this->data['locfilePath'] = $file['path'];
+					break;
+				}				
+			}
+		}							
 
 		$chunks = 0;
-
-		if ($this->input->post('is_confirmed')) {
-
-			check_admin_referer('update-import', '_wpnonce_update-import');		
 		
-			$uploads = wp_upload_dir();			
+		if ( ($this->input->post('is_confirmed') and check_admin_referer('confirm', '_wpnonce_confirm')) ) {
+			
+			$continue = $this->input->post('is_continue', 'no');
 
-			if ( empty(PMXI_Plugin::$session->data['pmxi_import']['chunk_number']) ) {			
-				
-				if ( in_array($item->type, array('upload')) ) { // if import type NOT URL
+			// mark action type ad continue
+			if ($continue == 'yes') $action_type = 'continue';						
+			
+			$filePath = '';
+			
+			// upload new file in case when import is not continue			
+			if ( empty(PMXI_Plugin::$session->chunk_number) ) {			
+								
+				if ( $item->type == 'upload' ){ // retrieve already uploaded file
 
-					if (preg_match('%\W(zip)$%i', trim(basename($item->path)))) {
-						
-						include_once(PMXI_Plugin::ROOT_DIR.'/libraries/pclzip.lib.php');
+					$uploader = new PMXI_Upload(trim($item->path), $this->errors, rtrim(str_replace(basename($item->path), '', $item->path), '/'));			
+					$upload_result = $uploader->upload();					
+					if ($upload_result instanceof WP_Error)
+						$this->errors = $upload_result;					
+					else						
+						$filePath  = $upload_result['filePath'];						
+				}	
 
-						$archive = new PclZip(trim($item->path));
-					    if (($v_result_list = $archive->extract(PCLZIP_OPT_PATH, $uploads['path'], PCLZIP_OPT_REPLACE_NEWER)) == 0) {
-					    	$this->errors->add('form-validation', 'Failed to open uploaded ZIP archive : '.$archive->errorInfo(true));			    	
-					   	}
-						else {
-							
-							$filePath = '';
+				if (empty($item->options['encoding'])){
+					$currentOptions = $item->options;
+					$currentOptions['encoding'] = 'UTF-8';
+					$item->set(array(
+						'options' => $currentOptions
+					))->update();
+				}			
 
-							if (!empty($v_result_list)){
-								foreach ($v_result_list as $unzipped_file) {									
-									if ($unzipped_file['status'] == 'ok' and preg_match('%\W(xml|csv|txt|dat|psv)$%i', trim($unzipped_file['stored_filename']))) { $filePath = $unzipped_file['filename']; break; }	
-								}
-							}
-					    	if($uploads['error']){
-								 $this->errors->add('form-validation', __('Can not create upload folder. Permision denied', 'pmxi_plugin'));
-							}
+				@set_time_limit(0);
 
-							if(empty($filePath)){						
-								$zip = zip_open(trim($item->path));
-								if (is_resource($zip)) {																		
-									while ($zip_entry = zip_read($zip)) {
-										$filePath = zip_entry_name($zip_entry);												
-									    $fp = fopen($uploads['path']."/".$filePath, "w");
-									    if (zip_entry_open($zip, $zip_entry, "r")) {
-									      $buf = zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
-									      fwrite($fp,"$buf");
-									      zip_entry_close($zip_entry);
-									      fclose($fp);
-									    }
-									    break;
-									}
-									zip_close($zip);							
-
-								} else {
-							        $this->errors->add('form-validation', __('Failed to open uploaded ZIP archive. Can\'t extract files.', 'pmxi_plugin'));
-							    }						
-							}															
-
-							if (preg_match('%\W(csv|txt|dat|psv)$%i', trim($filePath))){ // If CSV file found in archieve						
-
-								if($uploads['error']){
-									 $this->errors->add('form-validation', __('Can not create upload folder. Permision denied', 'pmxi_plugin'));
-								}																																			
-								include_once(PMXI_Plugin::ROOT_DIR.'/libraries/XmlImportCsvParse.php');
-								$csv = new PMXI_CsvParser($filePath, true, '', ( ! empty($item->options['delimiter']) ) ? $item->options['delimiter'] : '', ( ! empty($item->options['encoding']) ) ? $item->options['encoding'] : ''); // create chunks
-								$filePath = $csv->xml_path;																
-							}							
-						}					
-
-					} elseif ( preg_match('%\W(csv|txt|dat|psv)$%i', trim($item->path))) { // If CSV file uploaded										
-						if($uploads['error']){
-							 $this->errors->add('form-validation', __('Can not create upload folder. Permision denied', 'pmxi_plugin'));
-						}											    																			
-						include_once(PMXI_Plugin::ROOT_DIR.'/libraries/XmlImportCsvParse.php');					
-						$csv = new PMXI_CsvParser($item->path, true, '', ( ! empty($item->options['delimiter']) ) ? $item->options['delimiter'] : '', ( ! empty($item->options['encoding']) ) ? $item->options['encoding'] : '');					
-						$filePath = $csv->xml_path;						
-
-					} elseif(preg_match('%\W(gz)$%i', trim($item->path))){ // If gz file uploaded
-						$fileInfo = pmxi_gzfile_get_contents($item->path);
-						if ( ! is_wp_error($fileInfo) ){
-							$filePath = $fileInfo['localPath'];				
-							// detect CSV or XML 
-							if ( $fileInfo['type'] == 'csv') { // it is CSV file																
-								include_once(PMXI_Plugin::ROOT_DIR.'/libraries/XmlImportCsvParse.php');					
-								$csv = new PMXI_CsvParser($filePath, true, '', ( ! empty($item->options['delimiter']) ) ? $item->options['delimiter'] : '', ( ! empty($item->options['encoding']) ) ? $item->options['encoding'] : ''); // create chunks
-								$filePath = $csv->xml_path;																			
-							}
-						}
-						else $this->errors->add('form-validation', $fileInfo->get_error_message());
-
-					} else { // If XML file uploaded					
-						
-						$filePath = $item->path;
-						
-					}
-
-				}																						
-
-				@set_time_limit(0);															
-				$local_paths = !empty($local_paths) ? $local_paths : array($filePath);								
+				$local_paths = ( ! empty($local_paths) ) ? $local_paths : array($filePath);								
 
 				foreach ($local_paths as $key => $path) {
 
@@ -221,7 +228,7 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 				    						    
 					    while ($xml = $file->read()) {					      						    					    					    	
 					    	
-					    	if (!empty($xml))
+					    	if ( ! empty($xml) )
 					      	{												      		
 					      		PMXI_Import_Record::preprocessXml($xml);	
 					      		$xml = "<?xml version=\"1.0\" encoding=\"". $item->options['encoding'] ."\"?>" . "\n" . $xml;					      		      						      							      					      	
@@ -242,16 +249,16 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 				}				
 
 				if (empty($chunks)) 
-					$this->errors->add('form-validation', __('No matching elements found for Root element and XPath expression specified', 'pmxi_plugin'));						
+					$this->errors->add('form-validation', __('No matching elements found for Root element and XPath expression specified', 'wp_all_import_plugin'));						
 																		   							
 			}							
 			
-			if ( $chunks ) { // xml is valid		
+			if ( $chunks ) { // xml is valid						
 				
-				if ( ! PMXI_Plugin::is_ajax() and empty(PMXI_Plugin::$session->data['pmxi_import']['chunk_number'])){								
+				if ( ! PMXI_Plugin::is_ajax() and empty(PMXI_Plugin::$session->chunk_number)){
 
 					// compose data to look like result of wizard steps				
-					PMXI_Plugin::$session['pmxi_import'] = array(						
+					$sesson_data = array(						
 						'filePath' => $filePath,
 						'source' => array(
 							'name' => $item->name,
@@ -262,13 +269,11 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 						'feed_type' => $item->feed_type,
 						'update_previous' => $item->id,
 						'parent_import_id' => $item->parent_import_id,
-						'xpath' => $item->xpath,
-						'template' => $item->template,
+						'xpath' => $item->xpath,						
 						'options' => $item->options,
 						'encoding' => (!empty($item->options['encoding'])) ? $item->options['encoding'] : 'UTF-8',
 						'is_csv' => (!empty($item->options['delimiter'])) ? $item->options['delimiter'] : PMXI_Plugin::$is_csv,
-						'csv_path' => PMXI_Plugin::$csv_path,
-						'scheduled' => $item->scheduled,														
+						'csv_path' => PMXI_Plugin::$csv_path,																		
 						'chunk_number' => 1,						
 						'log' => '',						
 						'warnings' => 0,
@@ -277,12 +282,19 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 						'pointer' => 1,
 						'count' => (isset($chunks)) ? $chunks : 0,
 						'local_paths' => (!empty($local_paths)) ? $local_paths : array(), // ftp import local copies of remote files
-						'action' => (!empty($action_type) and $action_type == 'continue') ? 'continue' : 'update',					
+						'action' => (!empty($action_type) and $action_type == 'continue') ? 'continue' : 'update',	
+						'nonce' => wp_create_nonce( 'import' )				
 					);										
 					
-					pmxi_session_commit();
+					foreach ($sesson_data as $key => $value) {
+						PMXI_Plugin::$session->set($key, $value);
+					}
+
+					PMXI_Plugin::$session->save_data();
 					
 				}
+
+				$item->set(array('canceled' => 0, 'failed' => 0))->update();
 
 				// deligate operation to other controller
 				$controller = new PMXI_Admin_Import();
@@ -290,8 +302,9 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 				$controller->process();
 				return;
 			}
-		}				
-		$this->render();
+		}		
+
+		$this->render('admin/import/confirm');
 	}
 	
 	/**
@@ -310,7 +323,7 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 			do_action('pmxi_before_import_delete', $item, $this->input->post('is_delete_posts'));
 
 			$item->delete( ! $this->input->post('is_delete_posts'));
-			wp_redirect(add_query_arg('pmxi_nt', urlencode(__('Import deleted', 'pmxi_plugin')), $this->baseUrl)); die();
+			wp_redirect(add_query_arg('pmxi_nt', urlencode(__('Import deleted', 'wp_all_import_plugin')), $this->baseUrl)); die();
 		}
 		
 		$this->render();
@@ -338,23 +351,10 @@ class PMXI_Admin_Manage extends PMXI_Controller_Admin {
 				$item->delete( ! $is_delete_posts);
 			}
 			
-			wp_redirect(add_query_arg('pmxi_nt', urlencode(sprintf(__('<strong>%d</strong> %s deleted', 'pmxi_plugin'), $items->count(), _n('import', 'imports', $items->count(), 'pmxi_plugin'))), $this->baseUrl)); die();
+			wp_redirect(add_query_arg('pmxi_nt', urlencode(sprintf(__('<strong>%d</strong> %s deleted', 'wp_all_import_plugin'), $items->count(), _n('import', 'imports', $items->count(), 'wp_all_import_plugin'))), $this->baseUrl)); die();
 		}
 		
 		$this->render();
 	}
-
-	/*
-	 * Download import log file
-	 *
-	 */
-	public function log(){
-
-		$id = $this->input->get('id');
-		
-		$wp_uploads = wp_upload_dir();
-
-		PMXI_download::csv($wp_uploads['basedir'] . '/wpallimport_logs/' .$id.'.html');
-
-	}
+	
 }
