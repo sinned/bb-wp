@@ -85,6 +85,17 @@ get_header(); ?>
 						</div>
 					</div>
 
+					<div class="row" style="height:100px;">
+						<div class="col1">Expedite delivery for Father&rsquo;s Day?</div>
+						<div class="col2">
+							<select id="choice_expedite">
+								<option value="" id="choice_expedite_question">Expedite delivery for Father&rsquo;s Day?</option>
+								<option value="yes">Yes, please ($30).</option>
+								<option value="no">No, thanks.</option>
+							</select>
+						</div>
+					</div>					
+
 					<div class="row no_border">
 						<div class="col1"></div>
 						<div class="col2">

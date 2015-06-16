@@ -152,6 +152,15 @@ bb.subscription = (function() {
           $.getJSON(carturl, function(data) {
         });            
       }      
+
+      // add expedite delivery
+      if ($('#choice_expedite').val() == 'yes') {
+        console.log('add expedite');
+        var whofor = $('form#buy-subscription [name=shipto]').val() ? $('form#buy-subscription [name=shipto]').val() : '';
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Expedite+Order&price=30&shipto='+whofor+'&category=BARGOODS&code=EXPEDITE-ORDER' +fcc.session_get()+'&output=json&callback=?';
+          $.getJSON(carturl, function(data) {
+        });            
+      }         
     })
 
   }
