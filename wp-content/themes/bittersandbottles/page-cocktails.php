@@ -84,7 +84,7 @@ get_header(); ?>
 							<p><small>$55 Starter kit includes: modern hawthorne strainer, modern 4x1 jigger, modern bar spoon, modern shaker, and a pint glass</small></p>
 						</div>
 					</div>
-
+<!--
 					<div class="row" style="height:100px;">
 						<div class="col1">Expedite delivery for Father&rsquo;s Day?</div>
 						<div class="col2">
@@ -94,7 +94,8 @@ get_header(); ?>
 								<option value="no">No, thanks.</option>
 							</select>
 						</div>
-					</div>					
+					</div>	
+-->				
 
 					<div class="row no_border">
 						<div class="col1"></div>
