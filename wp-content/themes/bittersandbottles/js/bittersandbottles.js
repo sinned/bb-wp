@@ -69,14 +69,39 @@ bb.subscription = (function() {
 
   function calculate_price() {
     console.log('calculating price');
+    var subscription_price = 85;
+    var subscription_code = '';
+
+    if ($('#choice_shipping').val() == 'yes') {
+      subscription_price = 85 + 23; 
+    }
+
     if ($('#choice_isgift').val() == 'gift') {
-      var gift_price = $('#choice_giftduration').val() * 95;      
+      var gift_price = $('#choice_giftduration').val() * subscription_price;      
       $('.subscription_choices .price').html('$' +gift_price.toLocaleString());
       $('.price_disclaimer').hide();
+      subscription_code = 'COCKTAILS-GIFT-' +$('#choice_giftduration').val()+ 'MO';
+      $('form#buy-subscription [name=price]').val(gift_price);           
+      $('form#buy-subscription [name=category]').val('DEFAULT'); 
+      $('form#buy-subscription [name=sub_frequency]').val(''); 
+      $('form#buy-subscription [name=shipto]').val($('#choice_giftname').val());         
+      $('form#buy-subscription [name=Gift_Message]').val($('#choice_giftmessage').val());       
     } else {
-      $('.subscription_choices .price').html('$95 / month');
-      $('.price_disclaimer').show();      
+      $('.subscription_choices .price').html('$' +subscription_price+ ' / month');
+      $('.price_disclaimer').show();     
+      subscription_code = 'COCKTAILS-MONTHLY-SUBSCRIPTION';       
+      $('form#buy-subscription [name=price]').val(subscription_price);                    
+      $('form#buy-subscription [name=category]').val('SUBSCRIPTION');                
+      $('form#buy-subscription [name=sub_frequency]').val('1m');        
     }
+
+    if ($('#choice_shipping').val() == 'yes') {
+      subscription_code += '-SHIPPED';
+    } else {
+      subscription_code += '-PICKUP';
+    } 
+    
+    $('form#buy-subscription [name=code]').val(subscription_code);   
 
   }
 
@@ -85,6 +110,7 @@ bb.subscription = (function() {
     // get started button
     $('.show_subscription_choices button').click(function(e) { 
       e.preventDefault();
+      calculate_price();
       $('.subscription_choices').show('fast', function () {
       });
       $('.show_subscription_choices').hide();
@@ -110,6 +136,10 @@ bb.subscription = (function() {
       }
     });
 
+    $('#choice_shipping').change(function(e) {
+      calculate_price();
+    });
+
     $('span.quantity_inc').click(function(e) {
       $(this).siblings('input').val(parseInt($(this).siblings('input').val()) + 1);
     })
@@ -124,24 +154,11 @@ bb.subscription = (function() {
 
     $('button#subscribe_process').click(function(e) {
       e.preventDefault();
-      console.log('checking required fields');   
-      
-      if ($('#choice_isgift').val() == 'gift') {
-        console.log('this is a gift');
-         $('form#buy-subscription [name=code]').val('COCKTAILS-GIFT-' +$('#choice_giftduration').val()+ 'MO');
-         var gift_price = $('#choice_giftduration').val() * 95;
-         $('form#buy-subscription [name=price]').val(gift_price);           
-         $('form#buy-subscription [name=category]').val('DEFAULT'); 
-         $('form#buy-subscription [name=sub_frequency]').val(''); 
-         $('form#buy-subscription [name=shipto]').val($('#choice_giftname').val());         
-         $('form#buy-subscription [name=Gift_Message]').val($('#choice_giftmessage').val()); 
-      } else {
-         $('form#buy-subscription [name=code]').val('COCKTAILS-MONTHLY-SUBSCRIPTION');   
-         $('form#buy-subscription [name=price]').val(95);                    
-         $('form#buy-subscription [name=category]').val('SUBSCRIPTION');                
-         $('form#buy-subscription [name=sub_frequency]').val('1m'); 
-      }      
 
+      // one last calculate
+      calculate_price();
+
+      // add the subscription
       $('#buy-subscription').submit();   
 
       // add the starter kit if it's selected.
@@ -160,7 +177,9 @@ bb.subscription = (function() {
         var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Expedite+Order&price=30&shipto='+whofor+'&category=BARGOODS&code=EXPEDITE-ORDER' +fcc.session_get()+'&output=json&callback=?';
           $.getJSON(carturl, function(data) {
         });            
-      }         
+      }      
+
+          
     })
 
   }

@@ -38,7 +38,7 @@ get_header(); ?>
 				</div>
 
 				<div class="row centered">
-					<h4 class="subscription_price">$95/month</h4>
+					<h4 class="subscription_price">$85/month</h4>
 				</div>
 
 				<div class="show_subscription_choices centered">
@@ -100,14 +100,19 @@ get_header(); ?>
 					<div class="row no_border">
 						<div class="col1"></div>
 						<div class="col2">
-							<h3>Price: <span class="price">$95 / month</span></h3>
+							<h3>Price: <span class="price">$85 / month</span></h3>
 							<p class="price_disclaimer"><small>(You can pause or cancel at any time.)</small></p>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col1"></div>						
 						<div class="col2">
-							<h6>Ships: <span class="shipdate">The 15th of each month.</span></h6>
+							<h6>Shipping: <span class="shipdate">The 15th of each month.</span></h6>
+							<select id="choice_shipping">
+								<option value="" id="choice_bartools_question">Ship or Pick up?</option>
+								<option value="yes">Ship it (adult signature required, office recommended). $23</option>
+								<option value="no">Pick it up in store. $0</option>
+							</select>
 						</div>
 					</div>
 						<button id="subscribe_process" class="btn btn-arrow">Buy</a>
@@ -115,7 +120,7 @@ get_header(); ?>
 					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
 						<input type="hidden" name="name" value="Monthly Cocktails Subscription" />
 						<input type="hidden" name="category" value="SUBSCRIPTION" />
-						<input type="hidden" name="price" value="95" />
+						<input type="hidden" name="price" value="85" />
 						<input type="hidden" name="code" value="COCKTAILS-MONTHLY-SUBSCRIPTION" />
 						<input type="hidden" name="sub_frequency" value="1m" />
 						<input type="hidden" name="sub_startdate" value="" />
