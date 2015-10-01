@@ -56,11 +56,8 @@
 	if ( ! function_exists('pmxi_getExtensionFromStr')){
 		function pmxi_getExtensionFromStr($str) 
 	    {
-	        $i = strrpos($str,".");
-	        if ($i === false) return "";
-	        $l = strlen($str) - $i;
-	        $ext = substr($str,$i+1,$l);	       
-	        return (preg_match('%(jpg|jpeg|gif|png)$%i', $ext) and strlen($ext) <= 4) ? $ext : "";
+	    	$filetype = wp_check_filetype($str);	              
+	        return $filetype['ext'];
 		}
 	}			
 
@@ -130,3 +127,25 @@
 		    return preg_match('/^[a-f0-9]{32}$/', $md5);
 		}
 	}
+
+	if ( ! function_exists('wp_all_import_get_relative_path') ){
+		function wp_all_import_get_relative_path($path){
+
+			$uploads = wp_upload_dir();
+
+			return str_replace($uploads['basedir'], '', $path);			
+
+		}
+	}
+
+	if ( ! function_exists('wp_all_import_get_absolute_path') ){
+		function wp_all_import_get_absolute_path($path){
+			
+			$uploads = wp_upload_dir();			
+
+			return ( strpos($path, $uploads['basedir']) === false and ! preg_match('%^https?://%i', $path)) ? $uploads['basedir'] . $path : $path;
+			
+		}
+	}
+
+

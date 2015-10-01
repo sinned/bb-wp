@@ -9,7 +9,7 @@ function pmxi_admin_notices() {
 		?>
 		<div class="error"><p>
 			<?php printf(
-					__('<b>%s Plugin</b>: Please update your WP All Import WooCommerce add-on to the latest version</a>', 'pmwi_plugin'),
+					__('<b>%s Plugin</b>: Please update your WP All Import WooCommerce add-on to the latest version', 'pmwi_plugin'),
 					PMWI_Plugin::getInstance()->getName()
 			) ?>
 		</p></div>
@@ -36,7 +36,7 @@ function pmxi_admin_notices() {
 		?>
 		<div class="error"><p>
 			<?php printf(
-					__('<b>%s Plugin</b>: Please update your WP All Import ACF add-on to the latest version</a>', 'pmwi_plugin'),
+					__('<b>%s Plugin</b>: Please update your WP All Import ACF add-on to the latest version', 'pmwi_plugin'),
 					PMAI_Plugin::getInstance()->getName()
 			) ?>
 		</p></div>
@@ -53,7 +53,7 @@ function pmxi_admin_notices() {
 		?>
 		<div class="error"><p>
 			<?php printf(
-					__('<b>%s Plugin</b>: Please update your WP All Import Linkcloak add-on to the latest version</a>', 'pmwi_plugin'),
+					__('<b>%s Plugin</b>: Please update your WP All Import Linkcloak add-on to the latest version', 'pmwi_plugin'),
 					PMLCA_Plugin::getInstance()->getName()
 			) ?>
 		</p></div>
@@ -70,7 +70,7 @@ function pmxi_admin_notices() {
 		?>
 		<div class="error"><p>
 			<?php printf(
-					__('<b>%s Plugin</b>: Please update your WP All Import User add-on to the latest version</a>', 'pmwi_plugin'),
+					__('<b>%s Plugin</b>: Please update your WP All Import User add-on to the latest version', 'pmwi_plugin'),
 					PMUI_Plugin::getInstance()->getName()
 			) ?>
 		</p></div>
@@ -87,7 +87,7 @@ function pmxi_admin_notices() {
 		?>
 		<div class="error"><p>
 			<?php printf(
-					__('<b>%s Plugin</b>: Please update your WP All Import WPML add-on to the latest version</a>', 'pmwi_plugin'),
+					__('<b>%s Plugin</b>: Please update your WP All Import WPML add-on to the latest version', 'pmwi_plugin'),
 					PMLI_Plugin::getInstance()->getName()
 			) ?>
 		</p></div>
@@ -138,4 +138,5 @@ function pmxi_admin_notices() {
 			endif;
 		}
 	}	
+	wp_all_import_addon_notifications();	
 }

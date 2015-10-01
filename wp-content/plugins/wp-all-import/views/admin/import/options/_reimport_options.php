@@ -106,6 +106,11 @@
 				<label for="is_update_parent"><?php _e('Parent post', 'wp_all_import_plugin') ?></label>
 			</div>	
 			<div class="input">
+				<input type="hidden" name="is_update_comment_status" value="0" />
+				<input type="checkbox" id="is_update_comment_status" name="is_update_comment_status" value="1" <?php echo $post['is_update_comment_status'] ? 'checked="checked"': '' ?> />
+				<label for="is_update_comment_status"><?php _e('Comment status', 'wp_all_import_plugin') ?></label>
+			</div>	
+			<div class="input">
 				<input type="hidden" name="is_update_attachments" value="0" />
 				<input type="checkbox" id="is_update_attachments" name="is_update_attachments" value="1" <?php echo $post['is_update_attachments'] ? 'checked="checked"': '' ?> />
 				<label for="is_update_attachments"><?php _e('Attachments', 'wp_all_import_plugin') ?></label>
@@ -127,11 +132,21 @@
 					<div class="input" style="margin-bottom:3px;">								
 						<input type="radio" id="update_images_logic_full_update" name="update_images_logic" value="full_update" <?php echo ( "full_update" == $post['update_images_logic'] ) ? 'checked="checked"': '' ?> />
 						<label for="update_images_logic_full_update"><?php _e('Update all images', 'wp_all_import_plugin') ?></label>
+						<div class="switcher-target-update_images_logic_full_update" style="padding-left:27px;">
+							<div class="input">
+								<input type="hidden" name="do_not_remove_images" value="0" />
+								<input type="checkbox" id="do_not_remove_images" name="do_not_remove_images" value="1" <?php echo $post['do_not_remove_images'] ? 'checked="checked"': '' ?> />
+								<label for="do_not_remove_images"><?php _e('Do not remove images from media gallery', 'wp_all_import_plugin') ?></label>
+							</div>
+						</div>
 					</div>
+					<?php $is_show_add_new_images = apply_filters('wp_all_import_is_show_add_new_images', true, $post_type); ?>
+					<?php if ($is_show_add_new_images): ?>
 					<div class="input" style="margin-bottom:3px;">								
 						<input type="radio" id="update_images_logic_add_new" name="update_images_logic" value="add_new" <?php echo ( "add_new" == $post['update_images_logic'] ) ? 'checked="checked"': '' ?> />
 						<label for="update_images_logic_add_new"><?php _e('Don\'t touch existing images, append new images', 'wp_all_import_plugin') ?></label>
 					</div>
+					<?php endif; ?>
 				</div>
 			</div>			
 			<div class="input">			
