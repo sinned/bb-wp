@@ -43,7 +43,7 @@
 				</div>
 
 				<div id="site-generator">
-					&copy; 2014 Bar Antz LLC
+					&copy; 2015 Bar Antz LLC
 				</div>
 			</div>
 		</div>
@@ -59,29 +59,8 @@
     <a href="#" class="btn">Yes</a>
     <a href="#" class="btn">No</a>
   </div>
-  <script type="text/javascript" charset="utf-8">
-  if (typeof(fcc) != 'undefined') {
-    fcc.events.cart.preprocess.add(function(e, arr) {
-      if (arr['cart'] == 'checkout' || arr['cart'] == 'updateinfo' || arr['output'] == 'json') {
-        return true;
-      }
-      if (arr['cart'] == 'checkout_paypal_express') {
-        _gaq.push(['_trackPageview', '/paypal_checkout']);
-        return true;
-      }
-      _gaq.push(['_trackPageview', '/cart']);
-      return true;
-    });
-    fcc.events.cart.process.add_pre(function(e, arr) {
-      var pageTracker = _gat._getTrackerByName();
-      jQuery.getJSON('https://' + storedomain + '/cart?' + fcc.session_get() + '&h:ga=' + escape(pageTracker._getLinkerUrl('', true)) + '&output=json&callback=?', function(data){});
-      return true;
-    });    
-  }
-  </script>
 
   <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="//cdn.foxycart.com/bittersandbottles/foxycart.colorbox.js?ver=2" type="text/javascript" charset="utf-8"></script>
   <script src="//i.bittersandbottles.com/js/jquery.slides.min.js"></script>
   <script src="//unslider.com/unslider.min.js"></script>
   <!-- End SlidesJS Required -->

@@ -158,14 +158,11 @@ bb.subscription = (function() {
       // one last calculate
       calculate_price();
 
-      // add the subscription
-      $('#buy-subscription').submit();   
-
       // add the starter kit if it's selected.
       if ($('#choice_bartools').val() == 'yes') {
         console.log('add bar toools');
         var whofor = $('form#buy-subscription [name=shipto]').val() ? $('form#buy-subscription [name=shipto]').val() : '';
-        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=55&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT' +fcc.session_get()+'&output=json&callback=?';
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Bar+Tools+Starter+Kit&price=55&shipto='+whofor+'&category=BARGOODS&code=BAR-TOOLS-STARTER-KIT&' +FC.session.get()+'&output=json&callback=?';
           $.getJSON(carturl, function(data) {
         });            
       }      
@@ -174,12 +171,13 @@ bb.subscription = (function() {
       if ($('#choice_expedite').val() == 'yes') {
         console.log('add expedite');
         var whofor = $('form#buy-subscription [name=shipto]').val() ? $('form#buy-subscription [name=shipto]').val() : '';
-        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Expedite+Order&price=30&shipto='+whofor+'&category=BARGOODS&code=EXPEDITE-ORDER' +fcc.session_get()+'&output=json&callback=?';
+        var carturl = 'https://bittersandbottles.foxycart.com/cart?name=Expedite+Order&price=30&shipto='+whofor+'&category=BARGOODS&code=EXPEDITE-ORDER&' +FC.session.get()+'&output=json&callback=?';
           $.getJSON(carturl, function(data) {
         });            
       }      
 
-          
+      // add the subscription
+      $('#buy-subscription').submit();             
     })
 
   }

@@ -50,9 +50,10 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<!-- BEGIN FOXYCART FILES -->
-<link rel="stylesheet" href="//cdn.foxycart.com/static/scripts/colorbox/1.3.23/style1_fc/colorbox.css?ver=1" type="text/css" media="screen" charset="utf-8" />
-<!-- END FOXYCART FILES -->
+<!-- FOXYCART -->
+<script src="//cdn.foxycart.com/bittersandbottles/loader.js" async defer></script>
+<!-- /FOXYCART -->
+
 
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
