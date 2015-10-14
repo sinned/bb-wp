@@ -97,6 +97,21 @@ get_header(); ?>
 					</div>	
 -->				
 
+
+					<div class="row" style="height:80px;">
+						<div class="col1">Shipping?</div>						
+						<div class="col2">
+							<h6>Ships: <span class="shipdate">The 15th of each month.</span></h6>
+							<select id="choice_shipping">
+								<option value="" id="choice_bartools_question">Ship or Pick up?</option>
+								<option value="yes">Ship it (adult signature required, office recommended). $23</option>
+								<option value="no">Pick it up in store. $0</option>
+							</select>
+						</div>
+						<p></p>
+					</div>
+
+
 					<div class="row no_border">
 						<div class="col1"></div>
 						<div class="col2">
@@ -104,17 +119,8 @@ get_header(); ?>
 							<p class="price_disclaimer"><small>(You can pause or cancel at any time.)</small></p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col1"></div>						
-						<div class="col2">
-							<h6>Shipping: <span class="shipdate">The 15th of each month.</span></h6>
-							<select id="choice_shipping">
-								<option value="" id="choice_bartools_question">Ship or Pick up?</option>
-								<option value="yes">Ship it (adult signature required, office recommended). $23</option>
-								<option value="no">Pick it up in store. $0</option>
-							</select>
-						</div>
-					</div>
+
+
 						<button id="subscribe_process" class="btn btn-arrow">Buy</a>
 
 					<form id="buy-subscription" action="https://bittersandbottles.foxycart.com/cart" method="post" accept-charset="utf-8">				
