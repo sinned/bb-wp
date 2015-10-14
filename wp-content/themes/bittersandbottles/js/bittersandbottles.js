@@ -72,6 +72,11 @@ bb.subscription = (function() {
     var subscription_price = 85;
     var subscription_code = '';
 
+    if ($('#choice_shipping').val() == 'yes') {
+      subscription_price = 85 + 23; 
+    } 
+
+
     if ($('#choice_isgift').val() == 'gift') {
       var gift_price = $('#choice_giftduration').val() * subscription_price;      
       $('.subscription_choices .price').html('$' +gift_price.toLocaleString());
@@ -92,15 +97,10 @@ bb.subscription = (function() {
     }
 
     if ($('#choice_shipping').val() == 'yes') {
-      subscription_price = 85 + 23; 
-    } else {
-      $('form#buy-subscription [name=category]').val('PICKUP');      
-    }    
-
-    if ($('#choice_shipping').val() == 'yes') {
       subscription_code += '-SHIPPED';
     } else {
       subscription_code += '-PICKUP';
+      $('form#buy-subscription [name=category]').val('PICKUP');      
     } 
     
     $('form#buy-subscription [name=code]').val(subscription_code);   
