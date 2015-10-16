@@ -46,8 +46,10 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/bittersandbottles/colorbox/colorbox.css" />
 <link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/twentyeleven/style.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 <!-- FOXYCART -->
