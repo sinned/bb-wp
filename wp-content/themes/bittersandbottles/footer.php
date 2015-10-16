@@ -103,5 +103,8 @@ jQuery(document).ready(function($){
   bb.subscription.init();
 });
 </script>
+<!-- FOXYCART -->
+<script src="//cdn.foxycart.com/bittersandbottles/loader.js" async defer></script>
+<!-- /FOXYCART -->
 </body>
 </html>
