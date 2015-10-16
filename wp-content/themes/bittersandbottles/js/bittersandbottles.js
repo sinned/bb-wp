@@ -24,12 +24,11 @@ bb.age_verify = (function() {
   }
 
   function age_verified() {
-    // set the cookie
-    $.cookie('age_verified', age_verified_check, { expires: 14 });
     // close the modal
     $('#ageModal').hide();
     $.colorbox.close();
-
+    // set the cookie
+    $.cookie('age_verified', age_verified_check, { expires: 14 });
   }
 
   function verify() {
