@@ -35,7 +35,7 @@ bb.age_verify = (function() {
   function verify() {
     console.log('Reading age cookie', $.cookie('age_verified'), ' matches ' , age_verified_check);
     if ($.cookie('age_verified') !== age_verified_check || document.location.search == '?verify') {
-      //showmodal();
+      showmodal();
     }
   }
 
