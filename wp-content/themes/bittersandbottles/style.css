@@ -54,10 +54,15 @@ nav#access {
   background: url(images/global/BB-content-area-bg-pattern.jpg) ;
 }
 
+#access a {
+	margin-top: 20px;
+}
+
 li.home-nav-class {
   background: url(images/header/BB-header-logo-transp.png) no-repeat 5px;
-  width: 260px;
   color: #000;
+  width: 180px;
+  height: 80px;
 }
 
 li.home-nav-class a {
@@ -321,10 +326,12 @@ div#site-generator {
 	color: #fff;
 	text-align: left;
 	padding: 0;
-	background: url(http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/footer/BB-footer-logo-transp.png) no-repeat right;
+	background: url(images/header/BB-header-logo-transp.png) no-repeat right;
+	height: 80px;
 	border: none;
 	clear: both;
 	margin-bottom: 20px;
+
 }
 
 #sharebuttons {

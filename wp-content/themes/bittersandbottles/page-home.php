@@ -36,23 +36,21 @@ get_header(); ?>
 				<p class="centered">The Best Quality Ingredients and Supplies + Classic Cocktail Recipes + Education
 				<br />Delivered to your doorstep every month
 				<p class="centered">
-					<a href="/cocktails/" class="btn btn-arrow">Get Started</a>
+					<a href="/cocktails/" class="btn btn-arrow">Cocktail at Home</a>
 				</p>
 
+				<br />
 					<div class="bb-process">
-						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/register.jpg" alt="Register" />
-						<h4>Subscribe</h4>
-						<p><a href="/cocktails/">Sign up</a>. Your first box ships on the 15th of each month.</p>
+						<a href="/travel-size-alcohol/"><img src="/wp-content/themes/bittersandbottles/images/homepage/coasters.jpg" alt="Cocktails On The Go" /></a>
+						<h4>Cocktails on the Go with Travel Size Alcohol</h4>
 					</div>
 					<div class="bb-process">				
-						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/receive.jpg" alt="Receive" />
-						<h4>Receive</h4>
-						<p>FedEx shows up at your door with all you need to start shaking things up!</p>
+						<img src="/wp-content/themes/bittersandbottles/images/homepage/holiday.jpg" alt="Holiday Gift Guide" />
+						<h4>Holiday Gift Guide</h4>
 					</div>
 					<div class="bb-process">
-						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/reveal.jpg" alt="Reveal"/>
-						<h4>Mix</h4>
-						<p>The hardest part is deciding which cocktail to make first. </p>
+						<a href="/about/"><img src="/wp-content/themes/bittersandbottles/images/homepage/shop.jpg" alt="Visit Our Shop"/></a>
+						<h4>Visit Our Shop</h4>
 					</div>
 			</div>
 		</div>
