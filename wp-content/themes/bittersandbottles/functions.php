@@ -2,6 +2,18 @@
 // hide admin bar
 add_filter('show_admin_bar', '__return_false');
 
+// removing the local jquery
+// comment out the next two lines to load the local copy of jQuery
+wp_deregister_script('jquery'); 
+wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, '2.1.4'); 
+wp_enqueue_script('jquery');
+
+// lightbox2
+//wp_register_script('lightbox2', 'http://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js');
+//wp_enqueue_script('lightbox2');
+wp_register_style( 'lightbox2', 'http://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/css/lightbox.min.css' );
+wp_enqueue_style( 'lightbox2' );
+
 /**
  * Redirect user after successful login.
  *
@@ -36,11 +48,6 @@ function foxyshop_custom_css() {
 	return;
 }
 
-// removing the local jquery
-// comment out the next two lines to load the local copy of jQuery
-wp_deregister_script('jquery'); 
-wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js', false, '1.9.0'); 
-wp_enqueue_script('jquery');
 
 
 // adding our application script a la http://codex.wordpress.org/Function_Reference/wp_enqueue_script

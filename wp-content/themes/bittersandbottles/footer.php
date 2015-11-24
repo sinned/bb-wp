@@ -64,6 +64,9 @@
   <script src="//i.bittersandbottles.com/js/jquery.slides.min.js"></script>
   <script src="//unslider.com/unslider.min.js"></script>
   <!-- End SlidesJS Required -->
+  
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.1/js/lightbox.min.js'></script>
+
 
   <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
   <script>

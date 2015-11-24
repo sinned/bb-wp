@@ -27,11 +27,26 @@ get_header(); ?>
 				<div class="cocktails-page">
 
 					<h3 style="text-align: center;">Your Bar, Curated + Delivered</h3>
-					<p style="text-align: center;">Subscribe today and let us curate your top shelf.</p>
+					<p style="text-align: center;">Subscribe and become your favorite bartender.</p>
 
 					<hr />
-						<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/recipes.jpg" alt="Recipes"  />
-
+						<a data-lightbox="months" data-title="Ready to Ship" href="/wp-content/themes/bittersandbottles/images/subscriptions/box-ready-to-ship.jpg">
+							<img src="/wp-content/themes/bittersandbottles/images/subscriptions/box-ready-to-ship.jpg" alt="Ready To Ship" />
+						</a>
+					<br />
+					<div class="bb-process">
+						<a data-lightbox="months" data-title="Month 1" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg" alt="Month 1" /></a>
+						<h4>Month 1</h4>
+					</div>
+					<div class="bb-process">				
+						<a data-lightbox="months" data-title="Month 2" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg" alt="Month 2" /></a>
+						<h4>Month 2</h4>
+					</div>
+					<div class="bb-process">
+						<a data-lightbox="months" data-title="Month 3" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg" alt="Month 3"/></a>
+						<h4>Month 3</h4>
+					</div>
+					<br clear="both" />
 					<?php echo the_content(); ?>
 					<?php //comments_template( '', true ); ?>
 
@@ -137,7 +152,7 @@ get_header(); ?>
 				</div>
 
 				<div class="row centered" style="margin-top:20px;">
-					<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/subscription-wb-mc-ps.jpg" alt="subscription-wb-mc-ps"  />      
+						<a data-lightbox="months" data-title="Month 1 with Starter Kit" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-1-with-starter.jpg" alt="Month 1 With Starter" /></a>
 				</div>
 				
 			</div><!-- #content -->
