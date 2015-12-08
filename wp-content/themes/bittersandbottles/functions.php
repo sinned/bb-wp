@@ -55,7 +55,8 @@ function bittersandbottles_scripts_method() {
   wp_enqueue_script(
     'bittersandbottles-script',
     get_stylesheet_directory_uri() . '/js/bittersandbottles.js',
-    array( 'jquery' )
+    array( 'jquery' ),
+    '1.2'
   );
 }
 add_action( 'wp_enqueue_scripts', 'bittersandbottles_scripts_method' );

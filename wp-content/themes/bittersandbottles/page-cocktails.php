@@ -56,43 +56,38 @@ get_header(); ?>
 					<h4 class="subscription_price">$85/month</h4>
 				</div>
 
-				<div class="show_subscription_choices centered">
-					<button class="btn btn-arrow">Get Started</button>
-				</div>
+				<div class="subscription_choices centered">
 
-				<div class="subscription_choices centered" style="display:none;">
 
-					<div class="row">
-						<div class="col1">Who is this for?</div>
-						<div class="col2">
-							<select id="choice_isgift">
-								<option value="myself">This is for myself</option>
-								<option value="gift">This is a Gift</option>
-							</select>
-							<div class="giftoptions" style="display:none;">		
-									<input id="choice_giftname" type="text" placeholder='Enter Gift Recipient Name'>
-									<textarea id="choice_giftmessage" placeholder="Enter Gift Message Here"></textarea>
-							</div>
-						</div>
-					</div>
 
-					<div class="row giftoptions" style="display:none;">
-						<div class="col1">How many months?</div>
+					<div class="row giftoptions">
+						<div class="col1">Duration?</div>
 						<div class="col2">
 							<select id="choice_giftduration">
+								<option value="0">Bill me monthly, I can cancel at any time</option>								
 								<option value="1">1 month</option>
 								<option value="3">3 months</option>
 								<option value="6">6 months</option>		
 								<option value="12">12 months</option>																
 							</select>
 						</div>
-					</div>					
+					</div>				
+
+					<div class="row" style="height:150px;">
+						<div class="col1">Who is this for?</div>
+						<div class="col2">
+							<div class="giftoptions">		
+									<input id="choice_giftname" type="text" placeholder='Enter Gift Recipient Name (Optional)'>
+									<textarea id="choice_giftmessage" placeholder="Enter Gift Message Here (Optional)"></textarea>
+							</div>
+						</div>
+					</div>						
 
 					<div class="row" style="height:100px;">
 						<div class="col1">Bar tools?</div>
 						<div class="col2">
 							<select id="choice_bartools">
-								<option value="" id="choice_bartools_question">Do you need bar tools?</option>
+								<option value="" id="choice_bartools_question">Should we include bar tools?</option>
 								<option value="yes">Yes, please ($55).</option>
 								<option value="no">No bar tools, thanks.</option>
 							</select>

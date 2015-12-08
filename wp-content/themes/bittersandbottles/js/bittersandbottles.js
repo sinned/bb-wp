@@ -76,12 +76,14 @@ bb.subscription = (function() {
       subscription_price = 85 + 23; 
     } 
 
+    // if $('#choice_giftduration').val() is 0, it's recurring
+    var prepaid_months = $('#choice_giftduration').val();
 
-    if ($('#choice_isgift').val() == 'gift') {
+    if (prepaid_months > 0) {
       var gift_price = $('#choice_giftduration').val() * subscription_price;      
       $('.subscription_choices .price').html('$' +gift_price.toLocaleString());
       $('.price_disclaimer').hide();
-      subscription_code = 'COCKTAILS-GIFT-' +$('#choice_giftduration').val()+ 'MO';
+      subscription_code = 'COCKTAILS-PREPAID-' +$('#choice_giftduration').val()+ 'MO';
       $('form#buy-subscription [name=price]').val(gift_price);           
       $('form#buy-subscription [name=category]').val('DEFAULT'); 
       $('form#buy-subscription [name=sub_frequency]').val(''); 
@@ -122,21 +124,6 @@ bb.subscription = (function() {
     $('.subscription_choices select').change(function(e) {
       calculate_price();
     });       
-
-    $('#choice_isgift').change(function(e) {
-      e.preventDefault();
-      if ($('#choice_isgift').val() == 'gift') {
-        $('.giftoptions').show('fast');    
-        $('#choice_isgift').parents('.row').height(200);
-        $('#choice_bartools_question').html('Do they need bartools?');
-
-      } else {
-        $('form#buy-subscription [name=shipto]').val(''); // blank out shipto
-        $('.giftoptions').hide('fast');
-        $('#choice_isgift').parents('.row').height(40);    
-        $('#choice_bartools_question').html('Do you need bartools?');  
-      }
-    });
 
     $('#choice_shipping').change(function(e) {
       calculate_price();
