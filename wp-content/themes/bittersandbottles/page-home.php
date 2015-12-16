@@ -41,15 +41,15 @@ get_header(); ?>
 
 				<br />
 					<div class="bb-process">
-						<a href="/travel-size-alcohol/"><img src="/wp-content/themes/bittersandbottles/images/homepage/coasters.jpg" alt="Cocktails On The Go" /></a>
+						<a href="/travel-size-alcohol/"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/coasters.jpg" alt="Cocktails On The Go" /></a>
 						<h4>Cocktails on the Go with Travel Size Alcohol</h4>
 					</div>
 					<div class="bb-process">				
-						<a href="/holiday-gift-guide/"><img src="/wp-content/themes/bittersandbottles/images/homepage/holiday.jpg" alt="Holiday Gift Guide" /></a>
-						<h4>Holiday Gift Guide</h4>
+						<a href="http://shop.bittersandbottles.com/"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/2000-bottles.jpg" alt="Shop our 2000 Bottles" /></a>
+						<h4>Shop our 2,000 Bottles</h4>
 					</div>
 					<div class="bb-process">
-						<a href="/about/"><img src="/wp-content/themes/bittersandbottles/images/homepage/shop.jpg" alt="Visit Our Shop"/></a>
+						<a href="/about/"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/homepage/shop.jpg" alt="Visit Our Shop"/></a>
 						<h4>Visit Our Shop</h4>
 					</div>
 			</div>

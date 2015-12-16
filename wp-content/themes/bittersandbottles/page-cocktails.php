@@ -31,19 +31,19 @@ get_header(); ?>
 
 					<hr />
 						<a data-lightbox="months" data-title="Ready to Ship" href="/wp-content/themes/bittersandbottles/images/subscriptions/box-ready-to-ship.jpg">
-							<img src="/wp-content/themes/bittersandbottles/images/subscriptions/box-ready-to-ship.jpg" alt="Ready To Ship" />
+							<img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/box-ready-to-ship.jpg" alt="Ready To Ship" />
 						</a>
 					<br />
 					<div class="bb-process">
-						<a data-lightbox="months" data-title="Month 1" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg" alt="Month 1" /></a>
+						<a data-lightbox="months" data-title="Month 1" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg" alt="Month 1" /></a>
 						<h4>Month 1</h4>
 					</div>
 					<div class="bb-process">				
-						<a data-lightbox="months" data-title="Month 2" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg" alt="Month 2" /></a>
+						<a data-lightbox="months" data-title="Month 2" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/month-2.jpg" alt="Month 2" /></a>
 						<h4>Month 2</h4>
 					</div>
 					<div class="bb-process">
-						<a data-lightbox="months" data-title="Month 3" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg" alt="Month 3"/></a>
+						<a data-lightbox="months" data-title="Month 3" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/month-3.jpg" alt="Month 3"/></a>
 						<h4>Month 3</h4>
 					</div>
 					<br clear="both" />
@@ -147,7 +147,7 @@ get_header(); ?>
 				</div>
 
 				<div class="row centered" style="margin-top:20px;">
-						<a data-lightbox="months" data-title="Month 1 with Starter Kit" href="/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="/wp-content/themes/bittersandbottles/images/subscriptions/month-1-with-starter.jpg" alt="Month 1 With Starter" /></a>
+						<a data-lightbox="months" data-title="Month 1 with Starter Kit" href="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/month-1.jpg"><img src="http://i.bittersandbottles.com/wp-content/themes/bittersandbottles/images/subscriptions/month-1-with-starter.jpg" alt="Month 1 With Starter" /></a>
 				</div>
 				
 			</div><!-- #content -->
