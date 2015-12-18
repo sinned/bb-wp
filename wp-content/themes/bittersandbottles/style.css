@@ -764,6 +764,11 @@ select:active {
   margin-left: 20px;
 }
 
+#subscribe_process_message {
+	padding: 5px 10px;
+	color: red;
+}
+
 /* foxyshop checkout styles */
 #fc_cart_container td.fc_cart_item_image img, #fc_checkout_cart #fc_cart_container td.fc_cart_item_image img {
 	width: 50px!important;

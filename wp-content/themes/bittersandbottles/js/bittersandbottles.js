@@ -129,6 +129,7 @@ bb.subscription = (function() {
 
     $('#choice_shipping').change(function(e) {
       calculate_price();
+      $('#subscribe_process_message').html('');
     });
 
     $('.needbartools a').click(function(e) {
@@ -139,8 +140,14 @@ bb.subscription = (function() {
     $('button#subscribe_process').click(function(e) {
 
       if ($('#choice_shipping').val() == '') {
-        $.colorbox({html:"<p style='margin:10px;padding:10px;'>Please select a shipping option.</p>"});
+        console.log('no shipping');
+        $('#shipping_label').css('font-weight', 'bold');
+        $('#subscribe_process_message').hide();
+        $('#subscribe_process_message').html('Please choose a shipping option.');
+        $('#subscribe_process_message').slideDown('fast');
         return;
+      } else {
+        $('#subscribe_process_message').html('');
       }
 
       e.preventDefault();
