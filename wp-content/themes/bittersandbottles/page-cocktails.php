@@ -113,7 +113,6 @@ get_header(); ?>
 						<div class="col2">
 							<h6>Ships: <span class="shipdate">The 15th of each month.</span></h6>
 							<select id="choice_shipping">
-								<option value="yes" id="choice_bartools_question">Ship or Pick up?</option>
 								<option value="yes">Ship it (adult signature required, office recommended). $23</option>
 								<option value="no">Pick it up in store. $0</option>
 							</select>
@@ -125,7 +124,7 @@ get_header(); ?>
 					<div class="row no_border">
 						<div class="col1"></div>
 						<div class="col2">
-							<h3>Price: <span class="price">$85 / month</span></h3>
+							<h3>Total Price: <span class="price">$85 / month</span></h3>
 							<p class="price_disclaimer"><small>(You can pause or cancel at any time.)</small></p>
 						</div>
 					</div>
