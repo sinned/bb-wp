@@ -111,6 +111,8 @@ bb.subscription = (function() {
 
   function init() {
 
+    calculate_price();
+
     // get started button
     $('.show_subscription_choices button').click(function(e) { 
       e.preventDefault();
