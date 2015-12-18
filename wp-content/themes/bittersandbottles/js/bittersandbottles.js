@@ -68,7 +68,7 @@ bb.age_verify = (function() {
 bb.subscription = (function() {
 
   function calculate_price() {
-    console.log('calculating price');
+    //console.log('calculating price');
     var subscription_price = 85;
     var subscription_code = '';
 
@@ -131,19 +131,18 @@ bb.subscription = (function() {
       calculate_price();
     });
 
-    $('span.quantity_inc').click(function(e) {
-      $(this).siblings('input').val(parseInt($(this).siblings('input').val()) + 1);
-    })
-
-    $('span.quantity_dec').click(function(e) {
-      $(this).siblings('input').val(Math.max(1,parseInt($(this).siblings('input').val()) - 1));
-    })    
-
     $('.needbartools a').click(function(e) {
       e.preventDefault();
     });  
 
+    // process the subscription
     $('button#subscribe_process').click(function(e) {
+
+      if ($('#choice_shipping').val() == '') {
+        $.colorbox({html:"<p style='margin:10px;padding:10px;'>Please select a shipping option.</p>"});
+        return;
+      }
+
       e.preventDefault();
 
       // one last calculate

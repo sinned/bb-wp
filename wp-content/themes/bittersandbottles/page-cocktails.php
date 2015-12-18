@@ -113,6 +113,7 @@ get_header(); ?>
 						<div class="col2">
 							<h6>Ships: <span class="shipdate">The 15th of each month.</span></h6>
 							<select id="choice_shipping">
+								<option value="">Please choose one option:</option>
 								<option value="yes">Ship it (adult signature required, office recommended). $23</option>
 								<option value="no">Pick it up in store. $0</option>
 							</select>
